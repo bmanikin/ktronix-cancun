@@ -86,17 +86,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3.1. Navegación fluida y prellenado para enlaces de Cotización hacia #contacto
+  // 4. Modales Interactivos y Función Global de Cierre
+  const modalOverlays = document.querySelectorAll('.service-modal-overlay');
+  const modalTriggers = document.querySelectorAll('[data-modal]');
+
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // 4.1. Navegación fluida y prellenado para enlaces de Cotización hacia #contacto
   const quoteLinks = document.querySelectorAll('a[href="#contacto"]');
   quoteLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
 
-      // Cerrar modales si hubiera alguno abierto
+      // Cerrar cualquier modal abierto
       modalOverlays.forEach(m => closeModal(m));
       const projModal = document.getElementById('modal-proyecto-detalle');
-      if (projModal && typeof closeModal === 'function') closeModal(projModal);
+      if (projModal) closeModal(projModal);
 
       // Si el enlace tiene nombre de producto asociado, prellenar el campo de mensaje
       const prodName = link.getAttribute('data-product-name');
@@ -105,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
         messageTextarea.value = `Hola, solicito información técnica y cotización para el equipo: ${prodName}.`;
       }
 
-      // Desplazamiento suave con compensación del header fijo
+      // Desplazamiento suave con compensación exacta del header fijo
       const contactSection = document.getElementById('contacto');
       if (contactSection) {
-        const headerOffset = 85;
+        const headerOffset = 80;
         const elementPosition = contactSection.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -121,20 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           const firstInput = document.getElementById('c_nombre') || messageTextarea;
           firstInput?.focus();
-        }, 500);
+        }, 600);
       }
     });
   });
-
-  // 4. Modales Interactivos de Servicios (Ingeniería, etc.)
-  const modalTriggers = document.querySelectorAll('[data-modal]');
-  const modalOverlays = document.querySelectorAll('.service-modal-overlay');
-
-  const closeModal = (modal) => {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  };
 
   modalTriggers.forEach(btn => {
     btn.addEventListener('click', (e) => {
