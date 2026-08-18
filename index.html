@@ -1345,9 +1345,9 @@
             <h4>📋 Tabla de Precios de Lista (MXN) y Stock Disponible</h4>
             <span style="font-size: 0.85rem; color: rgba(255,255,255,0.8);">Grupel - Calidad Europea con Soporte e Ingeniería K-tronix</span>
           </div>
-          <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20una%20Planta%20de%20Emergencia%20Grupel%20en%20Stock." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background: #25D366; border-color: #25D366;">
-            <i class="fab fa-whatsapp"></i> Apartar por WhatsApp
-          </a>
+          <button type="button" class="btn btn-primary btn-sm open-plantas-cfg" style="background: #25D366; border-color: #25D366; cursor: pointer;">
+            <i class="fab fa-whatsapp"></i> Cotizar y Configurar
+          </button>
         </div>
 
         <div class="stock-table-responsive">
@@ -1384,9 +1384,7 @@
                   <span class="price-subtag">MXN + IVA</span>
                 </td>
                 <td style="text-align: center;">
-                  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20la%20Planta%20Grupel%20de%2025%20kW%20(Modelo%20G0025GRGRGCA8T2200S)." target="_blank" rel="noopener noreferrer" class="btn-stock-cotizar">
-                    <i class="fas fa-bolt"></i> Cotizar
-                  </a>
+                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="25" data-ats="con" aria-label="Cotizar Planta 25 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
                 </td>
               </tr>
 
@@ -1410,9 +1408,7 @@
                   <span class="price-subtag">MXN + IVA</span>
                 </td>
                 <td style="text-align: center;">
-                  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20la%20Planta%20Grupel%20de%2039%20kW%20(Modelo%20G0039GRGRGCA8T2200S)." target="_blank" rel="noopener noreferrer" class="btn-stock-cotizar">
-                    <i class="fas fa-bolt"></i> Cotizar
-                  </a>
+                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="39" data-ats="con" aria-label="Cotizar Planta 39 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
                 </td>
               </tr>
 
@@ -1436,9 +1432,7 @@
                   <span class="price-subtag">MXN + IVA</span>
                 </td>
                 <td style="text-align: center;">
-                  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20la%20Planta%20Grupel%20de%2076%20kW%20(Modelo%20G0076GRGRCA8T2200S)." target="_blank" rel="noopener noreferrer" class="btn-stock-cotizar">
-                    <i class="fas fa-bolt"></i> Cotizar
-                  </a>
+                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="76" data-ats="con" aria-label="Cotizar Planta 76 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
                 </td>
               </tr>
 
@@ -1462,9 +1456,7 @@
                   <span class="price-subtag">MXN + IVA</span>
                 </td>
                 <td style="text-align: center;">
-                  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20la%20Planta%20Grupel%20de%20113%20kW%20(Modelo%20G0113GRGRCA8T2200S)." target="_blank" rel="noopener noreferrer" class="btn-stock-cotizar">
-                    <i class="fas fa-bolt"></i> Cotizar
-                  </a>
+                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="113" data-ats="con" aria-label="Cotizar Planta 113 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
                 </td>
               </tr>
 
@@ -1488,9 +1480,7 @@
                   <span class="price-subtag">MXN + IVA</span>
                 </td>
                 <td style="text-align: center;">
-                  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20la%20Planta%20Grupel%20de%20149%20kW%20(Modelo%20G0149GRGRCA8T2200S)." target="_blank" rel="noopener noreferrer" class="btn-stock-cotizar">
-                    <i class="fas fa-bolt"></i> Cotizar
-                  </a>
+                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="149" data-ats="con" aria-label="Cotizar Planta 149 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
                 </td>
               </tr>
 
@@ -1514,9 +1504,7 @@
                   <span class="price-subtag">MXN + IVA</span>
                 </td>
                 <td style="text-align: center;">
-                  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20la%20Planta%20Grupel%20de%20305%20kW%20(Modelo%20G0305GRGRCA8T2200S)." target="_blank" rel="noopener noreferrer" class="btn-stock-cotizar">
-                    <i class="fas fa-bolt"></i> Cotizar
-                  </a>
+                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="305" data-ats="con" aria-label="Cotizar Planta 305 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
                 </td>
               </tr>
             </tbody>
@@ -2052,7 +2040,132 @@
     </div>
   </section>
 
-    <!-- SECTION 9: FOOTER & DIRECTORIO NACIONAL (5 Sucursales + Distribuidor) -->
+      <!-- MODAL: COTIZADOR PERSONALIZADO DE PLANTAS DE EMERGENCIA GRUPEL -->
+  <div id="modal-cotizar-planta" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="generator-modal-box">
+      <button type="button" class="service-modal-close" aria-label="Cerrar modal" id="closePlantaModal">&times;</button>
+      
+      <div class="generator-modal-header">
+        <div class="badge-cancun" style="margin-bottom: 0.5rem;">
+          <span>⚡</span> Cotización Inmediata K-tronix
+        </div>
+        <h3 class="generator-modal-title">Personaliza tu Planta de Emergencia</h3>
+        <p class="generator-modal-subtitle">Selecciona tus requerimientos de automatismo (ATS) y voltaje para generar tu cotización formal al instante.</p>
+      </div>
+
+      <form id="plantasConfigForm" onsubmit="event.preventDefault();">
+        <!-- 1. Capacidad -->
+        <div class="config-form-group">
+          <label class="config-form-label" for="cfg_capacidad">
+            <i class="fas fa-industry text-turquoise"></i> 1. Capacidad de la Planta (kW):
+          </label>
+          <select id="cfg_capacidad" class="config-select">
+            <option value="25" data-model="G0025GRGRGCA8T2200S" data-ats="161704.19" data-sin="157176.10" data-stock="6 en Stock">25 kW - Modelo G0025GRGRGCA8T2200S (6 en Stock)</option>
+            <option value="39" data-model="G0039GRGRGCA8T2200S" data-ats="194490.60" data-sin="181032.31" data-stock="5 en Stock">39 kW - Modelo G0039GRGRGCA8T2200S (5 en Stock)</option>
+            <option value="76" data-model="G0076GRGRCA8T2200S" data-ats="312194.36" data-sin="289059.15" data-stock="3 en Stock">76 kW - Modelo G0076GRGRCA8T2200S (3 en Stock)</option>
+            <option value="113" data-model="G0113GRGRCA8T2200S" data-ats="368743.80" data-sin="319174.60" data-stock="Tránsito / Pedido">113 kW - Modelo G0113GRGRCA8T2200S (Tránsito / Pedido)</option>
+            <option value="149" data-model="G0149GRGRCA8T2200S" data-ats="488666.13" data-sin="439096.93" data-stock="2 en Stock">149 kW - Modelo G0149GRGRCA8T2200S (2 en Stock)</option>
+            <option value="305" data-model="G0305GRGRCA8T2200S" data-ats="1056846.31" data-sin="917382.51" data-stock="Tránsito / Pedido">305 kW - Modelo G0305GRGRCA8T2200S (Tránsito / Pedido)</option>
+          </select>
+        </div>
+
+        <!-- 2. Modalidad ATS -->
+        <div class="config-form-group">
+          <label class="config-form-label">
+            <i class="fas fa-sync-alt text-turquoise"></i> 2. Modalidad de Transferencia (ATS):
+          </label>
+          <div class="config-radio-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="config-radio-card">
+              <input type="radio" id="ats_con" name="cfg_ats" value="Con ATS (Automático)" checked>
+              <label for="ats_con">
+                <i class="fas fa-magic"></i>
+                <span>CON ATS (Automático)</span>
+                <small style="font-size: 0.72rem; opacity: 0.8; font-weight: normal;">Arranque autónomo 24/7</small>
+              </label>
+            </div>
+            <div class="config-radio-card">
+              <input type="radio" id="ats_sin" name="cfg_ats" value="Sin ATS (Manual)">
+              <label for="ats_sin">
+                <i class="fas fa-hand-paper"></i>
+                <span>SIN ATS (Manual)</span>
+                <small style="font-size: 0.72rem; opacity: 0.8; font-weight: normal;">Arranque por operador</small>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Voltaje Requerido -->
+        <div class="config-form-group">
+          <label class="config-form-label">
+            <i class="fas fa-bolt text-turquoise"></i> 3. Voltaje Requerido para su Proyecto:
+          </label>
+          <div class="config-radio-grid">
+            <div class="config-radio-card">
+              <input type="radio" id="volt_220" name="cfg_volt" value="220 VCA (Estándar)" checked>
+              <label for="volt_220">
+                <span>220 VCA</span>
+                <small style="font-size: 0.7rem; opacity: 0.8;">Estándar</small>
+              </label>
+            </div>
+            <div class="config-radio-card">
+              <input type="radio" id="volt_440" name="cfg_volt" value="440 VCA (Reconexión)">
+              <label for="volt_440">
+                <span>440 VCA</span>
+                <small style="font-size: 0.7rem; opacity: 0.8;">Reconexión</small>
+              </label>
+            </div>
+            <div class="config-radio-card">
+              <input type="radio" id="volt_480" name="cfg_volt" value="480 VCA (Reconexión)">
+              <label for="volt_480">
+                <span>480 VCA</span>
+                <small style="font-size: 0.7rem; opacity: 0.8;">Reconexión</small>
+              </label>
+            </div>
+            <div class="config-radio-card">
+              <input type="radio" id="volt_otro" name="cfg_volt" value="Otro voltaje específico">
+              <label for="volt_otro">
+                <span>Otro Voltaje</span>
+                <small style="font-size: 0.7rem; opacity: 0.8;">Especial</small>
+              </label>
+            </div>
+          </div>
+          <input type="text" id="cfg_volt_custom" class="config-input" placeholder="Especifique el voltaje requerido (ej. 127/220V, 380V, etc.)" style="display: none; margin-top: 0.65rem;">
+        </div>
+
+        <!-- 4. Ciudad o Destino de Entrega (Opcional) -->
+        <div class="config-form-group">
+          <label class="config-form-label" for="cfg_ciudad">
+            <i class="fas fa-map-marker-alt text-coral"></i> 4. Ciudad o Destino de Entrega (Opcional):
+          </label>
+          <input type="text" id="cfg_ciudad" class="config-input" placeholder="Ej. Cancún, Playa del Carmen, Tulum, Monterrey, CDMX...">
+        </div>
+
+        <!-- Resumen de Precio de Lista Referencial -->
+        <div class="config-price-summary-box">
+          <div>
+            <div class="config-price-label">Precio de Lista de Referencia (MXN):</div>
+            <div class="config-price-amount" id="cfg_price_display">$161,704.19</div>
+            <small style="font-size: 0.75rem; color: #a5c7df;">+ IVA • En moneda nacional • Entrega hasta 5 días en stock</small>
+          </div>
+          <div id="cfg_stock_badge" class="stock-badge-pill in-stock">
+            <i class="fas fa-check-circle"></i> 6 en Stock
+          </div>
+        </div>
+
+        <!-- Botones de Acción Inmediata -->
+        <div class="config-modal-actions">
+          <button type="button" id="btnSendWhatsappQuote" class="btn-whatsapp-quote">
+            <i class="fab fa-whatsapp" style="font-size: 1.25rem;"></i> Enviar Cotización por WhatsApp
+          </button>
+          <button type="button" id="btnSendFormQuote" class="btn-form-quote">
+            <i class="fas fa-paper-plane"></i> Enviar a Formulario
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SECTION 9: FOOTER & DIRECTORIO NACIONAL (5 Sucursales + Distribuidor) -->
   <footer class="main-footer" id="sucursales">
     <div class="container">
       <!-- Footer Top Grid -->

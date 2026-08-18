@@ -3715,3 +3715,212 @@ textarea.form-input {
   background: #edf2f7;
   color: #475569;
 }
+
+/* ==========================================================================
+   MODAL COTIZADOR INTERACTIVO DE PLANTAS DE EMERGENCIA
+   ========================================================================== */
+.generator-modal-box {
+  background: #ffffff;
+  border-radius: 18px;
+  max-width: 680px;
+  width: 92%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(252, 87, 1, 0.3);
+  position: relative;
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.generator-modal-header {
+  border-bottom: 1.5px solid var(--color-sand-border);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.generator-modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin: 0 0 0.35rem 0;
+}
+
+.generator-modal-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.config-form-group {
+  margin-bottom: 1.35rem;
+}
+
+.config-form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.5rem;
+}
+
+.config-select, .config-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-sand-border);
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: var(--color-deep-ocean);
+  font-weight: 600;
+  transition: var(--transition-fluid);
+}
+
+.config-select:focus, .config-input:focus {
+  outline: none;
+  border-color: #FC5701;
+  box-shadow: 0 0 0 3px rgba(252, 87, 1, 0.15);
+}
+
+/* Radio Pill Grid */
+.config-radio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.config-radio-card {
+  position: relative;
+}
+
+.config-radio-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.config-radio-card label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.85rem 0.65rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.config-radio-card label i {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-muted);
+}
+
+.config-radio-card input[type="radio"]:checked + label {
+  background: #fff6ee;
+  border-color: #FC5701;
+  color: #FC5701;
+  box-shadow: 0 4px 12px rgba(252, 87, 1, 0.2);
+}
+
+.config-radio-card input[type="radio"]:checked + label i {
+  color: #FC5701;
+}
+
+/* Price preview banner */
+.config-price-summary-box {
+  background: linear-gradient(135deg, #08253E 0%, #0d3b66 100%);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  color: #ffffff;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.config-price-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #a5c7df;
+  font-weight: 700;
+}
+
+.config-price-amount {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #FC5701;
+}
+
+.config-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 540px) {
+  .config-modal-actions {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.btn-whatsapp-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: #25D366;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-whatsapp-quote:hover {
+  background: #20BA56;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-form-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--grad-orange);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(252, 87, 1, 0.3);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-form-quote:hover {
+  background: linear-gradient(135deg, #FF6A1A 0%, #FF8D47 100%);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
