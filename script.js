@@ -549,42 +549,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dots = productDots ? productDots.querySelectorAll('.product-dot') : [];
 
+    const getStepWidth = () => {
+      if (!items[0]) return 300;
+      if (items.length > 1) {
+        const step = items[1].offsetLeft - items[0].offsetLeft;
+        if (step > 0) return step;
+      }
+      return items[0].offsetWidth + 16;
+    };
+
     const updateActiveDot = () => {
       const scrollLeft = productTrack.scrollLeft;
-      const itemWidth = items[0]?.offsetWidth || 300;
-      const activeIdx = Math.round(scrollLeft / (itemWidth + 28)) % totalItems;
+      const step = getStepWidth();
+      const activeIdx = Math.round(scrollLeft / step) % totalItems;
       dots.forEach((d, i) => {
         d.classList.toggle('active', i === activeIdx);
       });
     };
 
     const scrollToIndex = (idx) => {
-      const itemWidth = items[0]?.offsetWidth || 300;
-      const gap = 28;
+      const step = getStepWidth();
       productTrack.scrollTo({
-        left: idx * (itemWidth + gap),
+        left: idx * step,
         behavior: 'smooth'
       });
     };
 
     productNextBtn?.addEventListener('click', () => {
-      const itemWidth = items[0]?.offsetWidth || 300;
-      const gap = 28;
+      const step = getStepWidth();
       const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
-      if (productTrack.scrollLeft >= maxScroll - 10) {
+      if (productTrack.scrollLeft >= maxScroll - 15) {
         productTrack.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        productTrack.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+        productTrack.scrollBy({ left: step, behavior: 'smooth' });
       }
     });
 
     productPrevBtn?.addEventListener('click', () => {
-      const itemWidth = items[0]?.offsetWidth || 300;
-      const gap = 28;
-      if (productTrack.scrollLeft <= 10) {
+      const step = getStepWidth();
+      if (productTrack.scrollLeft <= 15) {
         productTrack.scrollTo({ left: productTrack.scrollWidth, behavior: 'smooth' });
       } else {
-        productTrack.scrollBy({ left: -(itemWidth + gap), behavior: 'smooth' });
+        productTrack.scrollBy({ left: -step, behavior: 'smooth' });
       }
     });
 
@@ -592,13 +598,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Autoplay ruleta
     let autoplayInterval = setInterval(() => {
-      const itemWidth = items[0]?.offsetWidth || 300;
-      const gap = 28;
+      const step = getStepWidth();
       const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
       if (productTrack.scrollLeft >= maxScroll - 20) {
         productTrack.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        productTrack.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+        productTrack.scrollBy({ left: step, behavior: 'smooth' });
       }
     }, 4500);
 
