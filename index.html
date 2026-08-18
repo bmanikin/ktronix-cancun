@@ -1628,59 +1628,103 @@
     </div>
   </section>
 
-  <!-- SECTION 8: FORMULARIO (Contáctanos) -->
+    <!-- SECTION 8: FORMULARIO & MAPA NACIONAL (Contacto ktronix.com.mx/contacto/) -->
   <section id="contacto" class="contact-section">
     <div class="container">
-      <div class="contact-card-box">
-        <div class="text-center" style="margin-bottom: 2rem;">
-          <div class="badge-cancun" style="margin-bottom: 0.75rem;">
-            <span>☀️</span> Atención Inmediata
+      <div class="text-center" style="margin-bottom: 2.5rem;">
+        <div class="badge-cancun" style="margin-bottom: 0.75rem; background: rgba(252, 87, 1, 0.12); color: #FC5701; border-color: rgba(252, 87, 1, 0.35); font-weight: 800;">
+          <span>📍</span> Contacto
+        </div>
+        <h2 class="section-title">Contáctanos <span class="sea-glow">en México</span></h2>
+        <p class="section-subtitle">
+          Atención técnica especializada, asesoría de ingeniería y cotizaciones inmediatas para proyectos de respaldo de energía.
+        </p>
+      </div>
+
+      <div class="contact-layout-grid">
+        <!-- Columna Izquierda: Imagen Oficial, Botón de Formulario & Formulario Directo -->
+        <div class="contact-card-box">
+          <!-- Banner Oficial de Contacto K-tronix -->
+          <div class="contact-banner-card">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2026/07/02f17189-7c48-6852-a104-9c8448183f73-1024x341.jpg" alt="Contáctanos K-tronix Soluciones Energéticas">
           </div>
-          <h4 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--color-deep-ocean);">Contáctanos</h4>
-          <p style="color: var(--color-text-muted); font-size: 1rem;">Déjanos tus datos para enviarte una cotización personalizada o resolver cualquier duda técnica.</p>
+
+          <!-- Botón de Formulario de Contacto (Oficial ktronix.com.mx/contacto/) -->
+          <div class="contact-direct-btn-wrap">
+            <a href="https://us21.list-manage.com/contact-form?u=d817bd4f1fafd7e3209a64ff4&form_id=b6333ac2d6d03a5f216095ba616538f8" target="_blank" rel="noopener noreferrer" class="btn-external-form">
+              <i class="fas fa-file-signature"></i> <span>Formulario de contacto</span> <i class="fas fa-external-link-alt" style="font-size: 0.85rem;"></i>
+            </a>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--color-deep-ocean); margin-bottom: 0.35rem;">
+              Envíanos un mensaje directo
+            </h4>
+            <p style="color: var(--color-text-muted); font-size: 0.92rem; margin: 0;">
+              O completa el formulario a continuación y un especialista se comunicará contigo a la brevedad:
+            </p>
+          </div>
+
+          <form id="contactForm">
+            <div class="contact-form-grid">
+              <div>
+                <label class="form-label" for="c_nombre">Nombre completo *</label>
+                <input type="text" id="c_nombre" class="form-input" placeholder="Tu nombre" required>
+              </div>
+              <div>
+                <label class="form-label" for="c_email">Correo electrónico *</label>
+                <input type="email" id="c_email" class="form-input" placeholder="tu@correo.com" required>
+              </div>
+              <div>
+                <label class="form-label" for="c_telefono">Teléfono *</label>
+                <input type="tel" id="c_telefono" class="form-input" placeholder="(881) 105 8875" required>
+              </div>
+              <div>
+                <label class="form-label" for="c_sucursal">Sucursal de preferencia</label>
+                <select id="c_sucursal" class="form-input">
+                  <option value="cancun">🌴 Cancún, Q. Roo (Riviera Maya)</option>
+                  <option value="monterrey">🏭 Monterrey, N.L. (Matriz)</option>
+                  <option value="cdmx">🏢 CDMX</option>
+                  <option value="minatitlan">⚡ Minatitlán, Veracruz</option>
+                  <option value="madero">⚓ Cd. Madero, Tamaulipas</option>
+                  <option value="guadalajara">🇲🇽 Guadalajara, Jal. (Distribuidor)</option>
+                </select>
+              </div>
+              <div class="form-group-full">
+                <label class="form-label" for="c_mensaje">Mensaje / Requerimiento técnico *</label>
+                <textarea id="c_mensaje" class="form-input" placeholder="Describe los requerimientos de tu proyecto (kVA, voltaje, tipo de equipo)..." required></textarea>
+              </div>
+              <div class="form-group-full">
+                <label class="checkbox-wrap">
+                  <input type="checkbox" id="c_newsletter" checked>
+                  <span>Suscríbeme a la lista de correo de K-tronix</span>
+                </label>
+              </div>
+              <div class="form-group-full">
+                <button type="submit" class="btn btn-coral" style="width: 100%; font-size: 1.05rem;">
+                  <i class="fas fa-paper-plane"></i> <span>Enviar mensaje</span>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
 
-        <form id="contactForm">
-          <div class="contact-form-grid">
-            <div>
-              <label class="form-label" for="c_nombre">Nombre completo *</label>
-              <input type="text" id="c_nombre" class="form-input" placeholder="Tu nombre" required>
-            </div>
-            <div>
-              <label class="form-label" for="c_email">Correo electrónico *</label>
-              <input type="email" id="c_email" class="form-input" placeholder="tu@correo.com" required>
-            </div>
-            <div>
-              <label class="form-label" for="c_telefono">Teléfono *</label>
-              <input type="tel" id="c_telefono" class="form-input" placeholder="(998) 000 0000" required>
-            </div>
-            <div>
-              <label class="form-label" for="c_sucursal">Sucursal de preferencia</label>
-              <select id="c_sucursal" class="form-input">
-                <option value="cancun">🌴 Cancún, Q. Roo</option>
-                <option value="monterrey">🏭 Monterrey, N.L. (Matriz)</option>
-                <option value="cdmx">🏢 CDMX</option>
-                <option value="minatitlan">⚡ Minatitlán, Veracruz</option>
-                <option value="madero">⚓ Cd. Madero, Tamaulipas</option>
-              </select>
-            </div>
-            <div class="form-group-full">
-              <label class="form-label" for="c_mensaje">Mensaje / Requerimiento técnico *</label>
-              <textarea id="c_mensaje" class="form-input" placeholder="Describe los requerimientos de tu proyecto (kVA, voltaje, tipo de equipo)..." required></textarea>
-            </div>
-            <div class="form-group-full">
-              <label class="checkbox-wrap">
-                <input type="checkbox" id="c_newsletter" checked>
-                <span>Suscríbeme a la lista de correo</span>
-              </label>
-            </div>
-            <div class="form-group-full">
-              <button type="submit" class="btn btn-coral" style="width: 100%; font-size: 1.05rem;">
-                <i class="fas fa-paper-plane"></i> <span>Enviar</span>
-              </button>
-            </div>
+        <!-- Columna Derecha: Mapa Interactivo de Cobertura Nacional y Sucursales -->
+        <div class="contact-map-card">
+          <div class="contact-map-header">
+            <h4>🗺️ Mapa de Cobertura y Sucursales</h4>
+            <p>Ubica nuestras oficinas, centros de servicio y presencia estratégica en toda la República Mexicana.</p>
           </div>
-        </form>
+          <div class="contact-map-frame-wrap">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BdDl_Y_3JCezUbydbWd_CEcoHitKMUc&ehbc=2E312F&noprof=1" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div style="margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.88rem;">
+            <span style="color: var(--color-deep-ocean); font-weight: 700;">📍 5 Sucursales + Distribuidor Oficial</span>
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20atenci%C3%B3n%20en%20K-tronix." target="_blank" rel="noopener noreferrer" style="color: #FC5701; font-weight: 700; text-decoration: none;">
+              <i class="fab fa-whatsapp"></i> Chat WhatsApp →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
