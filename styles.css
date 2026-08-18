@@ -585,7 +585,7 @@ button, input, select, textarea {
 
 .hero-title span.cyan-text {
   color: #38E1FF;
-  text-shadow: 0 0 24px rgba(0, 201, 255, 0.7);
+  text-shadow: 0 0 18px rgba(252, 87, 1, 0.95), 0 0 35px rgba(255, 119, 40, 0.8), 0 0 55px rgba(252, 87, 1, 0.55);
 }
 
 .hero-subtitle-lead {
