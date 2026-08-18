@@ -156,4 +156,368 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 6. Modal Interactivo de Ficha Técnica de Proyectos
+  const projectsData = {
+    aifa: {
+      title: "Soluciones Energéticas para el Aeropuerto AIFA",
+      category: "Sector Aeroportuario • Misión Crítica",
+      status: "Completado",
+      statusClass: "completed",
+      location: "CDMX / Edo. de México",
+      year: "2021 - 2023",
+      client: "AIFA / SEDENA",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/aifa-1200x600.png",
+      gallery: [
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/PROYECTO-AIFA-1-rn9ty1dx5gt9pjvqhktgx7704gyxyjx78vhdffy83s.png",
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/PROYECTO-AIFA-2-rn9ty559wsyezzq9vmfz768ui0getcc4le3bcjsnew.png",
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/PROYECTO-AIFA-3-rn9ty70yah0zn7njkn98c5rros758qjl9neab3pv2g.png"
+      ],
+      paragraphs: [
+        "Comprometidos con el crecimiento de la infraestructura en México, desde 2021 hemos trabajado en el suministro de soluciones energéticas para el Aeropuerto Internacional Felipe Ángeles (AIFA), garantizando confiabilidad y respaldo en sus operaciones clave.",
+        "Se proporcionaron 21 cargadores para el respaldo de diversas áreas estratégicas del aeropuerto, incluyendo la Terminal de pasajeros, Instalaciones de la autoridad aeroportuaria, Área de catering y estacionamientos subterráneos, Centro de operaciones de aerolíneas, Comedor de empleados y Puestos de acceso.",
+        "Además, se suministró una UPS de 30 kVA para la estación de combustible, asegurando la continuidad operativa de este punto crítico de recarga aérea.",
+        "Como parte de la continuidad del proyecto, en 2023 se suministraron 3 UPS adicionales para el Depósito de Material Bélico de la Fuerza Aérea (Frente 45), fortaleciendo la infraestructura y máxima seguridad del AIFA.",
+        "Orgullosos de contribuir al desarrollo de uno de los aeropuertos más importantes del país, asegurando eficiencia, confiabilidad y seguridad operativa."
+      ],
+      highlights: [
+        { icon: "fas fa-charging-station", label: "21 Cargadores", desc: "Instalados en terminal, catering y accesos" },
+        { icon: "fas fa-server", label: "UPS 30 kVA", desc: "Estación de combustible de misión crítica" },
+        { icon: "fas fa-shield-alt", label: "3 UPS Frente 45", desc: "Depósito de Material Bélico Fuerza Aérea" },
+        { icon: "fas fa-plane-departure", label: "Operatividad 24/7", desc: "Continuidad total en navegación aérea" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20AIFA%20con%20K-tronix."
+    },
+    tren_maya: {
+      title: "Suministro de Cable Ferroviario para el Tren Maya",
+      category: "Transporte Ferroviario • Riviera Maya",
+      status: "En curso",
+      statusClass: "in-progress",
+      location: "🌴 Quintana Roo / Sureste",
+      year: "2022 - Presente",
+      client: "Voltrak / Cunext / SEDENA",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/tren-maya3.webp",
+      gallery: [
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/tren-maya5-rn9u6lozf4jbhnfwha33n1e6yurc39x5r9gmu793ew.jpeg",
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/tren-maya4-rn9u6lozf4jbhnfwha33n1e6yurc39x5r9gmu793ew.jpeg",
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/tren-maya2-rn9u6lozf4jbhnfwha33n1e6yurc39x5r9gmu793ew.jpeg",
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/tren-maya1-rn9u6jtb1ggqufims99ui1v9s30lnvpp305nvnbvrc.jpeg"
+      ],
+      paragraphs: [
+        "En un esfuerzo conjunto con Voltrak y Cunext, participamos en el desarrollo del Tren Maya, uno de los proyectos de infraestructura ferroviaria y turística más importantes en la historia moderna de México.",
+        "Para esta obra de envergadura nacional, suministramos cable de contacto de alta pureza y más de 100 bobinas de catenaria, cubriendo un tramo de más de 1,000 km de recorrido en la Riviera Maya y la península.",
+        "Este proyecto, entregado a la SEDENA, representa un avance significativo en el fortalecimiento del transporte ferroviario, la electrificación de vías y el desarrollo sustentable de la región sureste.",
+        "K-tronix reafirma su compromiso, calidad y tecnología de cobre especializado al servicio del progreso de Quintana Roo y todo el país."
+      ],
+      highlights: [
+        { icon: "fas fa-network-wired", label: "+100 Bobinas", desc: "Catenaria de cobre para tracción eléctrica" },
+        { icon: "fas fa-route", label: "+1,000 km", desc: "Cobertura en la Península y Riviera Maya" },
+        { icon: "fas fa-handshake", label: "Alianza Estratégica", desc: "Sinergia técnica con Voltrak y Cunext" },
+        { icon: "fas fa-train", label: "Transporte Verde", desc: "Infraestructura ferroviaria de alta eficiencia" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20Tren%20Maya%20con%20K-tronix."
+    },
+    tulum: {
+      title: "Aeropuerto Internacional de Tulúm Felipe Carrillo Puerto",
+      category: "Sector Aeroportuario • Caribe Mexicano",
+      status: "Completado",
+      statusClass: "completed",
+      location: "🌴 Tulum, Quintana Roo",
+      year: "2023 - 2024",
+      client: "SEDENA / Aeropuerto Tulum",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/Aeropuerto-Tulum3-1290x600.jpg",
+      gallery: [
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/Aeropuerto-Tulum2-rn9urhnval4php3mib4n1rmy73sz54ufand2rka554.jpg",
+        "https://ktronix.com.mx/wp-content/uploads/elementor/thumbs/Aeropuerto-Tulum1-rn9urfs6wx24uh6ctabdws410c28pqmyme23t0cxhk.jpg"
+      ],
+      paragraphs: [
+        "La Subestación Principal de la Planta de Combustibles y Obras Complementarias del Nuevo Aeropuerto Internacional «Felipe Carrillo Puerto» en Tulum, Quintana Roo, requería asegurar una fuente de energía 100% confiable para respaldar sus operaciones críticas y garantizar la continuidad total de los servicios aeroportuarios.",
+        "Solución Implementada: Se instalaron tres generadores de luz a diésel de alta potencia: 2 generadores de 800 kW y 1 generador de 1000 kW (totalizando 2,600 kW de respaldo). Cada unidad está equipada con un tanque adicional de diésel de 1,000 litros, diseñada para proporcionar energía inmediata durante cortes de electricidad o contingencias climáticas.",
+        "Confiabilidad Energética y Seguridad: La instalación garantizó un suministro ininterrumpido a la planta de combustible para aviones, minimizando a cero el riesgo de interrupciones en el abastecimiento de turbosina.",
+        "Eficiencia de Recursos: Al contar con su propio sistema de generación y sincronización automática, se optimizaron los costos operativos y la gestión energética de la terminal."
+      ],
+      highlights: [
+        { icon: "fas fa-bolt", label: "2,600 kW Total", desc: "2 plantas de 800 kW y 1 planta de 1000 kW" },
+        { icon: "fas fa-gas-pump", label: "Planta Combustible", desc: "Blindaje energético a tanques de turbosina" },
+        { icon: "fas fa-tint", label: "3,000 L Diésel", desc: "Tanques auxiliares de autonomía extendida" },
+        { icon: "fas fa-plane", label: "Arranque Automático", desc: "Transferencia instantánea ante cortes de red" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20Aeropuerto%20Tul%C3%BAm%20con%20K-tronix."
+    },
+    zotv: {
+      title: "Z.O.T.V. para la Gerencia Regional de Transmisión Baja California",
+      category: "Transmisión Eléctrica • CFE Subestaciones",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Mexicali, Baja California",
+      year: "2023",
+      client: "Comisión Federal de Electricidad (CFE)",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/proyecto-zotv.jpg",
+      gallery: [],
+      paragraphs: [
+        "K-tronix colaboró con la Comisión Federal de Electricidad (CFE) para el suministro, instalación, pruebas y puesta en operación de un Sistema de Energía Ininterrumpible de 40 kVA en la Z.O.T.V. (Zona de Operación y Transmisión Valle), en Mexicali, B.C., garantizando la operación continua de los sistemas críticos de control de la red eléctrica regional.",
+        "El proyecto incluyó el Commisioning especializado para la correcta alineación y balanceo de sus cargas críticas. El sistema UPS K-tronix cuenta con respaldo de Banco de Baterías de Ácido Plomo VRLA con autonomía de 20 minutos a plena carga.",
+        "Con una configuración modular de 2 x 20 kVA (sumados para alcanzar 40 kVA), el sistema ofrece máxima redundancia y confiabilidad. Su topología On-line Doble Conversión elimina puntos comunes de falla, mientras que la tecnología PWM en la fase inversora asegura una onda senoidal pura bajo normas IEC-62040 y VFI-SS-111.",
+        "El equipo UPS UPScale fue fabricado en nuestra Planta Matriz en Monterrey, N.L., desde donde se distribuye a todo el país bajo los más estrictos estándares internacionales de calidad."
+      ],
+      highlights: [
+        { icon: "fas fa-server", label: "2 x 20 kVA (40 kVA)", desc: "Topología On-line Doble Conversión" },
+        { icon: "fas fa-car-battery", label: "Baterías VRLA", desc: "Respaldo y autonomía de 20 min en Mexicali" },
+        { icon: "fas fa-cogs", label: "Norma IEC-62040", desc: "Onda senoidal pura con tecnología PWM" },
+        { icon: "fas fa-shield-alt", label: "Commisioning CFE", desc: "Puesta en marcha y alineación de cargas" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20ZOTV%20con%20K-tronix."
+    },
+    cfe_mederos: {
+      title: "CFE Mederos - Departamento Regional de Control",
+      category: "Control Eléctrico • Redundancia N+1",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Monterrey, Nuevo León",
+      year: "2023",
+      client: "CFE Gerencia Regional Noreste",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/proyecto-cfe-mederos.jpg",
+      gallery: [],
+      paragraphs: [
+        "Suministro, instalación, pruebas y puesta en marcha de un Sistema de Energía Ininterrumpible con Capacidad de 40 kVA en configuración redundante N+1, diseñado específicamente para garantizar la operación ininterrumpida del Departamento Regional de Control de la Gerencia Regional de Transmisión Noreste en la zona Mederos de Monterrey.",
+        "K-tronix ejecutó las adecuaciones eléctricas de ingeniería necesarias en el sitio para garantizar la alimentación sin cortes de los sistemas SCADA y control de despacho eléctrico de la zona metropolitana.",
+        "La solución cuenta con una arquitectura de 3 x 20 kVA (3 módulos de 20 kVA para lograr 40 kVA N+1 tolerante a fallas), con topología On-line Doble Conversión, modulación PWM e inversión de alta frecuencia.",
+        "El sistema incorpora un banco de baterías de ácido-plomo reguladas por válvula (VRLA) con 20 minutos de autonomía, cumpliendo la clasificación internacional VFI-SS-111 y fabricado en nuestra planta matriz de Monterrey."
+      ],
+      highlights: [
+        { icon: "fas fa-cubes", label: "3 x 20 kVA (N+1)", desc: "Arquitectura tolerante a fallas de módulos" },
+        { icon: "fas fa-network-wired", label: "Sistemas SCADA", desc: "Protección al centro de control metropolitano" },
+        { icon: "fas fa-car-battery", label: "Banco VRLA", desc: "Autonomía de 20 min ante corte general" },
+        { icon: "fas fa-industry", label: "Fabricación Nacional", desc: "Orgullo de manufactura en planta Monterrey" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20CFE%20Mederos%20con%20K-tronix."
+    },
+    larvacore: {
+      title: "Criadero de Camarón LarvaCore",
+      category: "Industria Acuícola • Continuidad 24/7",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Mazatlán, Sinaloa",
+      year: "2023",
+      client: "LarvaCore Mazatlán",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/PROYECTO-LARVACOR.jpg",
+      gallery: [],
+      paragraphs: [
+        "En el sector de la acuicultura, y en particular en los criaderos de larvas de camarón, la continuidad eléctrica es de vida o muerte: una falla en el suministro de oxígeno de pocos minutos destruye lotes completos de reproducción.",
+        "K-tronix diseñó e instaló una Planta de Emergencia de 255 kVA con Motor Grupel y Alternador Grupel para respaldar el Tablero de Distribución principal que alimenta las bombas de oxigenación y sistemas de bioseguridad en Mazatlán, Sinaloa.",
+        "El equipo está programado para arranque automático instantáneo ante cualquier corte o fluctuación de la red de CFE, garantizando el flujo constante de agua y oxígeno en las piletas de reproducción.",
+        "Con esta infraestructura, LarvaCore blindó su inversión biológica, optimizó sus procesos de cría y eliminó los riesgos económicos por inestabilidad eléctrica en zonas costeras."
+      ],
+      highlights: [
+        { icon: "fas fa-bolt", label: "Planta 255 kVA", desc: "Motor y Alternador de alto rendimiento Grupel" },
+        { icon: "fas fa-water", label: "Bombas de Oxígeno", desc: "Respaldo continuo a piletas de reproducción" },
+        { icon: "fas fa-shield-alt", label: "Cero Pérdida Biológica", desc: "Arranque automático ante fallas de la red" },
+        { icon: "fas fa-industry", label: "Resistencia Marina", desc: "Equipos protegidos contra ambiente salino" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20LarvaCore%20con%20K-tronix."
+    },
+    bancos_bienestar: {
+      title: "Bancos del Bienestar - Cobertura Urbana y Rural",
+      category: "Sector Financiero & Gobierno • 14 Sitios",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Nuevo León & Cobertura Nacional",
+      year: "2023 - 2024",
+      client: "SEDENA / Bancos del Bienestar",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/proyecto-bancos-bienestar.jpg",
+      gallery: [],
+      paragraphs: [
+        "K-tronix colaboró con la SEDENA en el suministro e instalación de Plantas de Emergencia en 14 sucursales del Banco del Bienestar en el Estado de Nuevo León, cubriendo tanto la zona metropolitana como comunidades rurales de difícil acceso.",
+        "El proyecto incluyó generadores de 24 kVA marca Grupel con motor y alternador integrados, acompañados de controladores inteligentes DeepSea para monitoreo automático y arranque en falla de red.",
+        "La solución garantiza que cajeros automáticos, sistemas de telecomunicaciones, servidores y ventanillas de atención operen sin interrupciones incluso durante contingencias climáticas en zonas apartadas.",
+        "Gracias a la alianza estratégica entre K-tronix y Grupel (presente en más de 70 países), se entregó un equipamiento con soporte técnico nacional y máxima confiabilidad."
+      ],
+      highlights: [
+        { icon: "fas fa-landmark", label: "14 Sucursales", desc: "Instalaciones en zonas urbanas y rurales" },
+        { icon: "fas fa-bolt", label: "Generadores 24 kVA", desc: "Motor y Alternador Grupel con DeepSea" },
+        { icon: "fas fa-globe", label: "Inclusión Social", desc: "Servicio bancario ininterrumpido a usuarios" },
+        { icon: "fas fa-tools", label: "Mantenimiento Preventivo", desc: "Cobertura de servicio técnico integral" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20Bancos%20Bienestar%20con%20K-tronix."
+    },
+    conagua: {
+      title: "CONAGUA - Sistema Cutzamala & Cuencas Valle de Bravo",
+      category: "Infraestructura Hidráulica • Gobierno Federal",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Valle de Bravo, Edo. de México",
+      year: "2022 - 2023",
+      client: "Comisión Nacional del Agua (CONAGUA)",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2025/04/proyecto-conagua.jpg",
+      gallery: [],
+      paragraphs: [
+        "El Sistema Cutzamala es la arteria hídrica vital para el almacenamiento, potabilización y distribución de agua potable para millones de habitantes de la Ciudad de México y el Estado de México. K-tronix suministró soluciones integrales de potencia en las Plantas de Bombeo 1, 2, 3, 4, 5 y 6 del sistema de cuencas Valle de Bravo.",
+        "Equipamiento Suministrado: Rectificadores industriales de 100 A y 75 A para respaldo del control, instrumentación, telemetría y alumbrado de emergencia, combinados con bancos de Baterías de Níquel-Cadmio de ciclo profundo y alta robustez.",
+        "Asimismo, se instalaron sistemas UPS modulares K-tronix (5 sistemas de 10 kVA N+1 y 1 sistema de 20 kVA N+1) dedicados al blindaje de PLC's de control de bombeo y computadoras de mando.",
+        "El proyecto abarcó la instalación electromecánica y el comisionamiento en sitio, garantizando que el bombeo de agua más importante del país no se detenga ante disturbios eléctricos."
+      ],
+      highlights: [
+        { icon: "fas fa-tint", label: "6 Plantas de Bombeo", desc: "Protección integral a todo el Sistema Cutzamala" },
+        { icon: "fas fa-charging-station", label: "Rectificadores 100/75A", desc: "Con bancos de baterías Níquel-Cadmio" },
+        { icon: "fas fa-server", label: "6 Sistemas UPS N+1", desc: "Respaldo a PLC's y telemetría de bombeo" },
+        { icon: "fas fa-shield-alt", label: "Misión Nacional", desc: "Suministro continuo de agua potable para CDMX" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20Conagua%20con%20K-tronix."
+    },
+    magna: {
+      title: "MAGNA Electronics - Plantas Guadalupe y Apodaca",
+      category: "Industria Automotriz • Manufactura de Alta Precisión",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Guadalupe y Apodaca, Nuevo León",
+      year: "2023",
+      client: "MAGNA Electronics México",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2024/05/Mask-Group-6-4@2x.jpg",
+      gallery: [],
+      paragraphs: [
+        "Para las plantas de manufactura de componentes electrónicos automotrices de «MAGNA Electronics» en Guadalupe y Apodaca, N.L., K-tronix ejecutó la ingeniería de respaldo, suministro integral e instalación de equipos de potencia de gran escala.",
+        "Equipamiento Suministrado: Planta de Emergencia de 941 kVA / 1000 kVA con controlador DeepSea y motorización pesada para respaldo general de planta ante contingencias de red.",
+        "Se suministraron Sistemas UPS Online de 400 kVA y 600 kVA para el blindaje de líneas robotizadas de ensamble SMT, previniendo costosos microcortes y variaciones de frecuencia.",
+        "Asimismo, se instalaron Supresores de Transientes (TVSS) Nivel C y B en tableros principales y subestaciones, blindando la electrónica de potencia contra descargas atmosféricas y transitorios."
+      ],
+      highlights: [
+        { icon: "fas fa-bolt", label: "Planta 1,000 kVA", desc: "Generador diésel pesado con DeepSea" },
+        { icon: "fas fa-server", label: "UPS 600 & 400 kVA", desc: "Protección a líneas SMT robotizadas" },
+        { icon: "fas fa-shield-alt", label: "Supresores TVSS B/C", desc: "Protección en tableros y subestación" },
+        { icon: "fas fa-car", label: "Calidad Automotriz", desc: "Cero paros en líneas de producción global" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20MAGNA%20con%20K-tronix."
+    },
+    sedena: {
+      title: "SEDENA - Cuarteles Generales Guardia Nacional",
+      category: "Seguridad Nacional • Fuerzas Armadas",
+      status: "Completado",
+      statusClass: "completed",
+      location: "Linares y Galeana, Nuevo León",
+      year: "2020",
+      client: "Secretaría de la Defensa Nacional (SEDENA)",
+      mainImg: "https://ktronix.com.mx/wp-content/uploads/2026/05/proyecto-sedena.jpg",
+      gallery: [],
+      paragraphs: [
+        "K-tronix realizó el suministro, instalación, comisionamiento, puesta en marcha y capacitación técnica especializada de 2 Plantas de Emergencia de 24 kW para los Cuarteles Generales de la Guardia Nacional (SEDENA).",
+        "Las instalaciones están ubicadas estratégicamente en los municipios de Linares y Galeana, Nuevo León, blindando centros de comando, comunicaciones tácticas y alumbrado perimetral de seguridad.",
+        "La solución contempló sistemas de transferencia automática (ATS), pruebas de carga in situ y capacitación operativa al personal militar para su óptimo mantenimiento preventivo.",
+        "Con este proyecto, K-tronix reafirma su solvencia técnica y capacidad para cumplir con las rigurosas exigencias de los organismos de seguridad nacional de México."
+      ],
+      highlights: [
+        { icon: "fas fa-shield-alt", label: "2 Plantas 24 kW", desc: "Cuarteles de Linares y Galeana, N.L." },
+        { icon: "fas fa-satellite-dish", label: "Comando & C4", desc: "Respaldo a comunicaciones tácticas militares" },
+        { icon: "fas fa-graduation-cap", label: "Capacitación Militar", desc: "Entrenamiento operativo in situ al personal" },
+        { icon: "fas fa-check-circle", label: "Transferencia ATS", desc: "Conmutación instantánea ante corte de red" }
+      ],
+      waMessage: "Hola,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20SEDENA%20con%20K-tronix."
+    }
+  };
+
+  const projectDetailModal = document.getElementById('modal-proyecto-detalle');
+  const projectModalContent = document.getElementById('projectModalContent');
+  const projectOpenBtns = document.querySelectorAll('.btn-open-project');
+
+  projectOpenBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const projId = btn.getAttribute('data-project');
+      const proj = projectsData[projId];
+      if (!proj || !projectModalContent || !projectDetailModal) return;
+
+      let galleryHtml = '';
+      if (proj.gallery && proj.gallery.length > 0) {
+        galleryHtml = `
+          <div style="margin-top: 1.5rem;">
+            <h6 style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 800; color: var(--color-deep-ocean); margin-bottom: 0.65rem;"><i class="fas fa-camera text-turquoise"></i> Galería de Evidencia en Sitio</h6>
+            <div class="project-modal-gallery">
+              ${proj.gallery.map(img => `<div class="project-modal-gallery-img"><img src="${img}" alt="${proj.title}" loading="lazy"></div>`).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      let highlightsHtml = '';
+      if (proj.highlights && proj.highlights.length > 0) {
+        highlightsHtml = `
+          <div class="project-highlight-grid">
+            ${proj.highlights.map(h => `
+              <div class="project-highlight-item">
+                <div class="project-highlight-icon"><i class="${h.icon}"></i></div>
+                <div class="project-highlight-info">
+                  <h6>${h.label}</h6>
+                  <p>${h.desc}</p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      let paragraphsHtml = proj.paragraphs.map(p => `<p>${p}</p>`).join('');
+
+      projectModalContent.innerHTML = `
+        <div class="project-modal-header">
+          <div class="badge-cancun" style="margin-bottom: 0.5rem;">
+            <span>📍</span> ${proj.category}
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--color-deep-ocean); line-height: 1.25; margin-bottom: 0.5rem;">
+            ${proj.title}
+          </h3>
+          <div class="project-modal-meta-tags">
+            <span class="project-modal-meta-item"><i class="fas fa-map-marker-alt text-coral"></i> <strong>Ubicación:</strong> ${proj.location}</span>
+            <span class="project-modal-meta-item"><i class="fas fa-calendar-alt text-turquoise"></i> <strong>Periodo:</strong> ${proj.year}</span>
+            <span class="project-modal-meta-item"><i class="fas fa-building text-deep-ocean"></i> <strong>Cliente:</strong> ${proj.client}</span>
+            <span class="project-modal-meta-item" style="border-color: ${proj.statusClass === 'completed' ? '#25d366' : 'var(--color-coral)'}; color: ${proj.statusClass === 'completed' ? '#0d9448' : '#e65100'};">
+              <i class="fas ${proj.statusClass === 'completed' ? 'fa-check-circle' : 'fa-sync-alt fa-spin'}"></i> <strong>${proj.status}</strong>
+            </span>
+          </div>
+        </div>
+
+        <div class="project-modal-hero-img">
+          <img src="${proj.mainImg}" alt="${proj.title}">
+        </div>
+
+        ${highlightsHtml}
+
+        <div class="project-modal-body-text">
+          <h5 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--color-deep-ocean); margin: 1.25rem 0 0.75rem;">
+            <i class="fas fa-info-circle text-turquoise"></i> Alcance de Ingeniería y Memoria Técnica
+          </h5>
+          ${paragraphsHtml}
+        </div>
+
+        ${galleryHtml}
+
+        <div class="service-modal-footer">
+          <div class="modal-footer-cta">
+            <div>
+              <h5 style="font-size: 1.05rem; margin-bottom: 0.25rem;">¿Requieres una solución similar para tu empresa?</h5>
+              <p style="font-size: 0.85rem; margin: 0;">Nuestros ingenieros especialistas te asesoran en el dimensionamiento y levantamiento en campo.</p>
+            </div>
+            <div class="modal-footer-cta-actions">
+              <a href="https://wa.me/528811058875?text=${proj.waMessage}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal">
+                <i class="fab fa-whatsapp"></i> WhatsApp Proyecto
+              </a>
+              <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
+                <i class="fas fa-envelope"></i> Cotizar Caso
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      projectDetailModal.classList.add('active');
+      projectDetailModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      // Re-bind close & scroll buttons in newly inserted content
+      const closeLinks = projectModalContent.querySelectorAll('.modal-close-and-scroll');
+      closeLinks.forEach(l => {
+        l.addEventListener('click', () => {
+          closeModal(projectDetailModal);
+        });
+      });
+    });
+  });
 });
