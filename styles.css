@@ -1416,12 +1416,14 @@ button, input, select, textarea {
   transform: translateY(-2px);
 }
 
-.modal-dialog-wide {
-  max-width: 900px !important;
+.modal-box-wide {
+  max-width: 920px !important;
+  background: #ffffff !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45) !important;
 }
 
 .project-modal-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .project-modal-meta-tags {
@@ -1433,16 +1435,16 @@ button, input, select, textarea {
 }
 
 .project-modal-meta-item {
-  background: var(--color-sand-bg);
-  border: 1px solid var(--color-sand-border);
-  color: var(--color-deep-ocean);
-  font-size: 0.82rem;
+  background: #f0f6fa;
+  border: 1.5px solid #cfe2ec;
+  color: #0b2e4c;
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 0.95rem;
   border-radius: 30px;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .project-modal-hero-img {
@@ -1450,8 +1452,8 @@ button, input, select, textarea {
   max-height: 380px;
   border-radius: var(--radius-card);
   overflow: hidden;
-  margin-bottom: 1.75rem;
-  border: 1px solid var(--color-sand-border);
+  margin-bottom: 1.5rem;
+  border: 1.5px solid #cfe2ec;
   box-shadow: var(--shadow-sand-card);
   background: #0f2b38;
 }
@@ -1468,14 +1470,14 @@ button, input, select, textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  margin: 1.75rem 0;
+  margin: 1.25rem 0;
 }
 
 .project-modal-gallery-img {
   border-radius: 12px;
   overflow: hidden;
-  height: 130px;
-  border: 1px solid var(--color-sand-border);
+  height: 140px;
+  border: 1.5px solid #cfe2ec;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
@@ -1487,22 +1489,22 @@ button, input, select, textarea {
 }
 
 .project-modal-gallery-img img:hover {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .project-highlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0 1.5rem;
 }
 
 .project-highlight-item {
   background: #ffffff;
-  border: 1.5px solid var(--color-sand-border);
+  border: 1.5px solid #dbe8ef;
   border-radius: 12px;
-  padding: 1.1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 1.1rem 1.15rem;
+  box-shadow: 0 4px 12px rgba(8, 37, 62, 0.04);
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
@@ -1512,44 +1514,61 @@ button, input, select, textarea {
 .project-highlight-item:hover {
   border-color: var(--color-turquoise);
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 180, 219, 0.15);
 }
 
 .project-highlight-icon {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
-  background: rgba(0, 180, 219, 0.12);
-  color: var(--color-turquoise);
+  background: rgba(0, 180, 219, 0.14);
+  color: #008fa8;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 
 .project-highlight-info h6 {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 800;
-  color: var(--color-deep-ocean);
-  margin-bottom: 0.2rem;
+  color: #0b2e4c;
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
 }
 
 .project-highlight-info p {
-  font-size: 0.82rem;
-  color: var(--color-text-muted);
-  line-height: 1.35;
+  font-size: 0.84rem;
+  color: #486581;
+  line-height: 1.4;
   margin: 0;
+  font-weight: 500;
+}
+
+.project-modal-body-box {
+  background: #f8fbfe;
+  border: 1.5px solid #dce8f0;
+  border-left: 5px solid var(--color-turquoise);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.25rem 0 1.5rem;
 }
 
 .project-modal-body-text {
-  font-size: 0.96rem;
-  color: var(--color-deep-ocean);
-  line-height: 1.7;
+  font-size: 0.98rem;
+  color: #102a43;
+  line-height: 1.75;
 }
 
 .project-modal-body-text p {
   margin-bottom: 1rem;
+  color: #1f3b52;
+}
+
+.project-modal-body-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* ==========================================================================

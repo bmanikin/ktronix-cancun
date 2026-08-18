@@ -480,11 +480,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ${highlightsHtml}
 
-        <div class="project-modal-body-text">
-          <h5 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--color-deep-ocean); margin: 1.25rem 0 0.75rem;">
-            <i class="fas fa-info-circle text-turquoise"></i> Alcance de Ingeniería y Memoria Técnica
+        <div class="project-modal-body-box">
+          <h5 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: #0b2e4c; margin: 0 0 0.85rem 0;">
+            <i class="fas fa-info-circle text-turquoise"></i> Resumen y Alcance del Proyecto
           </h5>
-          ${paragraphsHtml}
+          <div class="project-modal-body-text">
+            ${paragraphsHtml}
+          </div>
         </div>
 
         ${galleryHtml}
