@@ -1196,6 +1196,122 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   PAGE HERO BANNER (Dedicado a Páginas Secundarias como Proyectos)
+   ========================================================================== */
+.page-hero-banner {
+  background: linear-gradient(135deg, #08253E 0%, #0D3B66 50%, #05192D 100%);
+  padding: 8.5rem 0 4.5rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 180, 219, 0.22) 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.breadcrumbs a {
+  color: var(--color-turquoise);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  color: #ffffff;
+}
+
+.page-hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-hero-title {
+    font-size: 2.1rem;
+  }
+}
+
+.page-hero-subtitle {
+  font-size: 1.12rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 760px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.page-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .page-hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hero-stat-box {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.hero-stat-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-turquoise);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-stat-box h4 {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-turquoise);
+  margin-bottom: 0.25rem;
+}
+
+.hero-stat-box p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ==========================================================================
    PROYECTOS SECTION (Portafolio de Infraestructura Nacional)
    ========================================================================== */
 .projects-section {
