@@ -1166,6 +1166,35 @@ button, input, select, textarea {
   gap: 1rem;
 }
 
+.modal-footer-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-whatsapp-modal {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  border-radius: var(--radius-btn);
+  padding: 0.75rem 1.35rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition-fluid);
+}
+
+.btn-whatsapp-modal:hover {
+  background: linear-gradient(135deg, #2ef176 0%, #1db954 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.55);
+  color: #ffffff;
+}
+
 /* ==========================================================================
    SECTION 5: PRODUCTOS (Nuestras categorías de producto)
    ========================================================================== */
