@@ -1,0 +1,1593 @@
+/* ==========================================================================
+   KTronix - Rediseño Temático Cancún (Estructura 100% Fiel a ktronix.com.mx)
+   Paleta: Turquesa/Mar (#00B4DB / #00C9FF), Arena Cálida (#F5E6CA / #FAF3E0),
+           Coral/Puesta de Sol (#FF6F61 / #FF7E5F), Azul Océano Profundo (#08253E)
+   ========================================================================== */
+
+:root {
+  /* --- Paleta de Colores Cancún --- */
+  --color-turquoise: #00b4db;
+  --color-cyan: #00c9ff;
+  --color-sea-green: #00c9a7;
+  --color-sand: #f5e6ca;
+  --color-sand-warm: #faf3e0;
+  --color-sand-border: #e8d5b5;
+  --color-coral: #ff6f61;
+  --color-coral-hover: #ff5252;
+  --color-deep-ocean: #08253e;
+  --color-navy: #10375c;
+  --color-text-dark: #243a4e;
+  --color-text-muted: #5f7a90;
+  --color-bg-light: #fafcfd;
+  --color-white: #ffffff;
+
+  /* --- Degradados Caribeños --- */
+  --grad-caribbean: linear-gradient(135deg, #00b4db 0%, #00c9ff 50%, #00c9a7 100%);
+  --grad-sunset: linear-gradient(135deg, #ff6f61 0%, #ff8e6b 100%);
+  --grad-sand: linear-gradient(135deg, #faf3e0 0%, #f5e6ca 100%);
+  --grad-ocean: linear-gradient(145deg, #08253e 0%, #0d3b66 100%);
+  --grad-hero-overlay: linear-gradient(180deg, rgba(8, 37, 62, 0.65) 0%, rgba(0, 180, 219, 0.45) 60%, rgba(250, 252, 253, 0.95) 100%);
+
+  /* --- Sombras Solares Cálidas --- */
+  --shadow-sun-sm: 0 4px 14px -2px rgba(0, 180, 219, 0.18), 0 2px 6px rgba(8, 37, 62, 0.04);
+  --shadow-sun-md: 0 10px 28px -4px rgba(0, 180, 219, 0.25), 0 4px 10px rgba(8, 37, 62, 0.06);
+  --shadow-sun-lg: 0 20px 40px -8px rgba(0, 180, 219, 0.32), 0 8px 18px rgba(8, 37, 62, 0.08);
+  --shadow-coral-btn: 0 8px 24px -3px rgba(255, 111, 97, 0.45);
+  --shadow-cyan-btn: 0 8px 24px -3px rgba(0, 180, 219, 0.45);
+  --shadow-sand-card: 0 8px 24px -4px rgba(232, 213, 181, 0.6);
+
+  /* --- Componentes & Geometría --- */
+  --radius-btn: 10px;
+  --radius-card: 16px;
+  --touch-min: 48px;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Montserrat', sans-serif;
+  --transition-fluid: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fluid);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.text-center { text-align: center; }
+.text-turquoise { color: var(--color-turquoise); }
+.text-coral { color: var(--color-coral); }
+.text-sand { color: #b58315; }
+
+/* Badges Cancún */
+.badge-cancun {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  background: var(--color-sand-warm);
+  border: 1px solid var(--color-sand-border);
+  border-radius: 999px;
+  color: #8c5b03;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(245, 230, 202, 0.5);
+}
+
+.badge-sea {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: rgba(0, 201, 167, 0.12);
+  border: 1px solid rgba(0, 201, 167, 0.35);
+  border-radius: 999px;
+  color: #00876f;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* Titles */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.section-title span.sea-glow {
+  background: var(--grad-caribbean);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title span.coral-glow {
+  background: var(--grad-sunset);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  font-size: 1.08rem;
+  color: var(--color-text-muted);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   BOTONES Y COMPONENTES (Bordes 10px, sombras solares, min-height 48px)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: var(--touch-min);
+  padding: 0.8rem 1.75rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border-radius: var(--radius-btn);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fluid);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-primary {
+  background: var(--grad-caribbean);
+  color: #ffffff;
+  box-shadow: var(--shadow-cyan-btn);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #02c3ec 0%, #15d5ff 50%, #18e5bf 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sun-lg);
+  color: #ffffff;
+}
+
+.btn-coral, .btn-secondary {
+  background: var(--grad-sunset);
+  color: #ffffff;
+  box-shadow: var(--shadow-coral-btn);
+}
+
+.btn-coral:hover, .btn-secondary:hover {
+  background: linear-gradient(135deg, #ff7e72 0%, #ffa588 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -3px rgba(255, 111, 97, 0.55);
+  color: #ffffff;
+}
+
+.btn-outline-sea {
+  background: transparent;
+  color: var(--color-deep-ocean);
+  border: 2px solid var(--color-turquoise);
+  box-shadow: var(--shadow-sun-sm);
+}
+
+.btn-outline-sea:hover {
+  background: rgba(0, 180, 219, 0.1);
+  border-color: var(--color-cyan);
+  color: var(--color-turquoise);
+  transform: translateY(-2px);
+}
+
+.btn-sand {
+  background: var(--grad-sand);
+  color: #634305;
+  border: 1px solid var(--color-sand-border);
+  box-shadow: var(--shadow-sand-card);
+}
+
+.btn-sand:hover {
+  background: linear-gradient(135deg, #fff2d6 0%, #f5e6ca 100%);
+  transform: translateY(-2px);
+  color: #452e02;
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+.top-bar {
+  background: var(--grad-ocean);
+  color: var(--color-sand);
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 180, 219, 0.25);
+}
+
+.top-bar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.top-bar-contacts {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.top-bar-contacts a {
+  color: var(--color-sand);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.top-bar-contacts a:hover {
+  color: var(--color-cyan);
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 180, 219, 0.15);
+  box-shadow: 0 4px 20px rgba(8, 37, 62, 0.06);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo img {
+  height: 44px;
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-fluid);
+}
+
+.site-logo:hover img {
+  transform: scale(1.03);
+}
+
+.site-logo-text h1, .site-logo-text .logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.site-logo-text .logo-name span {
+  color: var(--color-turquoise);
+}
+
+.site-logo-text .logo-tagline {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-sea-green);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* Nav Menu */
+.nav-list {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-deep-ocean);
+  border-radius: 8px;
+  min-height: var(--touch-min);
+  transition: var(--transition-fluid);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-turquoise);
+  background: rgba(0, 180, 219, 0.08);
+}
+
+.nav-link i.fa-chevron-down {
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+}
+
+.nav-item:hover .nav-link i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 180, 219, 0.2);
+  border-radius: 12px;
+  padding: 0.6rem;
+  box-shadow: var(--shadow-sun-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: var(--transition-fluid);
+  z-index: 100;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  min-height: 42px;
+}
+
+.dropdown-link:hover {
+  background: var(--color-sand-warm);
+  color: var(--color-turquoise);
+  transform: translateX(4px);
+}
+
+.dropdown-link i {
+  color: var(--color-turquoise);
+  width: 16px;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-sand-warm);
+  border: 1px solid var(--color-sand-border);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .mobile-toggle {
+    display: none;
+  }
+}
+
+.mobile-toggle span {
+  display: block;
+  height: 2.5px;
+  width: 100%;
+  background: var(--color-deep-ocean);
+  border-radius: 2px;
+  transition: var(--transition-fluid);
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+  background: var(--color-turquoise);
+}
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+  background: var(--color-turquoise);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+.mobile-nav-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-deep-ocean);
+  background: var(--color-sand-warm);
+  border-radius: 12px;
+  border: 1px solid var(--color-sand-border);
+  min-height: 52px;
+  box-shadow: var(--shadow-sun-sm);
+}
+
+.mobile-nav-item:active, .mobile-nav-item:hover {
+  background: rgba(0, 180, 219, 0.12);
+  color: var(--color-turquoise);
+}
+
+/* ==========================================================================
+   SECTION 1: HERO SECTION (Cancún Coastal Energy)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1510097467424-192d713fd8b2?auto=format&fit=crop&w=1800&q=80') center center / cover no-repeat;
+  padding: 5rem 0 6rem;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(8, 37, 62, 0.88) 0%, rgba(0, 180, 219, 0.72) 65%, rgba(250, 252, 253, 0.88) 100%);
+  z-index: 1;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.hero-content {
+  color: #ffffff;
+}
+
+.hero-lead-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(250, 243, 224, 0.95);
+  border: 1px solid var(--color-sand-border);
+  border-radius: 999px;
+  color: #784d02;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.12;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title span.cyan-text {
+  color: #5ce1e6;
+  text-shadow: 0 0 20px rgba(0, 201, 255, 0.6);
+}
+
+.hero-subtitle-lead {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-sand);
+  margin-bottom: 1rem;
+}
+
+.hero-text-h4 {
+  font-size: 1.1rem;
+  color: #f1f8fc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-visual-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(0, 180, 219, 0.3);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sun-lg);
+  position: relative;
+}
+
+.hero-visual-card-img {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 260px;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sun-sm);
+}
+
+.hero-visual-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hero-visual-card:hover .hero-visual-card-img img {
+  transform: scale(1.05);
+}
+
+.hero-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  background: var(--color-sand-warm);
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-sand-border);
+}
+
+.stat-item h4 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-turquoise);
+}
+
+.stat-item p {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+/* Wave Divider */
+.wave-divider {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .wave-divider svg {
+    height: 75px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 2: METRIC CARDS / STATS (Alcance, Fuerza, Calidad)
+   ========================================================================== */
+.stats-section {
+  padding: 3.5rem 0 4.5rem;
+  background: var(--color-bg-light);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card-box {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1.5px solid var(--color-sand-border);
+  box-shadow: var(--shadow-sand-card);
+  padding: 2rem 1.75rem;
+  transition: var(--transition-fluid);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--grad-caribbean);
+  opacity: 0;
+  transition: var(--transition-fluid);
+}
+
+.stat-card-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-sun-md);
+  border-color: var(--color-turquoise);
+}
+
+.stat-card-box:hover::before {
+  opacity: 1;
+}
+
+.stat-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: var(--color-sand-warm);
+  color: var(--color-turquoise);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition-fluid);
+}
+
+.stat-card-box:hover .stat-icon {
+  background: var(--grad-caribbean);
+  color: #ffffff;
+  transform: rotate(5deg) scale(1.05);
+}
+
+.stat-card-box h5 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.6rem;
+}
+
+.stat-card-box p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECTION 3: MISIÓN & VISIÓN (Ingeniería Mexicana)
+   ========================================================================== */
+.mission-section {
+  padding: 5rem 0;
+  background: var(--grad-sand);
+  position: relative;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .mission-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.mission-tabs-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.mission-card-item {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 1.5rem 1.75rem;
+  border: 1.5px solid rgba(0, 180, 219, 0.2);
+  box-shadow: var(--shadow-sun-sm);
+  transition: var(--transition-fluid);
+}
+
+.mission-card-item:hover {
+  border-color: var(--color-turquoise);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-sun-md);
+}
+
+.mission-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.5rem;
+}
+
+.mission-card-header i {
+  color: var(--color-coral);
+}
+
+.mission-card-item p {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.mission-visual {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  height: 380px;
+  box-shadow: var(--shadow-sun-lg);
+  border: 3px solid #ffffff;
+}
+
+.mission-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mission-visual-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: rgba(8, 37, 62, 0.88);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 180, 219, 0.35);
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   SECTION 4: SERVICIOS (Descubre nuestros servicios)
+   ========================================================================== */
+.services-section {
+  padding: 5.5rem 0;
+  background: var(--color-bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1.5px solid rgba(0, 180, 219, 0.18);
+  box-shadow: var(--shadow-sun-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-fluid);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-sun-lg);
+  border-color: var(--color-turquoise);
+}
+
+.service-card-img {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-img img {
+  transform: scale(1.08);
+}
+
+.service-card-body {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-body h5 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.6rem;
+}
+
+.service-card-body p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.service-btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-turquoise);
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-height: 44px;
+}
+
+.service-btn-link:hover {
+  color: var(--color-coral);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   SECTION 5: PRODUCTOS (Nuestras categorías de producto)
+   ========================================================================== */
+.products-section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-card {
+  background: var(--color-sand-warm);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-sand-border);
+  box-shadow: var(--shadow-sand-card);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-fluid);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-sun-md);
+  border-color: var(--color-turquoise);
+  background: #ffffff;
+}
+
+.product-img-box {
+  background: radial-gradient(circle, #ffffff 60%, #f0fbfc 100%);
+  border-radius: 12px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0, 180, 219, 0.15);
+}
+
+.product-img-box img {
+  max-height: 155px;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img-box img {
+  transform: scale(1.08) translateY(-3px);
+}
+
+.product-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.product-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.product-card-action .btn {
+  width: 100%;
+}
+
+/* ==========================================================================
+   SECTION 6: ALIADOS Y CLIENTES (Ruleta / Infinite Carousel Continuo)
+   ========================================================================== */
+.partners-section {
+  padding: 5rem 0;
+  background: var(--color-bg-light);
+  border-top: 1px solid rgba(0, 180, 219, 0.15);
+  border-bottom: 1px solid rgba(0, 180, 219, 0.15);
+  overflow: hidden;
+}
+
+.partners-heading-h4 {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scrollMarquee 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-track.reverse {
+  animation: scrollMarqueeReverse 30s linear infinite;
+}
+
+.marquee-track.reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollMarqueeReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.partner-logo-badge {
+  background: #ffffff;
+  padding: 1.1rem 1.85rem;
+  border-radius: 14px;
+  border: 1.5px solid var(--color-sand-border);
+  box-shadow: 0 4px 16px rgba(0, 180, 219, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 86px;
+  width: 210px;
+  min-width: 210px;
+  flex-shrink: 0;
+  transition: var(--transition-fluid);
+}
+
+.partner-logo-badge img {
+  max-height: 52px;
+  max-width: 90%;
+  width: auto;
+  object-fit: contain;
+  filter: contrast(110%) brightness(96%);
+  opacity: 1;
+  transition: var(--transition-fluid);
+}
+
+.partner-logo-badge:hover {
+  border-color: var(--color-turquoise);
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(0, 180, 219, 0.25);
+  background: #ffffff;
+}
+
+.partner-logo-badge:hover img {
+  filter: contrast(120%) brightness(100%);
+}
+
+/* Rating 4.9 Block */
+.rating-banner-box {
+  background: var(--grad-sand);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  border: 1.5px solid var(--color-sand-border);
+  box-shadow: var(--shadow-sand-card);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.rating-score-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rating-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-deep-ocean);
+  line-height: 1;
+}
+
+.rating-stars {
+  color: #f7b731;
+  font-size: 1.25rem;
+}
+
+.rating-avatars-group {
+  display: flex;
+  align-items: center;
+}
+
+.rating-avatars-group img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2.5px solid #ffffff;
+  margin-left: -12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.rating-avatars-group img:first-child {
+  margin-left: 0;
+}
+
+/* ==========================================================================
+   SECTION 7: LO QUE NOS HACE DIFERENTES (3 Pillars)
+   ========================================================================== */
+.different-section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+}
+
+.different-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .different-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.diff-card {
+  background: var(--color-sand-warm);
+  border-radius: var(--radius-card);
+  border: 1.5px solid var(--color-sand-border);
+  box-shadow: var(--shadow-sand-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-fluid);
+}
+
+.diff-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-sun-md);
+  border-color: var(--color-turquoise);
+  background: #ffffff;
+}
+
+.diff-card-img {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.diff-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.diff-card:hover .diff-card-img img {
+  transform: scale(1.08);
+}
+
+.diff-card-body {
+  padding: 1.75rem 1.5rem;
+}
+
+.diff-card-body h6 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.6rem;
+}
+
+.diff-card-body p {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   SECTION 8: FORMULARIO (Contáctanos)
+   ========================================================================== */
+.contact-section {
+  padding: 5.5rem 0;
+  background: linear-gradient(135deg, #e8f7fa 0%, #faf3e0 100%);
+  position: relative;
+}
+
+.contact-card-box {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1.5px solid rgba(0, 180, 219, 0.25);
+  box-shadow: var(--shadow-sun-lg);
+  padding: 2.5rem 1.75rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contact-card-box {
+    padding: 3.5rem 3rem;
+  }
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-deep-ocean);
+  margin-bottom: 0.4rem;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.95rem;
+  border-radius: var(--radius-btn);
+  border: 1.5px solid rgba(0, 180, 219, 0.25);
+  background: #ffffff;
+  color: var(--color-deep-ocean);
+  transition: var(--transition-fluid);
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--color-turquoise);
+  box-shadow: 0 0 0 4px rgba(0, 180, 219, 0.18);
+}
+
+textarea.form-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  cursor: pointer;
+}
+
+.checkbox-wrap input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-turquoise);
+}
+
+/* ==========================================================================
+   SECTION 9: FOOTER & DIRECTORIO NACIONAL (5 Sucursales + Distribuidor)
+   ========================================================================== */
+.main-footer {
+  background: var(--color-deep-ocean);
+  color: #c4d7e6;
+  padding: 5rem 0 2rem;
+  position: relative;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-top-grid {
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+  }
+}
+
+.footer-brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand-title span {
+  color: var(--color-turquoise);
+}
+
+.footer-brand-desc {
+  font-size: 0.95rem;
+  color: var(--color-sand);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links-list a {
+  color: #c4d7e6;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links-list a:hover {
+  color: var(--color-cyan);
+  transform: translateX(4px);
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.social-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 180, 219, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.15rem;
+  transition: var(--transition-fluid);
+}
+
+.social-icon-btn:hover {
+  background: var(--grad-caribbean);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-cyan-btn);
+}
+
+/* Sucursales Directory Grid */
+.footer-branches-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.branches-directory-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .branches-directory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .branches-directory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.branch-office-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 180, 219, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: var(--transition-fluid);
+}
+
+.branch-office-box.featured-cancun {
+  background: rgba(245, 230, 202, 0.1);
+  border-color: var(--color-sand);
+  box-shadow: 0 4px 20px rgba(247, 208, 112, 0.2);
+}
+
+.branch-office-box:hover {
+  background: rgba(0, 180, 219, 0.12);
+  border-color: var(--color-cyan);
+  transform: translateY(-4px);
+}
+
+.branch-office-box h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.branch-office-box.featured-cancun h3 {
+  color: var(--color-sand);
+}
+
+.branch-office-box p {
+  font-size: 0.88rem;
+  color: #c4d7e6;
+  line-height: 1.6;
+}
+
+.footer-bottom-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   FLOATING BUTTONS (WhatsApp & Scroll-To-Top)
+   ========================================================================== */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  transition: var(--transition-fluid);
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+  color: #ffffff;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 990;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 180, 219, 0.35);
+  color: var(--color-turquoise);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sun-md);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fluid);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background: var(--grad-caribbean);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
