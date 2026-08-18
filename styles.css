@@ -1880,6 +1880,44 @@ button, input, select, textarea {
   }
 }
 
+/* Ruleta / Carrusel en Mobile para Aplicaciones */
+@media (max-width: 767px) {
+  .applications-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.25rem;
+    padding: 1rem 0.75rem 2rem;
+    scrollbar-width: none;
+    margin-top: 1.75rem;
+  }
+
+  .applications-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .app-card {
+    flex: 0 0 85% !important;
+    min-width: unset !important;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  .app-card-media {
+    height: 190px;
+  }
+
+  .app-card-body {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .app-card-title {
+    font-size: 1.2rem;
+  }
+}
+
 .app-card {
   background: #ffffff;
   border-radius: var(--radius-card);
@@ -1959,7 +1997,8 @@ button, input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 1.5rem;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .app-highlight-pill {
@@ -1970,23 +2009,6 @@ button, input, select, textarea {
   font-weight: 700;
   padding: 0.25rem 0.65rem;
   border-radius: 20px;
-}
-
-.app-card-actions {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: auto;
-}
-
-.app-card-actions .btn {
-  flex: 1;
-  font-size: 0.85rem;
-  padding: 0.65rem 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  white-space: nowrap;
 }
 
 /* ==========================================================================
