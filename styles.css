@@ -3281,3 +3281,273 @@ textarea.form-input {
   color: #ffffff;
   transform: translateY(-3px);
 }
+
+
+/* ==========================================================================
+   SECTION: STOCK DISPONIBLE PLANTAS DE EMERGENCIA GRUPEL
+   ========================================================================== */
+.stock-plantas-section {
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #FAFDFE 0%, #FFF7EE 50%, #FAF3E0 100%);
+  position: relative;
+  border-top: 1px solid rgba(252, 87, 1, 0.15);
+  border-bottom: 1px solid rgba(252, 87, 1, 0.15);
+}
+
+.stock-plantas-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 3rem;
+}
+
+.stock-notice-alert {
+  background: rgba(252, 87, 1, 0.1);
+  border: 1.5px solid rgba(252, 87, 1, 0.35);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #a73600;
+  font-weight: 700;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(252, 87, 1, 0.1);
+}
+
+.stock-comparison-box {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1.5px solid rgba(252, 87, 1, 0.25);
+  box-shadow: var(--shadow-sun-lg);
+  padding: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .stock-comparison-box {
+    padding: 2.75rem 2.5rem;
+  }
+}
+
+.stock-comparison-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stock-comparison-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin: 0;
+}
+
+.stock-comparison-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid var(--color-sand-border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  background: #f8fafc;
+  margin-bottom: 1.75rem;
+}
+
+.stock-comparison-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.stock-comparison-img-wrap:hover img {
+  transform: scale(1.02);
+}
+
+.stock-specs-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.stock-spec-pill {
+  background: var(--color-sand-warm);
+  border: 1px solid var(--color-sand-border);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--color-deep-ocean);
+  font-weight: 700;
+}
+
+.stock-spec-pill i {
+  color: var(--color-orange-brand);
+  font-size: 1.15rem;
+}
+
+/* Tabla de Precios y Stock */
+.stock-table-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  border: 1.5px solid rgba(252, 87, 1, 0.25);
+  box-shadow: var(--shadow-sun-lg);
+  overflow: hidden;
+}
+
+.stock-table-header-bar {
+  background: linear-gradient(135deg, #08253E 0%, #0d3b66 100%);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stock-table-header-bar h4 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+.stock-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.stock-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.stock-pricing-table th {
+  background: #f1f5f9;
+  color: var(--color-deep-ocean);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 2px solid var(--color-sand-border);
+  white-space: nowrap;
+}
+
+.stock-pricing-table td {
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: var(--color-text-dark);
+  vertical-align: middle;
+}
+
+.stock-pricing-table tr:hover td {
+  background: #fff8f2;
+}
+
+.capacity-cell {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #FC5701;
+  white-space: nowrap;
+}
+
+.model-code-tag {
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #edf2f7;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  color: #2d3748;
+  border: 1px solid #cbd5e0;
+}
+
+.stock-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.stock-badge-pill.in-stock {
+  background: rgba(37, 211, 102, 0.15);
+  color: #0d8a3d;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+}
+
+.stock-badge-pill.transit {
+  background: rgba(252, 87, 1, 0.15);
+  color: #D94600;
+  border: 1px solid rgba(252, 87, 1, 0.4);
+}
+
+.price-cell-value {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-deep-ocean);
+  white-space: nowrap;
+}
+
+.price-subtag {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  display: block;
+  font-weight: 600;
+}
+
+.btn-stock-cotizar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: var(--grad-orange);
+  color: #ffffff;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(252, 87, 1, 0.3);
+  transition: var(--transition-fluid);
+  white-space: nowrap;
+}
+
+.btn-stock-cotizar:hover {
+  background: linear-gradient(135deg, #FF6A1A 0%, #FF8D47 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(252, 87, 1, 0.45);
+  color: #ffffff;
+}
+
+/* Footer note */
+.stock-table-footer-note {
+  padding: 1.25rem 2rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
