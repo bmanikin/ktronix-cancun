@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p style="font-size: 0.85rem; margin: 0;">Nuestros ingenieros especialistas te asesoran en el dimensionamiento y levantamiento en campo.</p>
             </div>
             <div class="modal-footer-cta-actions">
-              <a href="https://wa.me/8811058875?text=${proj.waMessage}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal">
+              <a href="https://wa.me/528811058875?text=${proj.waMessage}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal">
                 <i class="fab fa-whatsapp"></i> WhatsApp Proyecto
               </a>
               <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
