@@ -596,8 +596,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productTrack.addEventListener('scroll', updateActiveDot, { passive: true });
 
-    // Autoplay ruleta
+    // Click / Touch Flip Card Interaction para Productos
+    const productFlipCards = productTrack.querySelectorAll('.product-flip-card');
+    productFlipCards.forEach(card => {
+      const front = card.querySelector('.product-card-front');
+      const closeBtn = card.querySelector('.product-flip-close');
+      const actionLinks = card.querySelectorAll('.product-back-actions a');
+
+      front?.addEventListener('click', (e) => {
+        // Cerrar otras tarjetas abiertas de productos
+        productFlipCards.forEach(c => {
+          if (c !== card) c.classList.remove('is-flipped');
+        });
+        card.classList.toggle('is-flipped');
+      });
+
+      closeBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        card.classList.remove('is-flipped');
+      });
+
+      actionLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.stopPropagation(); // Permitir clic directo en WhatsApp o Cotizar
+        });
+      });
+    });
+
+    // Autoplay ruleta de productos
     let autoplayInterval = setInterval(() => {
+      // No avanzar automáticamente si el usuario tiene una tarjeta volteada
+      const anyFlipped = productTrack.querySelector('.product-flip-card.is-flipped');
+      if (anyFlipped) return;
+
       const step = getStepWidth();
       const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
       if (productTrack.scrollLeft >= maxScroll - 20) {
@@ -611,13 +642,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumeAutoplay = () => {
       clearInterval(autoplayInterval);
       autoplayInterval = setInterval(() => {
-        const itemWidth = items[0]?.offsetWidth || 300;
-        const gap = 28;
+        const anyFlipped = productTrack.querySelector('.product-flip-card.is-flipped');
+        if (anyFlipped) return;
+
+        const step = getStepWidth();
         const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
         if (productTrack.scrollLeft >= maxScroll - 20) {
           productTrack.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
-          productTrack.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+          productTrack.scrollBy({ left: step, behavior: 'smooth' });
         }
       }, 4500);
     };
