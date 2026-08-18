@@ -522,4 +522,104 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // 7. Ruleta / Carrusel de Categorías de Producto
+  const productTrack = document.getElementById('productTrack');
+  const productPrevBtn = document.getElementById('productPrevBtn');
+  const productNextBtn = document.getElementById('productNextBtn');
+  const productDots = document.getElementById('productDots');
+
+  if (productTrack) {
+    const items = productTrack.querySelectorAll('.product-roulette-item');
+    const totalItems = items.length;
+
+    // Generar dots de paginación interactivos
+    if (productDots) {
+      productDots.innerHTML = '';
+      items.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `product-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Ir a producto ${idx + 1}`);
+        dot.addEventListener('click', () => {
+          scrollToIndex(idx);
+        });
+        productDots.appendChild(dot);
+      });
+    }
+
+    const dots = productDots ? productDots.querySelectorAll('.product-dot') : [];
+
+    const updateActiveDot = () => {
+      const scrollLeft = productTrack.scrollLeft;
+      const itemWidth = items[0]?.offsetWidth || 300;
+      const activeIdx = Math.round(scrollLeft / (itemWidth + 28)) % totalItems;
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === activeIdx);
+      });
+    };
+
+    const scrollToIndex = (idx) => {
+      const itemWidth = items[0]?.offsetWidth || 300;
+      const gap = 28;
+      productTrack.scrollTo({
+        left: idx * (itemWidth + gap),
+        behavior: 'smooth'
+      });
+    };
+
+    productNextBtn?.addEventListener('click', () => {
+      const itemWidth = items[0]?.offsetWidth || 300;
+      const gap = 28;
+      const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
+      if (productTrack.scrollLeft >= maxScroll - 10) {
+        productTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        productTrack.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+      }
+    });
+
+    productPrevBtn?.addEventListener('click', () => {
+      const itemWidth = items[0]?.offsetWidth || 300;
+      const gap = 28;
+      if (productTrack.scrollLeft <= 10) {
+        productTrack.scrollTo({ left: productTrack.scrollWidth, behavior: 'smooth' });
+      } else {
+        productTrack.scrollBy({ left: -(itemWidth + gap), behavior: 'smooth' });
+      }
+    });
+
+    productTrack.addEventListener('scroll', updateActiveDot, { passive: true });
+
+    // Autoplay ruleta
+    let autoplayInterval = setInterval(() => {
+      const itemWidth = items[0]?.offsetWidth || 300;
+      const gap = 28;
+      const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
+      if (productTrack.scrollLeft >= maxScroll - 20) {
+        productTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        productTrack.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+      }
+    }, 4500);
+
+    const pauseAutoplay = () => clearInterval(autoplayInterval);
+    const resumeAutoplay = () => {
+      clearInterval(autoplayInterval);
+      autoplayInterval = setInterval(() => {
+        const itemWidth = items[0]?.offsetWidth || 300;
+        const gap = 28;
+        const maxScroll = productTrack.scrollWidth - productTrack.clientWidth;
+        if (productTrack.scrollLeft >= maxScroll - 20) {
+          productTrack.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          productTrack.scrollBy({ left: itemWidth + gap, behavior: 'smooth' });
+        }
+      }, 4500);
+    };
+
+    productTrack.addEventListener('mouseenter', pauseAutoplay);
+    productTrack.addEventListener('mouseleave', resumeAutoplay);
+    productTrack.addEventListener('touchstart', pauseAutoplay, { passive: true });
+    productTrack.addEventListener('touchend', resumeAutoplay, { passive: true });
+  }
 });
