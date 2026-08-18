@@ -1853,7 +1853,7 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   SECTION: APLICACIONES (Sectores Industriales Oficiales)
+   SECTION: APLICACIONES (Ruleta / Carrusel Interactivo con Flip Card al Clic)
    ========================================================================== */
 .applications-section {
   padding: 5.5rem 0;
@@ -1861,97 +1861,120 @@ button, input, select, textarea {
   position: relative;
 }
 
-.applications-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 3rem;
+.app-carousel-wrapper {
+  position: relative;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0;
 }
 
-@media (min-width: 768px) {
-  .applications-grid {
-    grid-template-columns: repeat(2, 1fr);
+.app-carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 1.25rem 0.5rem 2rem;
+  scrollbar-width: none;
+}
+
+.app-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.app-roulette-item {
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: 290px;
+  scroll-snap-align: start;
+  perspective: 1200px;
+}
+
+@media (max-width: 991px) {
+  .app-roulette-item {
+    flex: 0 0 calc(50% - 0.75rem);
   }
 }
 
-@media (min-width: 1100px) {
-  .applications-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Ruleta / Carrusel en Mobile para Aplicaciones */
-@media (max-width: 767px) {
-  .applications-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    gap: 1.25rem;
-    padding: 1rem 0.75rem 2rem;
-    scrollbar-width: none;
-    margin-top: 1.75rem;
-  }
-
-  .applications-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .app-card {
-    flex: 0 0 85% !important;
-    min-width: unset !important;
+@media (max-width: 680px) {
+  .app-roulette-item {
+    flex: 0 0 85%;
+    min-width: unset;
     scroll-snap-align: center;
     scroll-snap-stop: always;
   }
-
-  .app-card-media {
-    height: 190px;
-  }
-
-  .app-card-body {
-    padding: 1.35rem 1.15rem;
-  }
-
-  .app-card-title {
-    font-size: 1.2rem;
-  }
 }
 
-.app-card {
-  background: #ffffff;
+/* 3D Flip Card Container */
+.app-flip-card {
+  width: 100%;
+  height: 480px;
+  background: transparent;
+  cursor: pointer;
   border-radius: var(--radius-card);
-  border: 1.5px solid var(--color-sand-border);
+}
+
+.app-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: var(--radius-card);
   box-shadow: var(--shadow-sand-card);
+}
+
+.app-flip-card.is-flipped .app-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Face Commons */
+.app-card-front,
+.app-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--radius-card);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: var(--transition-fluid);
-  position: relative;
 }
 
-.app-card:hover {
-  transform: translateY(-7px);
+/* FRONT FACE */
+.app-card-front {
+  background: #ffffff;
+  border: 1.5px solid var(--color-sand-border);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-flip-card:hover .app-card-front {
   border-color: var(--color-turquoise);
   box-shadow: 0 16px 36px rgba(0, 180, 219, 0.18);
 }
 
-.app-card-media {
-  height: 210px;
+.app-front-media {
+  height: 380px;
   position: relative;
   overflow: hidden;
-  background: #08253E;
+  background: radial-gradient(circle at 50% 40%, #edf8fc 0%, #f8fafc 85%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
-.app-card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+.app-front-media img {
+  max-width: 92%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.16));
+  transition: transform 0.5s ease;
 }
 
-.app-card:hover .app-card-media img {
-  transform: scale(1.08);
+.app-flip-card:hover .app-front-media img {
+  transform: scale(1.08) translateY(-4px);
 }
 
 .app-number-badge {
@@ -1969,46 +1992,239 @@ button, input, select, textarea {
   letter-spacing: 0.5px;
 }
 
-.app-card-body {
-  padding: 1.75rem 1.5rem;
+.app-tap-indicator {
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.85rem;
+  background: rgba(16, 42, 67, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.app-card-title {
+.app-flip-card:hover .app-tap-indicator {
+  background: var(--color-turquoise);
+  transform: scale(1.05);
+}
+
+.app-front-footer {
+  padding: 1.15rem 1.35rem;
+  background: #ffffff;
+  border-top: 1.5px solid var(--color-sand-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.app-front-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.btn-app-reveal {
+  background: rgba(0, 180, 219, 0.12);
+  color: var(--color-turquoise);
+  border: 1px solid rgba(0, 180, 219, 0.3);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-app-reveal:hover {
+  background: var(--color-turquoise);
+  color: #ffffff;
+}
+
+/* BACK FACE */
+.app-card-back {
+  background: linear-gradient(145deg, #0b253e 0%, #102a43 60%, #0d3859 100%);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  padding: 1.75rem 1.6rem;
+  border: 1.5px solid rgba(0, 180, 219, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.app-back-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.app-number-badge.small {
+  position: static;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.95rem;
+}
+
+.app-flip-close {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.3s ease;
+}
+
+.app-flip-close:hover {
+  background: rgba(255, 75, 75, 0.85);
+  border-color: rgba(255, 75, 75, 0.85);
+}
+
+.app-back-title {
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--color-deep-ocean);
+  color: #56CCF2;
   margin-bottom: 0.75rem;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
-.app-card-desc {
-  font-size: 0.92rem;
-  color: #334e68;
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
+.app-back-desc {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  line-height: 1.55;
+  margin-bottom: 1.15rem;
   flex-grow: 1;
 }
 
-.app-highlights-tags {
+.app-card-back .app-highlights-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-top: auto;
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
 }
 
-.app-highlight-pill {
-  background: #f0f7fa;
-  border: 1px solid #d2e6ef;
-  color: #0b2e4c;
-  font-size: 0.78rem;
+.app-card-back .app-highlight-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-size: 0.76rem;
   font-weight: 700;
-  padding: 0.25rem 0.65rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 20px;
+}
+
+.app-back-cta {
+  margin-top: auto;
+}
+
+/* Nav Buttons & Dots for App Carousel */
+.app-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid var(--color-sand-border);
+  color: var(--color-deep-ocean);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.app-carousel-nav:hover {
+  background: var(--color-turquoise);
+  color: #ffffff;
+  border-color: var(--color-turquoise);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.app-carousel-nav.prev {
+  left: 0px;
+}
+
+.app-carousel-nav.next {
+  right: 0px;
+}
+
+@media (min-width: 1200px) {
+  .app-carousel-nav.prev {
+    left: -22px;
+  }
+  .app-carousel-nav.next {
+    right: -22px;
+  }
+}
+
+@media (max-width: 680px) {
+  .app-carousel-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .app-carousel-nav.prev {
+    left: -5px;
+  }
+  .app-carousel-nav.next {
+    right: -5px;
+  }
+  .app-flip-card {
+    height: 470px;
+  }
+  .app-front-media {
+    height: 350px;
+  }
+}
+
+.app-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.app-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.app-dot.active {
+  background: var(--color-turquoise);
+  width: 24px;
+  border-radius: 12px;
 }
 
 /* ==========================================================================

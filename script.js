@@ -627,4 +627,142 @@ document.addEventListener('DOMContentLoaded', () => {
     productTrack.addEventListener('touchstart', pauseAutoplay, { passive: true });
     productTrack.addEventListener('touchend', resumeAutoplay, { passive: true });
   }
+
+  // ==========================================
+  // RULETA Y FLIP INTERACTIVO DE APLICACIONES
+  // ==========================================
+  const appTrack = document.getElementById('appTrack');
+  const appPrevBtn = document.getElementById('appPrevBtn');
+  const appNextBtn = document.getElementById('appNextBtn');
+  const appDots = document.getElementById('appDots');
+
+  if (appTrack) {
+    const appItems = appTrack.querySelectorAll('.app-roulette-item');
+    const totalApps = appItems.length;
+
+    // Generar dots de paginación interactivos
+    if (appDots) {
+      appDots.innerHTML = '';
+      appItems.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `app-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Ir a aplicación ${idx + 1}`);
+        dot.addEventListener('click', () => {
+          scrollAppToIndex(idx);
+        });
+        appDots.appendChild(dot);
+      });
+    }
+
+    const aDots = appDots ? appDots.querySelectorAll('.app-dot') : [];
+
+    const getAppStepWidth = () => {
+      if (!appItems[0]) return 320;
+      if (appItems.length > 1) {
+        const step = appItems[1].offsetLeft - appItems[0].offsetLeft;
+        if (step > 0) return step;
+      }
+      return appItems[0].offsetWidth + 24;
+    };
+
+    const updateActiveAppDot = () => {
+      const scrollLeft = appTrack.scrollLeft;
+      const step = getAppStepWidth();
+      const activeIdx = Math.round(scrollLeft / step) % totalApps;
+      aDots.forEach((d, i) => {
+        d.classList.toggle('active', i === activeIdx);
+      });
+    };
+
+    const scrollAppToIndex = (idx) => {
+      const step = getAppStepWidth();
+      appTrack.scrollTo({
+        left: idx * step,
+        behavior: 'smooth'
+      });
+    };
+
+    appNextBtn?.addEventListener('click', () => {
+      const step = getAppStepWidth();
+      const maxScroll = appTrack.scrollWidth - appTrack.clientWidth;
+      if (appTrack.scrollLeft >= maxScroll - 15) {
+        appTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        appTrack.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    });
+
+    appPrevBtn?.addEventListener('click', () => {
+      const step = getAppStepWidth();
+      if (appTrack.scrollLeft <= 15) {
+        appTrack.scrollTo({ left: appTrack.scrollWidth, behavior: 'smooth' });
+      } else {
+        appTrack.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    });
+
+    appTrack.addEventListener('scroll', updateActiveAppDot, { passive: true });
+
+    // Click / Touch Flip Card Interaction
+    const flipCards = appTrack.querySelectorAll('.app-flip-card');
+    flipCards.forEach(card => {
+      const front = card.querySelector('.app-card-front');
+      const closeBtn = card.querySelector('.app-flip-close');
+      const ctaBtn = card.querySelector('.btn-product-whatsapp');
+
+      front?.addEventListener('click', (e) => {
+        // Cerrar otras tarjetas abiertas
+        flipCards.forEach(c => {
+          if (c !== card) c.classList.remove('is-flipped');
+        });
+        card.classList.toggle('is-flipped');
+      });
+
+      closeBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        card.classList.remove('is-flipped');
+      });
+
+      ctaBtn?.addEventListener('click', (e) => {
+        e.stopPropagation(); // Permitir clic directo en el enlace de WhatsApp
+      });
+    });
+
+    // Autoplay ruleta de aplicaciones
+    let appAutoplay = setInterval(() => {
+      // No avanzar automáticamente si el usuario tiene una tarjeta volteada
+      const anyFlipped = appTrack.querySelector('.app-flip-card.is-flipped');
+      if (anyFlipped) return;
+
+      const step = getAppStepWidth();
+      const maxScroll = appTrack.scrollWidth - appTrack.clientWidth;
+      if (appTrack.scrollLeft >= maxScroll - 20) {
+        appTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        appTrack.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 5000);
+
+    const pauseAppAutoplay = () => clearInterval(appAutoplay);
+    const resumeAppAutoplay = () => {
+      clearInterval(appAutoplay);
+      appAutoplay = setInterval(() => {
+        const anyFlipped = appTrack.querySelector('.app-flip-card.is-flipped');
+        if (anyFlipped) return;
+
+        const step = getAppStepWidth();
+        const maxScroll = appTrack.scrollWidth - appTrack.clientWidth;
+        if (appTrack.scrollLeft >= maxScroll - 20) {
+          appTrack.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          appTrack.scrollBy({ left: step, behavior: 'smooth' });
+        }
+      }, 5000);
+    };
+
+    appTrack.addEventListener('mouseenter', pauseAppAutoplay);
+    appTrack.addEventListener('mouseleave', resumeAppAutoplay);
+    appTrack.addEventListener('touchstart', pauseAppAutoplay, { passive: true });
+    appTrack.addEventListener('touchend', resumeAppAutoplay, { passive: true });
+  }
 });

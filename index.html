@@ -932,7 +932,7 @@
     </div>
   </section>
 
-  <!-- SECTION: APLICACIONES (Sectores Industriales Oficiales hasta Industria Automotriz) -->
+    <!-- SECTION: APLICACIONES (Ruleta / Carrusel Interactivo con Info al Clic) -->
   <section id="aplicaciones" class="applications-section">
     <div class="container">
       <div class="section-header text-center">
@@ -941,124 +941,290 @@
         </div>
         <h2 class="section-title">Nuestras <span class="sea-glow">Aplicaciones</span> Industriales</h2>
         <p class="section-subtitle">
-          Ingeniería de potencia y respaldo ininterrumpible diseñado para los entornos más exigentes y de misión crítica de México.
+          Ingeniería de potencia y respaldo ininterrumpible para los sectores más exigentes de México. <em>(Toca cualquier imagen para ver su información y equipamiento recomendado)</em>.
         </p>
       </div>
 
-      <div class="applications-grid">
+      <!-- Carousel Container / Ruleta de Aplicaciones -->
+      <div class="app-carousel-wrapper">
+        <!-- Navigation Buttons -->
+        <button type="button" class="app-carousel-nav prev" id="appPrevBtn" aria-label="Aplicación anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button type="button" class="app-carousel-nav next" id="appNextBtn" aria-label="Aplicación siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Track -->
+        <div class="app-carousel-track" id="appTrack">
+
         <!-- 01. Oil & Gas -->
-        <div class="app-card">
-          <div class="app-card-media">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_3lt3033lt3033lt3.png" alt="Oil & Gas" loading="lazy">
-            <span class="app-number-badge">01</span>
-          </div>
-          <div class="app-card-body">
-            <h3 class="app-card-title">Oil & Gas</h3>
-            <p class="app-card-desc">
-              Respaldo y protección para plataformas costa afuera, refinerías, estaciones de bombeo y plantas petroquímicas. Rectificadores industriales de alta confiabilidad y bancos de baterías Ni-Cd.
-            </p>
-            <div class="app-highlights-tags">
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Rectificadores DC</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Bancos Ni-Cd</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Misión Crítica</span>
-            </div>
-            </div>
-          </div>
+        <div class="app-roulette-item">
+          <div class="app-flip-card" data-app="01">
+            <div class="app-flip-inner">
+              <!-- Front Face (Visual + Título + Hint) -->
+              <div class="app-card-front" title="Toca o haz clic para ver información">
+                <div class="app-front-media">
+                  <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_3lt3033lt3033lt3.png" alt="Oil & Gas" loading="lazy">
+                  <span class="app-number-badge">01</span>
+                  <div class="app-tap-indicator">
+                    <i class="fas fa-hand-pointer"></i> <span>Toca para ver info</span>
+                  </div>
+                </div>
+                <div class="app-front-footer">
+                  <h3 class="app-front-title">Oil & Gas</h3>
+                  <button type="button" class="btn-app-reveal" aria-label="Ver información de Oil & Gas">
+                    <i class="fas fa-info-circle"></i> Info
+                  </button>
+                </div>
+              </div>
 
-        <!-- 02. Data Center -->
-        <div class="app-card">
-          <div class="app-card-media">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_krd6i1krd6i1krd6.png" alt="Data Center" loading="lazy">
-            <span class="app-number-badge">02</span>
-          </div>
-          <div class="app-card-body">
-            <h3 class="app-card-title">Data center</h3>
-            <p class="app-card-desc">
-              Disponibilidad 99.999% y cumplimiento de estándares Tier III / Tier IV. Sistemas UPS modulares redundantes N+1, acondicionadores de línea y supresores de transientes TVSS para servidores e IT.
-            </p>
-            <div class="app-highlights-tags">
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> UPS Modular N+1</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Tier III / IV</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Supresores TVSS</span>
+              <!-- Back Face (Información Técnica Detallada) -->
+              <div class="app-card-back">
+                <div class="app-back-top">
+                  <span class="app-number-badge small">01</span>
+                  <button type="button" class="app-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                </div>
+                <h4 class="app-back-title">Oil & Gas</h4>
+                <p class="app-back-desc">Respaldo y protección para plataformas costa afuera, refinerías, estaciones de bombeo y plantas petroquímicas. Rectificadores industriales de alta confiabilidad y bancos de baterías Ni-Cd.</p>
+                <div class="app-highlights-tags">
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Rectificadores DC</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Bancos Ni-Cd</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Misión Crítica</span>
+                </div>
+                <div class="app-back-cta">
+                  <a href="https://wa.me/8811058875?text=Hola,%20deseo%20cotizar%20soluciones%20para%20el%20sector%20Oil%20%26%20Gas%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-product-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem;">
+                    <i class="fab fa-whatsapp"></i> Cotizar Sector
+                  </a>
+                </div>
+              </div>
             </div>
-            </div>
           </div>
+        </div>
 
-        <!-- 03. Generación Eléctrica -->
-        <div class="app-card">
-          <div class="app-card-media">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_7a1cew7a1cew7a1c.png" alt="Generación eléctrica" loading="lazy">
-            <span class="app-number-badge">03</span>
-          </div>
-          <div class="app-card-body">
-            <h3 class="app-card-title">Generación eléctrica</h3>
-            <p class="app-card-desc">
-              Centrales hidroeléctricas, termoeléctricas, parques solares y subestaciones de transmisión CFE. Plantas de emergencia continuas, bancos de baterías de ciclo profundo y tableros de control.
-            </p>
-            <div class="app-highlights-tags">
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Subestaciones CFE</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Plantas Continuas</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Media y Alta Tensión</span>
+        <!-- 02. Data center -->
+        <div class="app-roulette-item">
+          <div class="app-flip-card" data-app="02">
+            <div class="app-flip-inner">
+              <!-- Front Face (Visual + Título + Hint) -->
+              <div class="app-card-front" title="Toca o haz clic para ver información">
+                <div class="app-front-media">
+                  <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_krd6i1krd6i1krd6.png" alt="Data center" loading="lazy">
+                  <span class="app-number-badge">02</span>
+                  <div class="app-tap-indicator">
+                    <i class="fas fa-hand-pointer"></i> <span>Toca para ver info</span>
+                  </div>
+                </div>
+                <div class="app-front-footer">
+                  <h3 class="app-front-title">Data center</h3>
+                  <button type="button" class="btn-app-reveal" aria-label="Ver información de Data center">
+                    <i class="fas fa-info-circle"></i> Info
+                  </button>
+                </div>
+              </div>
+
+              <!-- Back Face (Información Técnica Detallada) -->
+              <div class="app-card-back">
+                <div class="app-back-top">
+                  <span class="app-number-badge small">02</span>
+                  <button type="button" class="app-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                </div>
+                <h4 class="app-back-title">Data center</h4>
+                <p class="app-back-desc">Disponibilidad 99.999% y cumplimiento de estándares Tier III / Tier IV. Sistemas UPS modulares redundantes N+1, acondicionadores de línea y supresores de transientes TVSS para servidores e IT.</p>
+                <div class="app-highlights-tags">
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> UPS Modular N+1</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Tier III / IV</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Supresores TVSS</span>
+                </div>
+                <div class="app-back-cta">
+                  <a href="https://wa.me/8811058875?text=Hola,%20deseo%20cotizar%20soluciones%20para%20Data%20Centers%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-product-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem;">
+                    <i class="fab fa-whatsapp"></i> Cotizar Sector
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <!-- 03. Generación eléctrica -->
+        <div class="app-roulette-item">
+          <div class="app-flip-card" data-app="03">
+            <div class="app-flip-inner">
+              <!-- Front Face (Visual + Título + Hint) -->
+              <div class="app-card-front" title="Toca o haz clic para ver información">
+                <div class="app-front-media">
+                  <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_7a1cew7a1cew7a1c.png" alt="Generación eléctrica" loading="lazy">
+                  <span class="app-number-badge">03</span>
+                  <div class="app-tap-indicator">
+                    <i class="fas fa-hand-pointer"></i> <span>Toca para ver info</span>
+                  </div>
+                </div>
+                <div class="app-front-footer">
+                  <h3 class="app-front-title">Generación eléctrica</h3>
+                  <button type="button" class="btn-app-reveal" aria-label="Ver información de Generación eléctrica">
+                    <i class="fas fa-info-circle"></i> Info
+                  </button>
+                </div>
+              </div>
+
+              <!-- Back Face (Información Técnica Detallada) -->
+              <div class="app-card-back">
+                <div class="app-back-top">
+                  <span class="app-number-badge small">03</span>
+                  <button type="button" class="app-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                </div>
+                <h4 class="app-back-title">Generación eléctrica</h4>
+                <p class="app-back-desc">Centrales hidroeléctricas, termoeléctricas, parques solares y subestaciones de transmisión CFE. Plantas de emergencia continuas, bancos de baterías de ciclo profundo y tableros de control.</p>
+                <div class="app-highlights-tags">
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Subestaciones CFE</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Plantas Continuas</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Media y Alta Tensión</span>
+                </div>
+                <div class="app-back-cta">
+                  <a href="https://wa.me/8811058875?text=Hola,%20deseo%20cotizar%20soluciones%20para%20Generaci%C3%B3n%20El%C3%A9ctrica%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-product-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem;">
+                    <i class="fab fa-whatsapp"></i> Cotizar Sector
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
         <!-- 04. Ferroviario -->
-        <div class="app-card">
-          <div class="app-card-media">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_e2jiare2jiare2ji.png" alt="Ferroviario" loading="lazy">
-            <span class="app-number-badge">04</span>
-          </div>
-          <div class="app-card-body">
-            <h3 class="app-card-title">Ferroviario</h3>
-            <p class="app-card-desc">
-              Infraestructura ferroviaria de pasajeros y carga, catenaria de cobre electrolítico de alta pureza, centros de control de tráfico y subestaciones de tracción para proyectos estratégicos como el Tren Maya.
-            </p>
-            <div class="app-highlights-tags">
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cable de Catenaria</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Tracción Eléctrica</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Control & Señalización</span>
+        <div class="app-roulette-item">
+          <div class="app-flip-card" data-app="04">
+            <div class="app-flip-inner">
+              <!-- Front Face (Visual + Título + Hint) -->
+              <div class="app-card-front" title="Toca o haz clic para ver información">
+                <div class="app-front-media">
+                  <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_e2jiare2jiare2ji.png" alt="Ferroviario" loading="lazy">
+                  <span class="app-number-badge">04</span>
+                  <div class="app-tap-indicator">
+                    <i class="fas fa-hand-pointer"></i> <span>Toca para ver info</span>
+                  </div>
+                </div>
+                <div class="app-front-footer">
+                  <h3 class="app-front-title">Ferroviario</h3>
+                  <button type="button" class="btn-app-reveal" aria-label="Ver información de Ferroviario">
+                    <i class="fas fa-info-circle"></i> Info
+                  </button>
+                </div>
+              </div>
+
+              <!-- Back Face (Información Técnica Detallada) -->
+              <div class="app-card-back">
+                <div class="app-back-top">
+                  <span class="app-number-badge small">04</span>
+                  <button type="button" class="app-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                </div>
+                <h4 class="app-back-title">Ferroviario</h4>
+                <p class="app-back-desc">Infraestructura ferroviaria de pasajeros y carga, catenaria de cobre electrolítico de alta pureza, centros de control de tráfico y subestaciones de tracción para proyectos estratégicos como el Tren Maya.</p>
+                <div class="app-highlights-tags">
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cable de Catenaria</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Tracción Eléctrica</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Control & Señalización</span>
+                </div>
+                <div class="app-back-cta">
+                  <a href="https://wa.me/8811058875?text=Hola,%20deseo%20cotizar%20soluciones%20para%20el%20Sector%20Ferroviario%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-product-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem;">
+                    <i class="fab fa-whatsapp"></i> Cotizar Sector
+                  </a>
+                </div>
+              </div>
             </div>
-            </div>
           </div>
+        </div>
 
         <!-- 05. Salud -->
-        <div class="app-card">
-          <div class="app-card-media">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_k8ttlwk8ttlwk8tt.png" alt="Salud" loading="lazy">
-            <span class="app-number-badge">05</span>
-          </div>
-          <div class="app-card-body">
-            <h3 class="app-card-title">Salud</h3>
-            <p class="app-card-desc">
-              Hospitales, centros quirúrgicos, áreas de terapia intensiva y bancos de sangre. Soluciones Cero Cortes con transferencia ultrarrápida (menor a 4ms) y aislamiento galvánico para protección de vidas.
-            </p>
-            <div class="app-highlights-tags">
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cero Cortes (&lt;4ms)</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Grado Médico</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Quirófanos & UCI</span>
+        <div class="app-roulette-item">
+          <div class="app-flip-card" data-app="05">
+            <div class="app-flip-inner">
+              <!-- Front Face (Visual + Título + Hint) -->
+              <div class="app-card-front" title="Toca o haz clic para ver información">
+                <div class="app-front-media">
+                  <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_k8ttlwk8ttlwk8tt.png" alt="Salud" loading="lazy">
+                  <span class="app-number-badge">05</span>
+                  <div class="app-tap-indicator">
+                    <i class="fas fa-hand-pointer"></i> <span>Toca para ver info</span>
+                  </div>
+                </div>
+                <div class="app-front-footer">
+                  <h3 class="app-front-title">Salud</h3>
+                  <button type="button" class="btn-app-reveal" aria-label="Ver información de Salud">
+                    <i class="fas fa-info-circle"></i> Info
+                  </button>
+                </div>
+              </div>
+
+              <!-- Back Face (Información Técnica Detallada) -->
+              <div class="app-card-back">
+                <div class="app-back-top">
+                  <span class="app-number-badge small">05</span>
+                  <button type="button" class="app-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                </div>
+                <h4 class="app-back-title">Salud</h4>
+                <p class="app-back-desc">Hospitales, centros quirúrgicos, áreas de terapia intensiva y bancos de sangre. Soluciones Cero Cortes con transferencia ultrarrápida (menor a 4ms) y aislamiento galvánico para protección de vidas.</p>
+                <div class="app-highlights-tags">
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cero Cortes (<4ms)</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Grado Médico</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Quirófanos & UCI</span>
+                </div>
+                <div class="app-back-cta">
+                  <a href="https://wa.me/8811058875?text=Hola,%20deseo%20cotizar%20soluciones%20para%20el%20Sector%20Salud%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-product-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem;">
+                    <i class="fab fa-whatsapp"></i> Cotizar Sector
+                  </a>
+                </div>
+              </div>
             </div>
-            </div>
           </div>
+        </div>
 
         <!-- 06. Industria Automotriz -->
-        <div class="app-card">
-          <div class="app-card-media">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_hapulehapulehapu.png" alt="Industria Automotriz" loading="lazy">
-            <span class="app-number-badge">06</span>
-          </div>
-          <div class="app-card-body">
-            <h3 class="app-card-title">Industria Automotriz</h3>
-            <p class="app-card-desc">
-              Líneas de ensamble robotizadas, prensas de estampado y plantas de autopartes. Estabilización de voltaje industrial, UPS trifásicos y plantas de emergencia de hasta 1,000 kVA para manufactura continua.
-            </p>
-            <div class="app-highlights-tags">
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Robótica Industrial</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Plantas 1,000 kVA</span>
-              <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Estabilización Dinámica</span>
+        <div class="app-roulette-item">
+          <div class="app-flip-card" data-app="06">
+            <div class="app-flip-inner">
+              <!-- Front Face (Visual + Título + Hint) -->
+              <div class="app-card-front" title="Toca o haz clic para ver información">
+                <div class="app-front-media">
+                  <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Gemini_Generated_Image_hapulehapulehapu.png" alt="Industria Automotriz" loading="lazy">
+                  <span class="app-number-badge">06</span>
+                  <div class="app-tap-indicator">
+                    <i class="fas fa-hand-pointer"></i> <span>Toca para ver info</span>
+                  </div>
+                </div>
+                <div class="app-front-footer">
+                  <h3 class="app-front-title">Industria Automotriz</h3>
+                  <button type="button" class="btn-app-reveal" aria-label="Ver información de Industria Automotriz">
+                    <i class="fas fa-info-circle"></i> Info
+                  </button>
+                </div>
+              </div>
+
+              <!-- Back Face (Información Técnica Detallada) -->
+              <div class="app-card-back">
+                <div class="app-back-top">
+                  <span class="app-number-badge small">06</span>
+                  <button type="button" class="app-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                </div>
+                <h4 class="app-back-title">Industria Automotriz</h4>
+                <p class="app-back-desc">Líneas de ensamble robotizadas, prensas de estampado y plantas de autopartes. Estabilización de voltaje industrial, UPS trifásicos y plantas de emergencia de hasta 1,000 kVA para manufactura continua.</p>
+                <div class="app-highlights-tags">
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Robótica Industrial</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Plantas 1,000 kVA</span>
+                  <span class="app-highlight-pill"><i class="fas fa-check text-turquoise"></i> Estabilización Dinámica</span>
+                </div>
+                <div class="app-back-cta">
+                  <a href="https://wa.me/8811058875?text=Hola,%20deseo%20cotizar%20soluciones%20para%20la%20Industria%20Automotriz%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-product-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem;">
+                    <i class="fab fa-whatsapp"></i> Cotizar Sector
+                  </a>
+                </div>
+              </div>
             </div>
-            </div>
           </div>
+        </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="app-carousel-dots" id="appDots"></div>
       </div>
     </div>
   </section>
