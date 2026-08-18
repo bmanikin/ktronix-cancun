@@ -1668,8 +1668,41 @@ button, input, select, textarea {
   flex-grow: 1;
 }
 
+.product-card-action {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  align-items: center;
+}
+
 .product-card-action .btn {
-  width: 100%;
+  flex: 1;
+  padding: 0.6rem 0.4rem;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.btn-product-whatsapp {
+  background: #25D366;
+  color: #ffffff !important;
+  border: 1.5px solid #20ba5a;
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  transition: var(--transition-fluid);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+}
+
+.btn-product-whatsapp:hover {
+  background: #1eb857;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
