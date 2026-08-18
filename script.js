@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje Enviado con Éxito!';
-        submitBtn.style.background = 'linear-gradient(135deg, #00C9A7 0%, #00B4DB 100%)';
+        submitBtn.style.background = 'linear-gradient(135deg, #FFA048 0%, #FC5701 100%)';
         
         // Notificación flotante estilo Cancún
         const toast = document.createElement('div');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.style.padding = '1.1rem 1.6rem';
         toast.style.borderRadius = '12px';
         toast.style.boxShadow = '0 12px 30px rgba(0, 180, 219, 0.45)';
-        toast.style.border = '1.5px solid #00B4DB';
+        toast.style.border = '1.5px solid #FC5701';
         toast.style.zIndex = '10000';
         toast.style.display = 'flex';
         toast.style.alignItems = 'center';
