@@ -1338,15 +1338,17 @@
         </div>
       </div>
 
-      <!-- Tabla Oficial de Precios y Disponibilidad de Stock -->
+            <!-- Tabla Oficial de Precios y Disponibilidad de Stock -->
       <div class="stock-table-card">
         <div class="stock-table-header-bar">
           <div>
-            <h4>📋 Tabla de Precios de Lista (MXN) y Stock Disponible</h4>
-            <span style="font-size: 0.85rem; color: rgba(255,255,255,0.8);">Grupel - Calidad Europea con Soporte e Ingeniería K-tronix</span>
+            <h4>📋 Tabla Interactiva de Stock y Configuración en Vivo</h4>
+            <span style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">
+              Selecciona tu voltaje y modalidad ATS en cada fila; el precio y el mensaje de cotización se adaptan al instante.
+            </span>
           </div>
-          <button type="button" class="btn btn-primary btn-sm open-plantas-cfg" style="background: #25D366; border-color: #25D366; cursor: pointer;">
-            <i class="fab fa-whatsapp"></i> Cotizar y Configurar
+          <button type="button" class="btn btn-primary btn-sm open-plantas-cfg" style="background: var(--grad-orange); border: none; cursor: pointer;">
+            <i class="fas fa-sliders-h"></i> Abrir Configurador Avanzado
           </button>
         </div>
 
@@ -1356,155 +1358,209 @@
               <tr>
                 <th>Capacidad (Stand by)</th>
                 <th>Modelo Grupel</th>
-                <th>Voltaje <small style="display: block; font-size: 0.72rem; font-weight: 700; color: #FC5701;"><i class="fas fa-sliders-h"></i> Modificable</small></th>
+                <th>Voltaje Requerido</th>
+                <th>Modalidad ATS</th>
                 <th>Disponibilidad</th>
-                <th>Precio Con ATS <small style="display: block; font-size: 0.72rem; font-weight: 700; color: #0d8a3d;"><i class="fas fa-bolt"></i> 100% Automático</small></th>
-                <th>Precio Sin ATS <small style="display: block; font-size: 0.72rem; font-weight: 700; color: #4b6b85;"><i class="fas fa-hand-paper"></i> Manual / Sin Tablero</small></th>
-                <th style="text-align: center;">Acción</th>
+                <th>Precio de Lista (MXN)</th>
+                <th style="text-align: center;">Cotizar Configuración</th>
               </tr>
             </thead>
             <tbody>
               <!-- 1. 25 kW -->
-              <tr>
+              <tr class="generator-row" data-kw="25" data-model="G0025GRGRGCA8T2200S" data-ats-price="161704.19" data-sin-price="157176.10" data-stock="6 en Stock">
                 <td class="capacity-cell">25 kW</td>
                 <td><span class="model-code-tag">G0025GRGRGCA8T2200S</span></td>
                 <td>
-                  <strong style="color: var(--color-deep-ocean);">220 VCA</strong>
-                  <span style="display: block; font-size: 0.73rem; color: #a73600; font-weight: 700; background: rgba(252, 87, 1, 0.1); padding: 0.15rem 0.45rem; border-radius: 4px; margin-top: 0.2rem; white-space: nowrap;">
-                    <i class="fas fa-sliders-h"></i> Adaptable a necesidad
-                  </span>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 25 kW">
+                    <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
+                    <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
+                    <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
+                    <option value="127/220 VCA">127/220 VCA</option>
+                    <option value="Otro voltaje específico">Otro voltaje...</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 25 kW">
+                    <option value="con" selected>🟢 Con ATS (Automático)</option>
+                    <option value="sin">🔵 Sin ATS (Manual)</option>
+                  </select>
                 </td>
                 <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> 6 en Stock</span></td>
                 <td>
-                  <span class="price-cell-value">$161,704.19</span>
-                  <span class="price-subtag">MXN + IVA</span>
-                </td>
-                <td>
-                  <span class="price-cell-value">$157,176.10</span>
-                  <span class="price-subtag">MXN + IVA</span>
+                  <div class="row-price-wrap">
+                    <span class="row-price-val">$161,704.19</span>
+                    <span class="price-subtag">MXN + IVA</span>
+                  </div>
                 </td>
                 <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="25" data-ats="con" aria-label="Cotizar Planta 25 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
+                  <button type="button" class="btn-stock-cotizar-direct">
+                    <i class="fab fa-whatsapp"></i> Cotizar
+                  </button>
                 </td>
               </tr>
 
               <!-- 2. 39 kW -->
-              <tr>
+              <tr class="generator-row" data-kw="39" data-model="G0039GRGRGCA8T2200S" data-ats-price="194490.60" data-sin-price="181032.31" data-stock="5 en Stock">
                 <td class="capacity-cell">39 kW</td>
                 <td><span class="model-code-tag">G0039GRGRGCA8T2200S</span></td>
                 <td>
-                  <strong style="color: var(--color-deep-ocean);">220 VCA</strong>
-                  <span style="display: block; font-size: 0.73rem; color: #a73600; font-weight: 700; background: rgba(252, 87, 1, 0.1); padding: 0.15rem 0.45rem; border-radius: 4px; margin-top: 0.2rem; white-space: nowrap;">
-                    <i class="fas fa-sliders-h"></i> Adaptable a necesidad
-                  </span>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 39 kW">
+                    <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
+                    <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
+                    <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
+                    <option value="127/220 VCA">127/220 VCA</option>
+                    <option value="Otro voltaje específico">Otro voltaje...</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 39 kW">
+                    <option value="con" selected>🟢 Con ATS (Automático)</option>
+                    <option value="sin">🔵 Sin ATS (Manual)</option>
+                  </select>
                 </td>
                 <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> 5 en Stock</span></td>
                 <td>
-                  <span class="price-cell-value">$194,490.60</span>
-                  <span class="price-subtag">MXN + IVA</span>
-                </td>
-                <td>
-                  <span class="price-cell-value">$181,032.31</span>
-                  <span class="price-subtag">MXN + IVA</span>
+                  <div class="row-price-wrap">
+                    <span class="row-price-val">$194,490.60</span>
+                    <span class="price-subtag">MXN + IVA</span>
+                  </div>
                 </td>
                 <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="39" data-ats="con" aria-label="Cotizar Planta 39 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
+                  <button type="button" class="btn-stock-cotizar-direct">
+                    <i class="fab fa-whatsapp"></i> Cotizar
+                  </button>
                 </td>
               </tr>
 
               <!-- 3. 76 kW -->
-              <tr>
+              <tr class="generator-row" data-kw="76" data-model="G0076GRGRCA8T2200S" data-ats-price="312194.36" data-sin-price="289059.15" data-stock="3 en Stock">
                 <td class="capacity-cell">76 kW</td>
                 <td><span class="model-code-tag">G0076GRGRCA8T2200S</span></td>
                 <td>
-                  <strong style="color: var(--color-deep-ocean);">220 VCA</strong>
-                  <span style="display: block; font-size: 0.73rem; color: #a73600; font-weight: 700; background: rgba(252, 87, 1, 0.1); padding: 0.15rem 0.45rem; border-radius: 4px; margin-top: 0.2rem; white-space: nowrap;">
-                    <i class="fas fa-sliders-h"></i> Adaptable a necesidad
-                  </span>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 76 kW">
+                    <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
+                    <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
+                    <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
+                    <option value="127/220 VCA">127/220 VCA</option>
+                    <option value="Otro voltaje específico">Otro voltaje...</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 76 kW">
+                    <option value="con" selected>🟢 Con ATS (Automático)</option>
+                    <option value="sin">🔵 Sin ATS (Manual)</option>
+                  </select>
                 </td>
                 <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> 3 en Stock</span></td>
                 <td>
-                  <span class="price-cell-value">$312,194.36</span>
-                  <span class="price-subtag">MXN + IVA</span>
-                </td>
-                <td>
-                  <span class="price-cell-value">$289,059.15</span>
-                  <span class="price-subtag">MXN + IVA</span>
+                  <div class="row-price-wrap">
+                    <span class="row-price-val">$312,194.36</span>
+                    <span class="price-subtag">MXN + IVA</span>
+                  </div>
                 </td>
                 <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="76" data-ats="con" aria-label="Cotizar Planta 76 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
+                  <button type="button" class="btn-stock-cotizar-direct">
+                    <i class="fab fa-whatsapp"></i> Cotizar
+                  </button>
                 </td>
               </tr>
 
               <!-- 4. 113 kW -->
-              <tr>
+              <tr class="generator-row" data-kw="113" data-model="G0113GRGRCA8T2200S" data-ats-price="368743.80" data-sin-price="319174.60" data-stock="Tránsito / Pedido">
                 <td class="capacity-cell">113 kW</td>
                 <td><span class="model-code-tag">G0113GRGRCA8T2200S</span></td>
                 <td>
-                  <strong style="color: var(--color-deep-ocean);">220 VCA</strong>
-                  <span style="display: block; font-size: 0.73rem; color: #a73600; font-weight: 700; background: rgba(252, 87, 1, 0.1); padding: 0.15rem 0.45rem; border-radius: 4px; margin-top: 0.2rem; white-space: nowrap;">
-                    <i class="fas fa-sliders-h"></i> Adaptable a necesidad
-                  </span>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 113 kW">
+                    <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
+                    <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
+                    <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
+                    <option value="127/220 VCA">127/220 VCA</option>
+                    <option value="Otro voltaje específico">Otro voltaje...</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 113 kW">
+                    <option value="con" selected>🟢 Con ATS (Automático)</option>
+                    <option value="sin">🔵 Sin ATS (Manual)</option>
+                  </select>
                 </td>
                 <td><span class="stock-badge-pill transit"><i class="fas fa-shipping-fast"></i> Tránsito / Pedido</span></td>
                 <td>
-                  <span class="price-cell-value">$368,743.80</span>
-                  <span class="price-subtag">MXN + IVA</span>
-                </td>
-                <td>
-                  <span class="price-cell-value">$319,174.60</span>
-                  <span class="price-subtag">MXN + IVA</span>
+                  <div class="row-price-wrap">
+                    <span class="row-price-val">$368,743.80</span>
+                    <span class="price-subtag">MXN + IVA</span>
+                  </div>
                 </td>
                 <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="113" data-ats="con" aria-label="Cotizar Planta 113 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
+                  <button type="button" class="btn-stock-cotizar-direct">
+                    <i class="fab fa-whatsapp"></i> Cotizar
+                  </button>
                 </td>
               </tr>
 
               <!-- 5. 149 kW -->
-              <tr>
+              <tr class="generator-row" data-kw="149" data-model="G0149GRGRCA8T2200S" data-ats-price="488666.13" data-sin-price="439096.93" data-stock="2 en Stock">
                 <td class="capacity-cell">149 kW</td>
                 <td><span class="model-code-tag">G0149GRGRCA8T2200S</span></td>
                 <td>
-                  <strong style="color: var(--color-deep-ocean);">220 VCA</strong>
-                  <span style="display: block; font-size: 0.73rem; color: #a73600; font-weight: 700; background: rgba(252, 87, 1, 0.1); padding: 0.15rem 0.45rem; border-radius: 4px; margin-top: 0.2rem; white-space: nowrap;">
-                    <i class="fas fa-sliders-h"></i> Adaptable a necesidad
-                  </span>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 149 kW">
+                    <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
+                    <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
+                    <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
+                    <option value="127/220 VCA">127/220 VCA</option>
+                    <option value="Otro voltaje específico">Otro voltaje...</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 149 kW">
+                    <option value="con" selected>🟢 Con ATS (Automático)</option>
+                    <option value="sin">🔵 Sin ATS (Manual)</option>
+                  </select>
                 </td>
                 <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> 2 en Stock</span></td>
                 <td>
-                  <span class="price-cell-value">$488,666.13</span>
-                  <span class="price-subtag">MXN + IVA</span>
-                </td>
-                <td>
-                  <span class="price-cell-value">$439,096.93</span>
-                  <span class="price-subtag">MXN + IVA</span>
+                  <div class="row-price-wrap">
+                    <span class="row-price-val">$488,666.13</span>
+                    <span class="price-subtag">MXN + IVA</span>
+                  </div>
                 </td>
                 <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="149" data-ats="con" aria-label="Cotizar Planta 149 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
+                  <button type="button" class="btn-stock-cotizar-direct">
+                    <i class="fab fa-whatsapp"></i> Cotizar
+                  </button>
                 </td>
               </tr>
 
               <!-- 6. 305 kW -->
-              <tr>
+              <tr class="generator-row" data-kw="305" data-model="G0305GRGRCA8T2200S" data-ats-price="1056846.31" data-sin-price="917382.51" data-stock="Tránsito / Pedido">
                 <td class="capacity-cell">305 kW</td>
                 <td><span class="model-code-tag">G0305GRGRCA8T2200S</span></td>
                 <td>
-                  <strong style="color: var(--color-deep-ocean);">220 VCA</strong>
-                  <span style="display: block; font-size: 0.73rem; color: #a73600; font-weight: 700; background: rgba(252, 87, 1, 0.1); padding: 0.15rem 0.45rem; border-radius: 4px; margin-top: 0.2rem; white-space: nowrap;">
-                    <i class="fas fa-sliders-h"></i> Adaptable a necesidad
-                  </span>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 305 kW">
+                    <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
+                    <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
+                    <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
+                    <option value="127/220 VCA">127/220 VCA</option>
+                    <option value="Otro voltaje específico">Otro voltaje...</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 305 kW">
+                    <option value="con" selected>🟢 Con ATS (Automático)</option>
+                    <option value="sin">🔵 Sin ATS (Manual)</option>
+                  </select>
                 </td>
                 <td><span class="stock-badge-pill transit"><i class="fas fa-shipping-fast"></i> Tránsito / Pedido</span></td>
                 <td>
-                  <span class="price-cell-value">$1,056,846.31</span>
-                  <span class="price-subtag">MXN + IVA</span>
-                </td>
-                <td>
-                  <span class="price-cell-value">$917,382.51</span>
-                  <span class="price-subtag">MXN + IVA</span>
+                  <div class="row-price-wrap">
+                    <span class="row-price-val">$1,056,846.31</span>
+                    <span class="price-subtag">MXN + IVA</span>
+                  </div>
                 </td>
                 <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar open-plantas-cfg" data-kw="305" data-ats="con" aria-label="Cotizar Planta 305 kW"><i class="fas fa-sliders-h"></i> Cotizar</button>
+                  <button type="button" class="btn-stock-cotizar-direct">
+                    <i class="fab fa-whatsapp"></i> Cotizar
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -1523,7 +1579,7 @@
             </div>
           </div>
           <div style="background: rgba(252, 87, 1, 0.08); border-left: 4px solid #FC5701; padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.86rem; color: #802a00;">
-            <i class="fas fa-tools text-turquoise"></i> <strong>Voltaje Adaptable a su Necesidad:</strong> Los equipos se entregan de fábrica a <strong>220 VCA</strong>, pero nuestro equipo de ingenieros puede <strong>reconfigurar y calibrar el voltaje a 440 VCA, 480 VCA o cualquier requerimiento específico de su proyecto</strong>.
+            <i class="fas fa-tools text-turquoise"></i> <strong>Voltaje y ATS Adaptables:</strong> Cambia los selectores directamente en cualquier fila de la tabla para ver el precio exacto y presiona <strong>Cotizar</strong> para enviar tu solicitud con tus especificaciones técnicas precisas.
           </div>
         </div>
       </div>

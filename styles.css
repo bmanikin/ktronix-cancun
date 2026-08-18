@@ -3924,3 +3924,89 @@ textarea.form-input {
   transform: translateY(-2px);
   color: #ffffff;
 }
+
+/* ==========================================================================
+   INLINE INTERACTIVE TABLE SELECTORS
+   ========================================================================== */
+.table-inline-select {
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-sand-border);
+  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--color-deep-ocean);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  min-width: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.table-inline-select:focus, .table-inline-select:hover {
+  border-color: #FC5701;
+  box-shadow: 0 0 0 3px rgba(252, 87, 1, 0.12);
+}
+
+.row-ats-select {
+  min-width: 175px;
+}
+
+.row-ats-select option[value="con"] {
+  color: #0d8a3d;
+  font-weight: 700;
+}
+
+.row-ats-select option[value="sin"] {
+  color: #0d3b66;
+  font-weight: 700;
+}
+
+.row-price-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-price-val {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #FC5701;
+  transition: all 0.2s ease;
+}
+
+.btn-stock-cotizar-direct {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: #25D366;
+  color: #ffffff;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: var(--transition-fluid);
+  white-space: nowrap;
+}
+
+.btn-stock-cotizar-direct:hover {
+  background: #20BA56;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+  color: #ffffff;
+}
+
+.custom-volt-prompt-input {
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #FC5701;
+  font-size: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}

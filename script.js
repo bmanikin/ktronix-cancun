@@ -989,4 +989,65 @@ Por favor confirmar disponibilidad en stock, costos de envío y tiempo de entreg
     }
   });
 
+  // ==========================================================================
+  // CONFIGURACIÓN DIRECTA EN FILAS DE LA TABLA (ATS, VOLTAJE Y PRECIO)
+  // ==========================================================================
+  const generatorRows = document.querySelectorAll('.generator-row');
+
+  generatorRows.forEach(row => {
+    const atsSelect = row.querySelector('.row-ats-select');
+    const voltSelect = row.querySelector('.row-volt-select');
+    const priceVal = row.querySelector('.row-price-val');
+    const cotizarBtn = row.querySelector('.btn-stock-cotizar-direct');
+
+    const atsPrice = parseFloat(row.getAttribute('data-ats-price'));
+    const sinPrice = parseFloat(row.getAttribute('data-sin-price'));
+    const kw = row.getAttribute('data-kw');
+    const model = row.getAttribute('data-model');
+    const stock = row.getAttribute('data-stock');
+
+    // Actualizar precio en vivo al cambiar el selector de ATS en la fila
+    atsSelect?.addEventListener('change', () => {
+      const isATS = atsSelect.value === 'con';
+      const currentPrice = isATS ? atsPrice : sinPrice;
+      if (priceVal) {
+        priceVal.textContent = ' + currentPrice.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+    });
+
+    // Enviar cotización por WhatsApp con la configuración exacta de esa fila
+    cotizarBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const isATS = atsSelect.value === 'con';
+      const atsText = isATS ? 'Con ATS (Transferencia Automática)' : 'Sin ATS (Transferencia Manual)';
+      const currentPrice = isATS ? atsPrice : sinPrice;
+      const priceFormatted = ' + currentPrice.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' MXN + IVA';
+
+      let voltValue = voltSelect.value;
+      if (voltValue.includes('Otro')) {
+        const customPrompt = prompt('Por favor, especifique el voltaje requerido para su planta de ' + kw + ' kW:', '440 VCA');
+        if (customPrompt && customPrompt.trim()) {
+          voltValue = 'Personalizado: ' + customPrompt.trim();
+        } else {
+          voltValue = '220 VCA (A definir)';
+        }
+      }
+
+      const message = `Hola K-tronix Cancún, deseo solicitar la cotización formal de una Planta de Emergencia Grupel:
+
+• Capacidad: ${kw} kW (Stand by)
+• Modelo: ${model}
+• Modalidad: ${atsText}
+• Voltaje Requerido: ${voltValue}
+• Precio de Lista Referencial: ${priceFormatted}
+• Disponibilidad: ${stock}
+
+Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
+
+      const whatsappUrl = `https://wa.me/528811058875?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  });
+
 });
