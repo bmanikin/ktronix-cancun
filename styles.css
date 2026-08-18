@@ -14,6 +14,11 @@
   --color-sand-border: #e8d5b5;
   --color-coral: #ff6f61;
   --color-coral-hover: #ff5252;
+  --color-orange-brand: #FC5701;
+  --color-orange-glow: #FF7728;
+  --color-orange-dark: #E04B00;
+  --grad-orange: linear-gradient(135deg, #FC5701 0%, #FF7728 100%);
+  --shadow-orange-btn: 0 8px 24px -3px rgba(252, 87, 1, 0.45);
   --color-deep-ocean: #08253e;
   --color-navy: #10375c;
   --color-text-dark: #243a4e;
@@ -2057,7 +2062,7 @@ button, input, select, textarea {
 }
 
 .product-dot.active {
-  background: #d30000;
+  background: var(--color-orange-brand);
   width: 24px;
   border-radius: 12px;
 }
@@ -2432,7 +2437,7 @@ button, input, select, textarea {
 }
 
 .app-dot.active {
-  background: var(--color-turquoise);
+  background: var(--color-orange-brand);
   width: 24px;
   border-radius: 12px;
 }
