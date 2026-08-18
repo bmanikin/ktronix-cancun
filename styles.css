@@ -530,8 +530,9 @@ button, input, select, textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(8, 37, 62, 0.88) 0%, rgba(252, 87, 1, 0.72) 65%, rgba(250, 252, 253, 0.88) 100%);
+  background: linear-gradient(105deg, rgba(8, 37, 62, 0.95) 0%, rgba(8, 37, 62, 0.7) 40%, rgba(252, 87, 1, 0.76) 72%, rgba(252, 87, 1, 0.9) 100%);
   z-index: 1;
+  pointer-events: none;
 }
 
 .hero-grid,
