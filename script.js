@@ -85,4 +85,52 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1000);
     });
   }
+
+  // 4. Modales Interactivos de Servicios (Ingeniería, etc.)
+  const modalTriggers = document.querySelectorAll('[data-modal]');
+  const modalOverlays = document.querySelectorAll('.service-modal-overlay');
+
+  const closeModal = (modal) => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  modalTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-modal');
+      const targetModal = document.getElementById(targetId);
+      if (targetModal) {
+        targetModal.classList.add('active');
+        targetModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  modalOverlays.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.closest('.service-modal-close')) {
+        closeModal(modal);
+      }
+    });
+
+    const actionLinks = modal.querySelectorAll('.modal-close-and-scroll');
+    actionLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeModal(modal);
+      });
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modalOverlays.forEach(modal => {
+        if (modal.classList.contains('active')) {
+          closeModal(modal);
+        }
+      });
+    }
+  });
 });
