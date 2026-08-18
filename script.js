@@ -86,6 +86,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 3.1. Navegación fluida y prellenado para enlaces de Cotización hacia #contacto
+  const quoteLinks = document.querySelectorAll('a[href="#contacto"]');
+  quoteLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Cerrar modales si hubiera alguno abierto
+      modalOverlays.forEach(m => closeModal(m));
+      const projModal = document.getElementById('modal-proyecto-detalle');
+      if (projModal && typeof closeModal === 'function') closeModal(projModal);
+
+      // Si el enlace tiene nombre de producto asociado, prellenar el campo de mensaje
+      const prodName = link.getAttribute('data-product-name');
+      const messageTextarea = document.getElementById('c_mensaje');
+      if (messageTextarea && prodName) {
+        messageTextarea.value = `Hola, solicito información técnica y cotización para el equipo: ${prodName}.`;
+      }
+
+      // Desplazamiento suave con compensación del header fijo
+      const contactSection = document.getElementById('contacto');
+      if (contactSection) {
+        const headerOffset = 85;
+        const elementPosition = contactSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Foco al campo para facilitar escritura
+        setTimeout(() => {
+          const firstInput = document.getElementById('c_nombre') || messageTextarea;
+          firstInput?.focus();
+        }, 500);
+      }
+    });
+  });
+
   // 4. Modales Interactivos de Servicios (Ingeniería, etc.)
   const modalTriggers = document.querySelectorAll('[data-modal]');
   const modalOverlays = document.querySelectorAll('.service-modal-overlay');
