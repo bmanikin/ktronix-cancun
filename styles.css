@@ -1196,6 +1196,205 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   PROYECTOS SECTION (Portafolio de Infraestructura Nacional)
+   ========================================================================== */
+.projects-section {
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #FAFCFD 0%, #F5F9FA 50%, #FAF3E0 100%);
+  position: relative;
+}
+
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.75rem;
+}
+
+.project-filter-btn {
+  background: #ffffff;
+  border: 1.5px solid var(--color-sand-border);
+  color: var(--color-deep-ocean);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition-fluid);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.project-filter-btn:hover {
+  border-color: var(--color-turquoise);
+  transform: translateY(-2px);
+  color: var(--color-turquoise);
+}
+
+.project-filter-btn.active {
+  background: var(--grad-caribbean);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: var(--shadow-cyan-btn);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1.5px solid var(--color-sand-border);
+  box-shadow: var(--shadow-sand-card);
+  transition: var(--transition-fluid);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-turquoise);
+  box-shadow: var(--shadow-sun-lg);
+}
+
+.project-card-media {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #0f2b38;
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-card-media img {
+  transform: scale(1.06);
+}
+
+.project-badges-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.project-status-tag {
+  background: rgba(15, 43, 56, 0.82);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.project-status-tag.completed {
+  border-color: #25d366;
+  color: #69f0ae;
+}
+
+.project-status-tag.in-progress {
+  border-color: var(--color-coral);
+  color: #ffab91;
+}
+
+.project-location-tag {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--color-deep-ocean);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.project-card-body {
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-card-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-turquoise);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.project-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-deep-ocean);
+  line-height: 1.35;
+  margin-bottom: 0.65rem;
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.project-card-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-sand-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-card-footer .btn {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.88rem;
+}
+
+/* ==========================================================================
    SECTION 5: PRODUCTOS (Nuestras categorías de producto)
    ========================================================================== */
 .products-section {
