@@ -358,19 +358,27 @@ button, input, select, textarea {
 .nav-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  padding: 0.65rem 1rem;
+  padding: 0.55rem 1.05rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-deep-ocean);
-  border-radius: 8px;
-  min-height: var(--touch-min);
-  transition: var(--transition-fluid);
+  border-radius: 10px;
+  min-height: 40px;
+  transition: all 0.25s ease;
+  text-decoration: none;
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--color-turquoise);
+.nav-link:hover {
+  color: #FC5701;
   background: rgba(252, 87, 1, 0.08);
+}
+
+.nav-link.active {
+  color: #FC5701 !important;
+  background: rgba(252, 87, 1, 0.12) !important;
+  font-weight: 700 !important;
 }
 
 .nav-link i.fa-chevron-down {
