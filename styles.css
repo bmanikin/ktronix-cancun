@@ -4010,3 +4010,47 @@ textarea.form-input {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* 3D Flip Card Interactive Fixes */
+.product-flip-card.is-flipped .product-card-front {
+  pointer-events: none !important;
+  visibility: hidden !important;
+  z-index: 1 !important;
+}
+
+.product-flip-card.is-flipped .product-card-back {
+  pointer-events: auto !important;
+  visibility: visible !important;
+  z-index: 20 !important;
+}
+
+.product-card-back a,
+.product-card-back button,
+.product-back-cta,
+.btn-product-whatsapp {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 30 !important;
+  cursor: pointer !important;
+}
+
+.app-flip-card.is-flipped .app-card-front {
+  pointer-events: none !important;
+  visibility: hidden !important;
+  z-index: 1 !important;
+}
+
+.app-flip-card.is-flipped .app-card-back {
+  pointer-events: auto !important;
+  visibility: visible !important;
+  z-index: 20 !important;
+}
+
+.app-card-back a,
+.app-card-back button,
+.app-back-cta {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 30 !important;
+  cursor: pointer !important;
+}

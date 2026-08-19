@@ -657,9 +657,10 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.remove('is-flipped');
       });
 
-      actionLinks.forEach(link => {
+      const backLinks = card.querySelectorAll('.product-card-back a, .product-card-back button');
+      backLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-          e.stopPropagation(); // Permitir clic directo en WhatsApp o Cotizar
+          e.stopPropagation();
         });
       });
     });
