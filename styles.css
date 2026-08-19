@@ -4067,3 +4067,29 @@ textarea.form-input {
   z-index: 30 !important;
   cursor: pointer !important;
 }
+
+
+/* ==========================================================================
+   ESTILOS DE FICHAS TÉCNICAS Y DIMENSIONES DE GENERADORES
+   ========================================================================== */
+.spec-dim-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.btn-stock-ficha:hover {
+  background: #e2e8f0 !important;
+  color: #0284c7 !important;
+  border-color: #94a3b8 !important;
+  transform: translateY(-1px);
+}

@@ -343,20 +343,34 @@
           <table class="stock-pricing-table">
             <thead>
               <tr>
-                <th>Capacidad (Stand by)</th>
-                <th>Modelo Grupel</th>
+                <th>Capacidad (ESP)</th>
+                <th>Modelo y Gama</th>
+                <th>Dimensiones (L × W × H)</th>
+                <th>Peso y Tanque</th>
                 <th>Voltaje Requerido</th>
                 <th>Modalidad ATS</th>
-                <th>Disponibilidad</th>
                 <th>Precio de Lista (MXN)</th>
-                <th style="text-align: center;">Cotizar Configuración</th>
+                <th style="text-align: center;">Acciones</th>
               </tr>
             </thead>
             <tbody>
               <!-- 1. 18 kW -->
               <tr class="generator-row" data-kw="18" data-model="G0018GRGRCA8T2200S" data-ats-price="142850.00" data-sin-price="138200.00" data-stock="Disponible en Stock">
-                <td class="capacity-cell">18 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(22.5 kVA)</span></td>
-                <td><span class="model-code-tag">G0018GRGRCA8T2200S</span></td>
+                <td class="capacity-cell">
+                  <strong>18 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">22.5 kVA • 60 A</div>
+                </td>
+                <td>
+                  <span class="model-code-tag">G0018GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Smart Range • Motor Grupel</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 1,970 × 825 × 1,120 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 680 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 55 L</div>
+                </td>
                 <td>
                   <select class="table-inline-select row-volt-select" aria-label="Voltaje 18 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
@@ -372,24 +386,41 @@
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
                     <span class="row-price-val">$142,850.00</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="18" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
 
               <!-- 2. 25 kW -->
-              <tr class="generator-row" data-kw="25" data-model="G0025GRGRGCA8T2200S" data-ats-price="161704.19" data-sin-price="157176.10" data-stock="Disponible en Stock">
-                <td class="capacity-cell">25 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(31.25 kVA)</span></td>
-                <td><span class="model-code-tag">G0025GRGRGCA8T2200S</span></td>
+              <tr class="generator-row" data-kw="25" data-model="G0025GRGRCA8T2200S" data-ats-price="161704.19" data-sin-price="157176.10" data-stock="Disponible en Stock">
+                <td class="capacity-cell">
+                  <strong>25 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">31.25 kVA • 80 A</div>
+                </td>
+                <td>
+                  <span class="model-code-tag">G0025GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Smart Range • 4GA27DS0</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 1,970 × 825 × 1,120 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 743 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 55 L</div>
+                </td>
                 <td>
                   <select class="table-inline-select row-volt-select" aria-label="Voltaje 25 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
@@ -405,24 +436,41 @@
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
                     <span class="row-price-val">$161,704.19</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="25" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
 
               <!-- 3. 39 kW -->
-              <tr class="generator-row" data-kw="39" data-model="G0039GRGRGCA8T2200S" data-ats-price="194490.60" data-sin-price="181032.31" data-stock="Disponible en Stock">
-                <td class="capacity-cell">39 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(48.75 kVA)</span></td>
-                <td><span class="model-code-tag">G0039GRGRGCA8T2200S</span></td>
+              <tr class="generator-row" data-kw="39" data-model="G0039GRGRCA8T2200S" data-ats-price="194490.60" data-sin-price="181032.31" data-stock="Disponible en Stock">
+                <td class="capacity-cell">
+                  <strong>39 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">48.75 kVA • 125 A</div>
+                </td>
+                <td>
+                  <span class="model-code-tag">G0039GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Smart Range • 4GD32TDS2</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 1,970 × 825 × 1,120 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 838 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 55 L</div>
+                </td>
                 <td>
                   <select class="table-inline-select row-volt-select" aria-label="Voltaje 39 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
@@ -438,24 +486,41 @@
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
                     <span class="row-price-val">$194,490.60</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="39" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
 
               <!-- 4. 76 kW -->
               <tr class="generator-row" data-kw="76" data-model="G0076GRGRCA8T2200S" data-ats-price="312194.36" data-sin-price="289059.15" data-stock="Disponible en Stock">
-                <td class="capacity-cell">76 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(95 kVA)</span></td>
-                <td><span class="model-code-tag">G0076GRGRCA8T2200S</span></td>
+                <td class="capacity-cell">
+                  <strong>76 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">95 kVA • 270 A</div>
+                </td>
+                <td>
+                  <span class="model-code-tag">G0076GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Industrial Range • 4GA41TID45</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 2,630 × 1,015 × 1,580 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 1,450 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 200 L</div>
+                </td>
                 <td>
                   <select class="table-inline-select row-volt-select" aria-label="Voltaje 76 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
@@ -471,24 +536,41 @@
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
                     <span class="row-price-val">$312,194.36</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="76" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
 
               <!-- 5. 113 kW -->
               <tr class="generator-row" data-kw="113" data-model="G0113GRGRCA8T2200S" data-ats-price="368743.80" data-sin-price="319174.60" data-stock="Disponible en Stock">
-                <td class="capacity-cell">113 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(141.25 kVA)</span></td>
-                <td><span class="model-code-tag">G0113GRGRCA8T2200S</span></td>
+                <td class="capacity-cell">
+                  <strong>113 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">141 kVA • 400 A</div>
+                </td>
+                <td>
+                  <span class="model-code-tag">G0113GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Industrial Range • 4GA53TID50</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 2,630 × 1,015 × 1,580 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 1,790 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 200 L</div>
+                </td>
                 <td>
                   <select class="table-inline-select row-volt-select" aria-label="Voltaje 113 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
@@ -504,26 +586,43 @@
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
                     <span class="row-price-val">$368,743.80</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="113" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
 
-              <!-- 6. 132 kW -->
-              <tr class="generator-row" data-kw="132" data-model="G0132GRGRCA8T2200S" data-ats-price="438900.00" data-sin-price="398500.00" data-stock="Disponible en Stock">
-                <td class="capacity-cell">132 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(165 kVA)</span></td>
-                <td><span class="model-code-tag">G0132GRGRCA8T2200S</span></td>
+              <!-- 6. 149 kW -->
+              <tr class="generator-row" data-kw="149" data-model="G0149GRGRCA8T2200S" data-ats-price="488666.13" data-sin-price="439096.93" data-stock="Disponible en Stock">
+                <td class="capacity-cell">
+                  <strong>149 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">186 kVA • 630 A</div>
+                </td>
                 <td>
-                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 132 kW">
+                  <span class="model-code-tag">G0149GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Industrial Range • 6GD65TIDS22</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 3,200 × 1,185 × 1,800 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 1,988 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 400 L</div>
+                </td>
+                <td>
+                  <select class="table-inline-select row-volt-select" aria-label="Voltaje 149 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
                     <option value="440 VCA (Reconexión)">440 VCA (Reconexión)</option>
                     <option value="480 VCA (Reconexión)">480 VCA (Reconexión)</option>
@@ -532,29 +631,46 @@
                   </select>
                 </td>
                 <td>
-                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 132 kW">
+                  <select class="table-inline-select row-ats-select" aria-label="Modalidad ATS 149 kW">
                     <option value="con" selected>🟢 Con ATS (Automático)</option>
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
-                    <span class="row-price-val">$438,900.00</span>
+                    <span class="row-price-val">$488,666.13</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="149" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
 
               <!-- 7. 305 kW -->
               <tr class="generator-row" data-kw="305" data-model="G0305GRGRCA8T2200S" data-ats-price="1056846.31" data-sin-price="917382.51" data-stock="Disponible en Stock">
-                <td class="capacity-cell">305 kW <span style="font-size: 0.8rem; font-weight: normal; color: #64748b;">(381.25 kVA)</span></td>
-                <td><span class="model-code-tag">G0305GRGRCA8T2200S</span></td>
+                <td class="capacity-cell">
+                  <strong>305 kW</strong>
+                  <div style="font-size: 0.8rem; color: #64748b; font-weight: normal;">381 kVA • 1,100 A</div>
+                </td>
+                <td>
+                  <span class="model-code-tag">G0305GRGRCA8T2200S</span>
+                  <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Industrial Extra Range • 6GA97TIDS45</div>
+                </td>
+                <td>
+                  <span class="spec-dim-badge"><i class="fas fa-ruler-combined"></i> 4,000 × 1,400 × 2,100 mm</span>
+                </td>
+                <td>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: #1e293b;">⚖️ 3,850 kg</div>
+                  <div style="font-size: 0.78rem; color: #0284c7;">🛢️ Tanque: 800 L</div>
+                </td>
                 <td>
                   <select class="table-inline-select row-volt-select" aria-label="Voltaje 305 kW">
                     <option value="220 VCA (Estándar)" selected>220 VCA (Estándar)</option>
@@ -570,17 +686,21 @@
                     <option value="sin">🔵 Sin ATS (Manual)</option>
                   </select>
                 </td>
-                <td><span class="stock-badge-pill in-stock"><i class="fas fa-check-circle"></i> Disponible en Stock</span></td>
                 <td>
                   <div class="row-price-wrap">
                     <span class="row-price-val">$1,056,846.31</span>
                     <span class="price-subtag">MXN + IVA</span>
                   </div>
                 </td>
-                <td style="text-align: center;">
-                  <button type="button" class="btn-stock-cotizar-direct">
-                    <i class="fab fa-whatsapp"></i> Cotizar
-                  </button>
+                <td style="text-align: center; white-space: nowrap;">
+                  <div style="display: flex; gap: 0.4rem; justify-content: center;">
+                    <button type="button" class="btn-stock-cotizar-direct" title="Cotizar por WhatsApp">
+                      <i class="fab fa-whatsapp"></i> Cotizar
+                    </button>
+                    <button type="button" class="btn-stock-ficha" data-kw="305" title="Ver Ficha Técnica Completa" style="background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">
+                      <i class="fas fa-file-alt text-turquoise"></i> Ficha
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>
@@ -1517,6 +1637,18 @@
       </div>
     </div>
   </footer>
+
+  
+  <!-- MODAL: FICHA TÉCNICA OFICIAL DE PLANTA GRUPEL / K-TRONIX -->
+  <div id="modal-ficha-planta" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="service-modal-box" style="max-width: 920px; padding: 2rem;">
+      <button type="button" class="service-modal-close" id="closeFichaModal" aria-label="Cerrar modal">&times;</button>
+      
+      <div id="fichaModalContent">
+        <!-- Inyectado dinámicamente desde script.js con los datos técnicos oficiales -->
+      </div>
+    </div>
+  </div>
 
   <!-- MODAL DINÁMICO DE DETALLES DE PROYECTO (Ver más...) -->
   <div id="modal-proyecto-detalle" class="service-modal-overlay" aria-hidden="true" role="dialog">

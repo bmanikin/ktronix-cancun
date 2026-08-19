@@ -1052,3 +1052,367 @@ Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
   });
 
 });
+
+  // ==========================================================================
+  // MODAL DE FICHA TÉCNICA OFICIAL DE PLANTAS DE EMERGENCIA GRUPEL / K-TRONIX
+  // ==========================================================================
+  const generatorSpecsDatabase = {
+    "18": {
+      kw: 18,
+      kva_esp: 22.5,
+      kw_prp: 16,
+      kva_prp: 20,
+      model: "G0018GRGRCA8T2200S",
+      range: "Smart Range",
+      engine: "Grupel / 3GA20DS0",
+      cylinders: "3 cilindros en línea, Aspiración Natural",
+      displacement: "1.9 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "60 A",
+      alternator: "Grupel 184GB18 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 1970,
+      width_mm: 825,
+      height_mm: 1120,
+      weight_kg: 680,
+      tank_l: 55,
+      sound_7m: "72 ± 2 dB(A)",
+      sound_1m: "80 ± 2 dB(A)",
+      consumption_100: "6.8 L/h",
+      consumption_75: "4.9 L/h",
+      consumption_50: "3.5 L/h",
+      oil_l: "5.5 L",
+      coolant_l: "9.5 L",
+      battery: "12V (62 Ah)",
+      price_ats: "$142,850.00 MXN",
+      price_sin: "$138,200.00 MXN"
+    },
+    "25": {
+      kw: 25,
+      kva_esp: 31.25,
+      kw_prp: 22,
+      kva_prp: 28,
+      model: "G0025GRGRCA8T2200S",
+      range: "Smart Range",
+      engine: "Grupel / 4GA27DS0",
+      cylinders: "4 cilindros en línea, Aspiración Natural",
+      displacement: "2.672 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "80 A",
+      alternator: "Grupel 184GB23 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 1970,
+      width_mm: 825,
+      height_mm: 1120,
+      weight_kg: 743,
+      tank_l: 55,
+      sound_7m: "73 ± 2 dB(A)",
+      sound_1m: "81 ± 2 dB(A)",
+      consumption_100: "9.1 L/h",
+      consumption_75: "6.2 L/h",
+      consumption_50: "4.6 L/h",
+      oil_l: "6.5 L",
+      coolant_l: "11.6 L",
+      battery: "12V (62 Ah)",
+      price_ats: "$161,704.19 MXN",
+      price_sin: "$157,176.10 MXN"
+    },
+    "39": {
+      kw: 39,
+      kva_esp: 48.75,
+      kw_prp: 35,
+      kva_prp: 44,
+      model: "G0039GRGRCA8T2200S",
+      range: "Smart Range",
+      engine: "Grupel / 4GD32TDS2",
+      cylinders: "4 cilindros en línea, Turbocharged",
+      displacement: "3.2 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "125 A",
+      alternator: "Grupel 184GB40 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 1970,
+      width_mm: 825,
+      height_mm: 1120,
+      weight_kg: 838,
+      tank_l: 55,
+      sound_7m: "73 ± 2 dB(A)",
+      sound_1m: "81 ± 2 dB(A)",
+      consumption_100: "15.3 L/h",
+      consumption_75: "10.4 L/h",
+      consumption_50: "7.3 L/h",
+      oil_l: "7.0 L",
+      coolant_l: "20.0 L",
+      battery: "12V (62 Ah)",
+      price_ats: "$194,490.60 MXN",
+      price_sin: "$181,032.31 MXN"
+    },
+    "76": {
+      kw: 76,
+      kva_esp: 95,
+      kw_prp: 68,
+      kva_prp: 85,
+      model: "G0076GRGRCA8T2200S",
+      range: "Industrial Range",
+      engine: "Grupel / 4GA41TID45",
+      cylinders: "4 cilindros en línea, Turbo-intercooled",
+      displacement: "4.1 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "270 A",
+      alternator: "Grupel 224GB90 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 2630,
+      width_mm: 1015,
+      height_mm: 1580,
+      weight_kg: 1450,
+      tank_l: 200,
+      sound_7m: "74 ± 2 dB(A)",
+      sound_1m: "82 ± 2 dB(A)",
+      consumption_100: "23.5 L/h",
+      consumption_75: "16.8 L/h",
+      consumption_50: "11.9 L/h",
+      oil_l: "11.0 L",
+      coolant_l: "24.0 L",
+      battery: "24V (100 Ah)",
+      price_ats: "$312,194.36 MXN",
+      price_sin: "$289,059.15 MXN"
+    },
+    "113": {
+      kw: 113,
+      kva_esp: 141,
+      kw_prp: 102,
+      kva_prp: 127,
+      model: "G0113GRGRCA8T2200S",
+      range: "Industrial Range",
+      engine: "Grupel / 4GA53TID50",
+      cylinders: "4 cilindros en línea, Turbo-intercooled, Regulación Electrónica",
+      displacement: "5.32 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "400 A",
+      alternator: "Grupel 274GB160 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 2630,
+      width_mm: 1015,
+      height_mm: 1580,
+      weight_kg: 1790,
+      tank_l: 200,
+      sound_7m: "74 ± 2 dB(A)",
+      sound_1m: "82 ± 2 dB(A)",
+      consumption_100: "30.0 L/h",
+      consumption_75: "21.2 L/h",
+      consumption_50: "15.3 L/h",
+      oil_l: "13.2 L",
+      coolant_l: "29.0 L",
+      battery: "24V (100 Ah)",
+      price_ats: "$368,743.80 MXN",
+      price_sin: "$319,174.60 MXN"
+    },
+    "149": {
+      kw: 149,
+      kva_esp: 186,
+      kw_prp: 134,
+      kva_prp: 168,
+      model: "G0149GRGRCA8T2200S",
+      range: "Industrial Range (150 kW)",
+      engine: "Grupel / 6GD65TIDS22",
+      cylinders: "6 cilindros en línea, Turbo-aftercooled, Inyección Directa Electrónica",
+      displacement: "6.5 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "630 A",
+      alternator: "Grupel 274GB160 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 3200,
+      width_mm: 1185,
+      height_mm: 1800,
+      weight_kg: 1988,
+      tank_l: 400,
+      sound_7m: "74 ± 2 dB(A)",
+      sound_1m: "82 ± 2 dB(A)",
+      consumption_100: "41.8 L/h",
+      consumption_75: "28.7 L/h",
+      consumption_50: "20.2 L/h",
+      oil_l: "17.5 L",
+      coolant_l: "35.0 L",
+      battery: "24V (140 Ah)",
+      price_ats: "$488,666.13 MXN",
+      price_sin: "$439,096.93 MXN"
+    },
+    "305": {
+      kw: 305,
+      kva_esp: 381,
+      kw_prp: 275,
+      kva_prp: 344,
+      model: "G0305GRGRCA8T2200S",
+      range: "Industrial Extra Range",
+      engine: "Grupel / 6GA97TIDS45",
+      cylinders: "6 cilindros en línea, Turbo-aftercooled, Common Rail",
+      displacement: "9.7 L",
+      rpm: "1800 r.p.m. (60 Hz)",
+      voltage: "220 VCA (Reconectable a 440V / 480V / 127V)",
+      amperage: "1100 A",
+      alternator: "Grupel 354GB350 (Trifásico, IP23, Aislamiento H)",
+      controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+      length_mm: 4000,
+      width_mm: 1400,
+      height_mm: 2100,
+      weight_kg: 3850,
+      tank_l: 800,
+      sound_7m: "78 ± 2 dB(A)",
+      sound_1m: "86 ± 2 dB(A)",
+      consumption_100: "82.0 L/h",
+      consumption_75: "58.5 L/h",
+      consumption_50: "40.2 L/h",
+      oil_l: "28.0 L",
+      coolant_l: "65.0 L",
+      battery: "24V (180 Ah)",
+      price_ats: "$1,056,846.31 MXN",
+      price_sin: "$917,382.51 MXN"
+    }
+  };
+
+  const modalFicha = document.getElementById('modal-ficha-planta');
+  const closeFichaBtn = document.getElementById('closeFichaModal');
+  const fichaContent = document.getElementById('fichaModalContent');
+  const fichaBtns = document.querySelectorAll('.btn-stock-ficha');
+
+  const openFichaModal = (kwKey) => {
+    const spec = generatorSpecsDatabase[kwKey];
+    if (!spec || !fichaContent || !modalFicha) return;
+
+    fichaContent.innerHTML = `
+      <div class="ficha-header-box" style="border-bottom: 2px solid #e2e8f0; padding-bottom: 1.25rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="badge-cancun" style="margin-bottom: 0.5rem;"><i class="fas fa-certificate"></i> Ficha Técnica Oficial Grupel • K-tronix</span>
+            <h3 style="font-size: 1.75rem; font-family: var(--font-heading); color: var(--color-deep-ocean); margin: 0.25rem 0 0.4rem 0;">
+              Planta de Emergencia ${spec.kw} kW <span class="sea-glow">(${spec.kva_esp} kVA)</span>
+            </h3>
+            <div style="font-size: 0.92rem; color: #64748b; font-weight: 600;">
+              Modelo: <span style="color: #FC5701; font-family: monospace; background: #fff5f0; padding: 2px 6px; border-radius: 4px;">${spec.model}</span> • ${spec.range}
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.85rem; color: #64748b;">Potencia Standby (ESP) / Prime (PRP):</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: #0284c7;">${spec.kw} kW / ${spec.kw_prp} kW</div>
+            <div style="font-size: 0.85rem; color: #16a34a; font-weight: 700;">Amperaje @ 220V: ${spec.amperage}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Summary Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.85rem; text-align: center;">
+          <div style="font-size: 0.8rem; color: #64748b;">Dimensiones (L × W × H)</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: #1e293b; margin-top: 0.25rem;">${spec.length_mm} × ${spec.width_mm} × ${spec.height_mm} mm</div>
+          <div style="font-size: 0.75rem; color: #94a3b8;">(${(spec.length_mm/1000).toFixed(2)} × ${(spec.width_mm/1000).toFixed(2)} × ${(spec.height_mm/1000).toFixed(2)} m)</div>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.85rem; text-align: center;">
+          <div style="font-size: 0.8rem; color: #64748b;">Peso en Seco</div>
+          <div style="font-size: 1.1rem; font-weight: 800; color: #1e293b; margin-top: 0.25rem;">⚖️ ${spec.weight_kg} kg</div>
+          <div style="font-size: 0.75rem; color: #16a34a;">Caseta insonorizada</div>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.85rem; text-align: center;">
+          <div style="font-size: 0.8rem; color: #64748b;">Depósito Diario</div>
+          <div style="font-size: 1.1rem; font-weight: 800; color: #0284c7; margin-top: 0.25rem;">🛢️ ${spec.tank_l} Litros</div>
+          <div style="font-size: 0.75rem; color: #64748b;">Diésel Industrial</div>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.85rem; text-align: center;">
+          <div style="font-size: 0.8rem; color: #64748b;">Nivel de Ruido Acústico</div>
+          <div style="font-size: 1.05rem; font-weight: 800; color: #d97706; margin-top: 0.25rem;">🔇 ${spec.sound_7m}</div>
+          <div style="font-size: 0.75rem; color: #64748b;">A 7 metros de distancia</div>
+        </div>
+      </div>
+
+      <!-- Detailed Tabs / Specs Tables -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem;">
+        
+        <!-- Table 1: Motor Diésel & Consumos -->
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.25rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--color-deep-ocean); margin: 0 0 0.85rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-cogs text-turquoise"></i> Especificaciones del Motor Diésel
+          </h4>
+          <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Modelo de Motor:</td><td style="font-weight: 600; text-align: right;">${spec.engine}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Configuración:</td><td style="font-weight: 600; text-align: right;">${spec.cylinders}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Cilindrada:</td><td style="font-weight: 600; text-align: right;">${spec.displacement}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Régimen / Frecuencia:</td><td style="font-weight: 600; text-align: right;">${spec.rpm}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Consumo al 100% (ESP):</td><td style="font-weight: 700; color: #FC5701; text-align: right;">${spec.consumption_100}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Consumo al 75% carga:</td><td style="font-weight: 600; text-align: right;">${spec.consumption_75}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Consumo al 50% carga:</td><td style="font-weight: 600; text-align: right;">${spec.consumption_50}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Capacidad de Aceite:</td><td style="font-weight: 600; text-align: right;">${spec.oil_l}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Líquido Refrigerante:</td><td style="font-weight: 600; text-align: right;">${spec.coolant_l}</td></tr>
+            <tr><td style="padding: 6px 0; color: #64748b;">Sistema de Batería:</td><td style="font-weight: 600; text-align: right;">${spec.battery}</td></tr>
+          </table>
+        </div>
+
+        <!-- Table 2: Alternador & Panel de Control -->
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.25rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--color-deep-ocean); margin: 0 0 0.85rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-microchip text-turquoise"></i> Alternador & Panel Digital G545
+          </h4>
+          <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Alternador:</td><td style="font-weight: 600; text-align: right;">${spec.alternator}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Voltaje Base:</td><td style="font-weight: 600; text-align: right;">${spec.voltage}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Factor de Potencia:</td><td style="font-weight: 600; text-align: right;">0.8 (Cos φ)</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Regulación de Tensión:</td><td style="font-weight: 600; text-align: right;">AVR Electrónico ±1%</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Panel de Control:</td><td style="font-weight: 600; color: #0284c7; text-align: right;">${spec.controller}</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Pantalla:</td><td style="font-weight: 600; text-align: right;">LCD con medición de V, A, Hz, kW, cos φ</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Protecciones:</td><td style="font-weight: 600; text-align: right;">Sobrevelocidad, Presión Aceite, T° Agua</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Alarmas y Eventos:</td><td style="font-weight: 600; text-align: right;">Registro histórico de hasta 400 eventos</td></tr>
+            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px 0; color: #64748b;">Comunicación:</td><td style="font-weight: 600; text-align: right;">USB, RS485 / Modbus / CAN Bus</td></tr>
+            <tr><td style="padding: 6px 0; color: #64748b;">Grado de Protección:</td><td style="font-weight: 600; text-align: right;">IP65 en frontal del panel</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Action Bottom Bar -->
+      <div style="background: linear-gradient(135deg, #0a2540 0%, #1e3a5f 100%); padding: 1.25rem 1.5rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; color: #ffffff;">
+        <div>
+          <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8);">Precio de Lista Oficial:</div>
+          <div style="font-size: 1.35rem; font-weight: 800; color: #FC5701;">${spec.price_ats} <span style="font-size: 0.85rem; font-weight: normal; color: rgba(255,255,255,0.85);">(Con ATS) • ${spec.price_sin} (Sin ATS)</span></div>
+        </div>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="https://wa.me/528111058875?text=${encodeURIComponent('Hola K-tronix Cancún, deseo cotizar formalmente la Planta de Emergencia Grupel de ' + spec.kw + ' kW (' + spec.model + ') con dimensiones ' + spec.length_mm + 'x' + spec.width_mm + 'x' + spec.height_mm + ' mm.')}" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: #ffffff; font-weight: 700; padding: 0.65rem 1.25rem; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(37,211,102,0.3);">
+            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Cotizar este Modelo
+          </a>
+          <button type="button" class="btn btn-outline-sea" onclick="window.print()" style="border-color: rgba(255,255,255,0.3); color: #ffffff; padding: 0.65rem 1rem; border-radius: 8px; cursor: pointer;">
+            <i class="fas fa-print"></i> Imprimir Ficha
+          </button>
+        </div>
+      </div>
+    `;
+
+    modalFicha.classList.add('active');
+    modalFicha.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  fichaBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const kw = btn.getAttribute('data-kw');
+      openFichaModal(kw);
+    });
+  });
+
+  closeFichaBtn?.addEventListener('click', () => {
+    if (modalFicha) {
+      modalFicha.classList.remove('active');
+      modalFicha.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  });
+
+  modalFicha?.addEventListener('click', (e) => {
+    if (e.target === modalFicha) {
+      modalFicha.classList.remove('active');
+      modalFicha.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  });
