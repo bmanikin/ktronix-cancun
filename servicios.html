@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios de Ingeniería Especializada • K-TRONIX Cancún & México</title>
+  <meta name="description" content="Servicios de ingeniería eléctrica, commissioning, capacitación técnica, pruebas de desempeño FAT/SAT y pólizas post-venta en Cancún y todo México.">
+  <link rel="icon" href="https://ktronix.com.mx/wp-content/uploads/2026/05/Recurso-2@2x-scaled.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div>
+        <span>☀️ <strong>Presencia Nacional:</strong> Cancún (Riviera Maya) • Monterrey • CDMX • Minatitlán • Cd. Madero</span>
+      </div>
+      <div class="top-bar-contacts">
+        <a href="index.html#stock-plantas" style="color: #ffffff; font-weight: 700; margin-right: 0.5rem;"><i class="fas fa-industry text-turquoise"></i> Plantas en Stock</a>
+        <a href="tel:8811058875"><i class="fas fa-phone"></i> Tel. (881) 105 8875</a>
+        <a href="mailto:ktronix@ktronix.com.mx"><i class="fas fa-envelope"></i> ktronix@ktronix.com.mx</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header" id="masthead">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Inicio K-tronix">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Recurso-2@2x-scaled.png" alt="K-tronix" onerror="this.onerror=null; this.src='https://ktronix.com.mx/wp-content/uploads/2026/05/logo-svg.svg';">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-list" aria-label="Navegación principal">
+        <div class="nav-item">
+          <a href="index.html#inicio" class="nav-link">Inicio</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#stock-plantas" class="nav-link" style="color: #FC5701; font-weight: 800;">Plantas</a>
+        </div>
+        <div class="nav-item">
+          <a href="nosotros.html" class="nav-link">Nosotros <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="nosotros.html#nosotros" class="dropdown-link"><i class="fas fa-building"></i> Misión & Visión</a>
+            <a href="nosotros.html#proyectos" class="dropdown-link"><i class="fas fa-project-diagram"></i> Proyectos Emblemáticos</a>
+            <a href="nosotros.html#blog" class="dropdown-link"><i class="fas fa-newspaper"></i> Blog/Novedades</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="servicios.html" class="nav-link active">Servicios <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="servicios.html#servicios" class="dropdown-link" data-modal="modal-ingenieria"><i class="fas fa-drafting-compass"></i> Ingeniería</a>
+            <a href="servicios.html#servicios" class="dropdown-link" data-modal="modal-capacitacion"><i class="fas fa-graduation-cap"></i> Capacitación</a>
+            <a href="servicios.html#servicios" class="dropdown-link" data-modal="modal-pruebas"><i class="fas fa-chart-line"></i> Pruebas de desempeño</a>
+            <a href="servicios.html#servicios" class="dropdown-link" data-modal="modal-commisioning"><i class="fas fa-cogs"></i> Commisioning</a>
+            <a href="servicios.html#servicios" class="dropdown-link" data-modal="modal-postventa"><i class="fas fa-tools"></i> Post-Venta</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#productos" class="nav-link">Productos</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#aplicaciones" class="nav-link">Aplicaciones</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#contacto" class="nav-link">Contacto</a>
+        </div>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="index.html#contacto" class="btn btn-primary" style="padding: 0.65rem 1.4rem;">
+          <i class="fas fa-bolt"></i> Cotiza ahora!
+        </a>
+        <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Menú móvil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <a href="index.html#inicio" class="mobile-nav-item">
+      <span><i class="fas fa-home text-turquoise"></i> Inicio</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#stock-plantas" class="mobile-nav-item" style="border-left: 4px solid #FC5701; background: #fff6ee;">
+      <span><i class="fas fa-industry text-turquoise"></i> Plantas de Emergencia (Stock)</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="nosotros.html" class="mobile-nav-item">
+      <span><i class="fas fa-building text-turquoise"></i> Nosotros & Proyectos</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="servicios.html" class="mobile-nav-item" style="font-weight: 800; color: #FC5701;">
+      <span><i class="fas fa-cogs text-turquoise"></i> Servicios Especializados</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#productos" class="mobile-nav-item">
+      <span><i class="fas fa-boxes text-turquoise"></i> Productos</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#aplicaciones" class="mobile-nav-item">
+      <span><i class="fas fa-th-large text-turquoise"></i> Aplicaciones</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#contacto" class="mobile-nav-item">
+      <span><i class="fas fa-envelope text-turquoise"></i> Contacto</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <!-- HERO DE SERVICIOS -->
+  <section class="hero-section" style="padding: 9rem 0 4.5rem; min-height: auto;">
+    <div class="hero-overlay" style="opacity: 0.92;"></div>
+    <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 900px;">
+      <div class="badge-cancun" style="margin-bottom: 1rem;">
+        <span>⚙️</span> Servicios Integrales de Potencia
+      </div>
+      <h1 class="hero-title" style="font-size: 2.8rem; margin-bottom: 1rem;">
+        Soluciones y Servicios de <span class="cyan-text">Ingeniería Especializada</span>
+      </h1>
+      <p class="hero-subtitle-lead" style="font-size: 1.15rem; color: #d6e8f5; line-height: 1.7;">
+        Acompañamiento técnico 360° en todo el ciclo de vida de tus sistemas de respaldo energético: diseño, comisionamiento, pruebas FAT/SAT, capacitación y pólizas post-venta.
+      </p>
+    </div>
+  </section>
+
+<!-- SECTION 4: SERVICIOS (Descubre nuestros servicios) -->
+  <section id="servicios" class="services-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-cancun" style="margin-bottom: 0.85rem;">
+          <span>🌊</span> Excelencia en Campo
+        </div>
+        <h2 class="section-title">Descubre nuestros <span class="sea-glow">servicios</span></h2>
+        <p class="section-subtitle">Acompañamiento especializado de ingeniería en todo el ciclo de vida de tus sistemas de potencia eléctrica.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1: Ingeniería -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_un-ingeniero-de-espaldas-_3012540440.png" alt="Ingeniería K-tronix">
+          </div>
+          <div class="service-card-body">
+            <h5>Ingeniería</h5>
+            <p>Diseño y cálculo de proyectos llave en mano, levantamientos técnicos y estudios de calidad eléctrica para infraestructuras industriales y costeras.</p>
+            <button type="button" class="service-btn-link" data-modal="modal-ingenieria"><span>Ver más</span> <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Servicio 2: Commisioning -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_una-composicion-limpia-y-_3012547058.png" alt="Commisioning K-tronix">
+          </div>
+          <div class="service-card-body">
+            <h5>Commisioning</h5>
+            <p>Puesta en marcha garantizada, pruebas FAT/SAT y supervisión experta del arranque de equipos de respaldo de potencia.</p>
+            <button type="button" class="service-btn-link" data-modal="modal-commisioning"><span>Ver más</span> <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Servicio 3: Capacitación -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_escena-fotorrealista-en-u_3012538634.png" alt="Capacitación K-tronix">
+          </div>
+          <div class="service-card-body">
+            <h5>Capacitación</h5>
+            <p>Formación y adiestramiento técnico para personal operativo en normativas de seguridad, mantenimiento de UPS y bancos de baterías.</p>
+            <button type="button" class="service-btn-link" data-modal="modal-capacitacion"><span>Ver más</span> <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Servicio 4: Pruebas de Desempeño -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_primer-plano-de-un-ingeni_3012545054.png" alt="Pruebas de Desempeño K-tronix">
+          </div>
+          <div class="service-card-body">
+            <h5>Pruebas de Desempeño</h5>
+            <p>Análisis con cámaras termográficas infrarrojas, pruebas con bancos de carga resistiva e inspección predictiva de fallos.</p>
+            <button type="button" class="service-btn-link" data-modal="modal-pruebas"><span>Ver más</span> <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Servicio 5: Post-Venta -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_un-ingeniero-de-servicio-_3012557155.png" alt="Post-Venta K-tronix">
+          </div>
+          <div class="service-card-body">
+            <h5>Post-Venta</h5>
+            <p>Pólizas de mantenimiento preventivo y correctivo, suministro de refacciones originales y asistencia técnica 24/7 los 365 días del año.</p>
+            <button type="button" class="service-btn-link" data-modal="modal-postventa"><span>Ver más</span> <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Action Card / Ver más -->
+        <div class="service-card" style="background: var(--grad-sand); display: flex; justify-content: center; align-items: center; text-align: center; padding: 2.5rem 1.5rem;">
+          <div class="badge-cancun" style="margin-bottom: 1rem;">
+            <span>☀️</span> Soluciones 360°
+          </div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-deep-ocean); margin-bottom: 0.75rem;">¿Requieres un servicio a la medida?</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-dark); margin-bottom: 1.5rem;">Diseñamos e implementamos la ingeniería exacta que tu empresa necesita.</p>
+          <a href="#contacto" class="btn btn-coral">
+            <i class="fas fa-calendar-check"></i> Solicitar Asesoría
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Transition -->
+  <div class="wave-divider" style="background: var(--color-bg-light);">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C480,45 960,-20 1440,25 L1440,60 L0,60 Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+
+  
+
+  <!-- SECTION 9: FOOTER & DIRECTORIO NACIONAL (5 Sucursales + Distribuidor) -->
+  <footer class="main-footer" id="sucursales">
+    <div class="container">
+      <!-- Footer Top Grid -->
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div>
+          <div class="footer-brand-title">K-<span>TRONIX</span></div>
+          <p class="footer-brand-desc">Energía Eléctrica Siempre a tu Alcance</p>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Líderes en ingeniería energética y respaldo ininterrumpible de potencia para industrias, centros de datos y hotelería.
+          </p>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61593284785329" class="social-icon-btn facebook" aria-label="Facebook K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ktronix_cancun/" class="social-icon-btn instagram" aria-label="Instagram K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@katronixcancun" class="social-icon-btn tiktok" aria-label="TikTok K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios%20con%20K-tronix%20Canc%C3%BAn%20y%20M%C3%A9xico." class="social-icon-btn whatsapp" aria-label="WhatsApp K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: #ffffff; margin-bottom: 1rem;">Navegación</h4>
+          <div class="footer-links-list">
+            <a href="index.html#inicio"><i class="fas fa-angle-right text-turquoise"></i> Inicio</a>
+            <a href="index.html#stock-plantas"><i class="fas fa-angle-right text-turquoise"></i> Plantas Diésel</a>
+            <a href="nosotros.html"><i class="fas fa-angle-right text-turquoise"></i> Nosotros & Proyectos</a>
+            <a href="servicios.html"><i class="fas fa-angle-right text-turquoise"></i> Servicios</a>
+            <a href="index.html#contacto"><i class="fas fa-angle-right text-turquoise"></i> Contacto</a>
+            <a href="aviso-de-privacidad.html" data-modal="modal-aviso"><i class="fas fa-angle-right text-turquoise"></i> Aviso de privacidad</a>
+            <a href="mailto:ktronix@ktronix.com.mx"><i class="fas fa-envelope text-turquoise"></i> ktronix@ktronix.com.mx</a>
+          </div>
+        </div>
+
+        <!-- Contacto Directo Matriz -->
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: #ffffff; margin-bottom: 1rem;">Atención Telefónica</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><a href="tel:8811058875" style="color: #c4d7e6; text-decoration: none;"><i class="fas fa-phone text-turquoise"></i> (881) 105 8875</a></p>
+          <p style="font-size: 0.9rem;"><i class="fab fa-whatsapp text-turquoise"></i> Whatsapp: (Pendiente)</p>
+        </div>
+      </div>
+
+      <!-- Sucursales Físicas (Exactas a ktronix.com.mx) -->
+      <h3 class="footer-branches-title">Directorio Nacional de Sucursales</h3>
+      <div class="branches-directory-grid">
+        <!-- 1. Cancún (Destacado Caribe) -->
+        <div class="branch-office-box featured-cancun">
+          <h3>🌴 Cancún (Riviera Maya)</h3>
+          <p>
+            Infinity Park Carretera Cancún Av. Chichén Itzá, C.P. 77569 Cancún, Q.R.<br>
+            <strong>Tel.</strong> (881) 105 8875<br><strong>Whatsapp:</strong> (Pendiente)
+          </p>
+        </div>
+
+        <!-- 2. Monterrey -->
+        <div class="branch-office-box">
+          <h3>🏭 Monterrey (Matriz)</h3>
+          <p>
+            Gral. José Ma. Mier #201, Col. Burócratas del Estado, Monterrey, Nuevo León, C.P. 64380<br>
+            <strong>Tel.</strong> (881) 105 8875<br>
+            <strong>Whatsapp:</strong> (Pendiente)
+          </p>
+        </div>
+
+        <!-- 3. CDMX -->
+        <div class="branch-office-box">
+          <h3>🏢 CDMX</h3>
+          <p>
+            Calle Volcán 150 Piso 4, Oficina 415, Col. Virreyes, CDMX, C.P. 11000<br>
+            <strong>Tel.</strong> (55) 4166 9122
+          </p>
+        </div>
+
+        <!-- 4. Minatitlán -->
+        <div class="branch-office-box">
+          <h3>⚡ Minatitlán</h3>
+          <p>
+            Calle Jose J. Zamora 22 Lote 11 Mza-29 Fracc. Eduardo Soto Innes, Minatitlán, Veracruz, C.P. 96879<br>
+            <strong>Tel.</strong> (922) 132 6062
+          </p>
+        </div>
+
+        <!-- 5. Cd. Madero -->
+        <div class="branch-office-box">
+          <h3>⚓ Cd. Madero</h3>
+          <p>
+            Av. Rosalío Bustamante 114, Esfuerzo Nacional, Cd. Madero, Tamaulipas, C.P. 89470<br>
+            <strong>Tel.</strong> (833) 513 0145
+          </p>
+        </div>
+
+        <!-- 6. EMI Proyectos -->
+        <div class="branch-office-box">
+          <h3>🤝 EMI Proyectos</h3>
+          <p>
+            <strong>DISTRIBUIDOR OFICIAL</strong><br>
+            Tel. (33) 5124 6877<br>
+            ventas@emiproyectos.com<br>
+            Guadalajara, Jalisco, México
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 K-TRONIX. Todos los derechos reservados.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="aviso-de-privacidad.html" data-modal="modal-aviso" style="color: #94aab9;">Aviso de privacidad</a>
+          <a href="servicios.html" style="color: #FC5701;">Volver arriba ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- MODALES DE SERVICIOS (Con contenido íntegro de Ingeniería K-tronix y temática Cancún) -->
+  
+  <!-- 1. MODAL: INGENIERÍA -->
+  <div id="modal-ingenieria" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="service-modal-box">
+      <button type="button" class="service-modal-close" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="service-modal-header">
+        <div class="badge-cancun" style="margin-bottom: 0.75rem;">
+          <span>⚡</span> Ingeniería Eléctrica K-tronix
+        </div>
+        <h3 class="service-modal-title">Servicio Especializado de <span class="sea-glow">Ingeniería</span></h3>
+        <p class="service-modal-lead">
+          Para <strong>K-tronix</strong> es prioritario acompañar al cliente desde la detección de sus necesidades de calidad en la energía. Nuestro departamento de Ingeniería cuenta con un área de servicios donde ofrecemos una amplia gama de opciones pre-venta y desarrollo integral de proyectos.
+        </p>
+      </div>
+
+      <div class="service-modal-media">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_un-ingeniero-de-espaldas-_3012540440.png" alt="Ingeniería K-tronix">
+        <div class="media-caption">
+          🌴 <strong>Ingeniería de Clase Mundial:</strong> Levantamientos y cálculos especializados para industrias, complejos turísticos y centros de datos.
+        </div>
+      </div>
+
+      <div class="service-modal-content">
+        <h4 class="service-subheading">Algunos de nuestros servicios de ingeniería eléctrica son:</h4>
+
+        <div class="engineering-features-grid">
+          <!-- 1. Ingeniería de Detalle -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-drafting-compass"></i></div>
+            <div class="feature-text">
+              <h5>Ingeniería de Detalle</h5>
+              <p>Desarrollo exhaustivo de planos ejecutivos, diagramas unifilares, especificaciones de conexionado y memorias técnicas de cálculo.</p>
+            </div>
+          </div>
+
+          <!-- 2. Cálculos de Capacidad de Bancos de Baterías -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-car-battery"></i></div>
+            <div class="feature-text">
+              <h5>Cálculos de Capacidad de Bancos de Baterías</h5>
+              <p>Dimensionamiento de autonomía de acuerdo a <strong>Normas Internacionales</strong> (IEEE / IEC) y <strong>Nacionales</strong> (NOM / CFE).</p>
+            </div>
+          </div>
+
+          <!-- 3. Cálculos de Tableros de Distribución AC y DC -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
+            <div class="feature-text">
+              <h5>Cálculos de Tableros de Distribución AC y DC</h5>
+              <p>Dimensionamiento de barras, interruptores, canalizaciones y coordinación de protecciones eléctricas termomagnéticas.</p>
+            </div>
+          </div>
+
+          <!-- 4. Análisis de Cargas -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="feature-text">
+              <h5>Análisis de Cargas</h5>
+              <p>Evaluación de perfil de demanda, factor de potencia, balanceo de fases y mitigación de caídas de tensión.</p>
+            </div>
+          </div>
+
+          <!-- 5. Cálculos de Capacidad de UPS, Rectificador, Inversor -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+            <div class="feature-text">
+              <h5>Cálculos de Capacidad de UPS, Rectificador e Inversor</h5>
+              <p>Determinación exacta de capacidad de acuerdo a Normas Internacionales y Nacionales para respaldo total y continuo.</p>
+            </div>
+          </div>
+
+          <!-- 6. Análisis de Calidad de la Energía -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <div class="feature-text">
+              <h5>Análisis de Calidad de la Energía</h5>
+              <p>Monitoreo de distorsión armónica (THD), transitorios, sobretensiones, fluctuaciones y cumplimiento de Código de Red.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-modal-footer">
+        <div class="modal-footer-cta">
+          <div>
+            <h5 style="margin: 0 0 0.35rem 0; color: var(--color-deep-ocean); font-weight: 800;">¿Tienes un proyecto de ingeniería en mente?</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">Nuestros ingenieros en Cancún y sucursales en México te asesoran sin costo.</p>
+          </div>
+          <div class="modal-footer-cta-actions">
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20el%20servicio%20de%20Ingenier%C3%ADa%20El%C3%A9ctrica%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-modal">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
+              <i class="fas fa-paper-plane"></i> Cotizar Ingeniería
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MODAL: COMMISIONING (Contenido íntegro de ktronix.com.mx/services/commisioning/) -->
+  <div id="modal-commisioning" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="service-modal-box">
+      <button type="button" class="service-modal-close" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="service-modal-header">
+        <div class="badge-cancun" style="margin-bottom: 0.75rem;">
+          <span>🔧</span> Puesta en Operación K-tronix
+        </div>
+        <h3 class="service-modal-title">Servicio Integral de <span class="sea-glow">Commisioning</span></h3>
+        <p class="service-modal-lead">
+          <strong>K-tronix</strong> ofrece un servicio integral en la <strong>Puesta en Operación</strong> de todas nuestras gamas de productos, garantizando instalaciones seguras, confiables y con apego estricto a normativas vigentes.
+        </p>
+      </div>
+
+      <div class="service-modal-media">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_una-composicion-limpia-y-_3012547058.png" alt="Commisioning y Puesta en Marcha K-tronix">
+        <div class="media-caption">
+          🌴 <strong>Arranque y Puesta en Marcha Garantizada:</strong> Maniobras especiales, obra eléctrica, obra civil y protocolos SAT en campo.
+        </div>
+      </div>
+
+      <div class="service-modal-content">
+        <h4 class="service-subheading">Nuestras capacidades en Puesta en Operación incluyen:</h4>
+
+        <div class="engineering-features-grid">
+          <!-- 1. Instalación Llave en Mano -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-tools"></i></div>
+            <div class="feature-text">
+              <h5>Instalación Llave en Mano</h5>
+              <p>Capacidad integral de apoyo técnico en todas las etapas de montaje e integración física de los sistemas de respaldo.</p>
+            </div>
+          </div>
+
+          <!-- 2. Maniobras Especiales -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-dolly"></i></div>
+            <div class="feature-text">
+              <h5>Maniobras Especiales</h5>
+              <p>Descarga, izaje y traslado especializado de transformadores, gabinetes de potencia y bancos de baterías en áreas complejas.</p>
+            </div>
+          </div>
+
+          <!-- 3. Obra Eléctrica -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <div class="feature-text">
+              <h5>Obra Eléctrica</h5>
+              <p>Tendido de charolas y conductores, conexionado de tableros de transferencia, puesta a tierra y pruebas de aislamiento.</p>
+            </div>
+          </div>
+
+          <!-- 4. Obra Civil -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-hard-hat"></i></div>
+            <div class="feature-text">
+              <h5>Obra Civil</h5>
+              <p>Construcción y adecuación de cuartos eléctricos, cimentaciones, diques de contención y sistemas de ventilación especializada.</p>
+            </div>
+          </div>
+
+          <!-- 5. Pruebas en Sitio (FAT / SAT) -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div class="feature-text">
+              <h5>Pruebas en Sitio Certificadas</h5>
+              <p>Ejecución con <strong>Equipo de Pruebas Certificado</strong> y especialistas para validación de aislamiento, continuidad y respuesta.</p>
+            </div>
+          </div>
+
+          <!-- 6. Puesta en Marcha Oficial -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-power-off"></i></div>
+            <div class="feature-text">
+              <h5>Puesta en Marcha & Arranque</h5>
+              <p>Energización controlada, calibración de parámetros operativos y entrega formal con protocolo de pruebas firmado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--color-sand-warm); border: 1.5px solid var(--color-sand-border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1.25rem;">
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-deep-ocean); line-height: 1.6;">
+            ⭐ <em>"En la instalación tenemos capacidad de apoyar a nuestros clientes en las especialidades de: <strong>Maniobras Especiales, Obra Eléctrica y Obra Civil</strong> ofreciendo servicios llave en mano. Contamos con un <strong>Equipo de pruebas Certificado y Especialistas</strong> para la ejecución de las Pruebas en Sitio y Puesta en Marcha con el objetivo de lograr la máxima satisfacción de los usuarios de nuestros equipos."</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="service-modal-footer">
+        <div class="modal-footer-cta">
+          <div>
+            <h5 style="margin: 0 0 0.35rem 0; color: var(--color-deep-ocean); font-weight: 800;">¿Requieres servicio de Commisioning para tus equipos?</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">Nuestros ingenieros de servicio están listos para asistirte en cualquier estado de la República.</p>
+          </div>
+          <div class="modal-footer-cta-actions">
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20el%20servicio%20de%20Commisioning%20y%20Puesta%20en%20Marcha%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-modal">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
+              <i class="fas fa-paper-plane"></i> Solicitar Commisioning
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. MODAL: CAPACITACIÓN (Contenido íntegro de ktronix.com.mx/services/capacitacion/) -->
+  <div id="modal-capacitacion" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="service-modal-box">
+      <button type="button" class="service-modal-close" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="service-modal-header">
+        <div class="badge-cancun" style="margin-bottom: 0.75rem;">
+          <span>🎓</span> Formación Especializada K-tronix
+        </div>
+        <h3 class="service-modal-title">Programa de <span class="sea-glow">Capacitación</span> Técnica</h3>
+        <p class="service-modal-lead">
+          Ofrecemos <strong>cursos de capacitación</strong> para la operación y mantenimiento de los equipos tanto en nuestras instalaciones como en las del cliente. Nuestros cursos cuentan con una <strong>parte teórica y otra práctica</strong> donde los clientes pueden simular alarmas de los equipos y la resolución de las mismas, obteniendo con esto un mejor aprovechamiento del seminario.
+        </p>
+      </div>
+
+      <div class="service-modal-media">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_escena-fotorrealista-en-u_3012538634.png" alt="Capacitación y Adiestramiento K-tronix">
+        <div class="media-caption">
+          🌴 <strong>Capacitación Teórico-Práctica:</strong> Entrenamos al personal de planta y operadores para responder con agilidad ante cualquier contingencia eléctrica.
+        </div>
+      </div>
+
+      <div class="service-modal-content">
+        <h4 class="service-subheading">Aspectos clave de nuestro programa de capacitación:</h4>
+
+        <div class="engineering-features-grid">
+          <!-- 1. En Sitio o en K-tronix -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="feature-text">
+              <h5>Modalidad Flexible (En Planta o en Laboratorio)</h5>
+              <p>Impartimos talleres directamente en tu instalación industrial o en las salas técnicas equipadas de K-tronix.</p>
+            </div>
+          </div>
+
+          <!-- 2. Fundamentos Teóricos -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-book-reader"></i></div>
+            <div class="feature-text">
+              <h5>Fundamentos Teóricos Sólidos</h5>
+              <p>Principios de operación de UPS, rectificadores, inversores, topologías estáticas y normas de seguridad industrial.</p>
+            </div>
+          </div>
+
+          <!-- 3. Simulación de Alarmas -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-bell"></i></div>
+            <div class="feature-text">
+              <h5>Simulación de Alarmas en Tiempo Real</h5>
+              <p>Prácticas guiadas donde los participantes simulan fallos reales de red, transferencias a bypass y eventos críticos.</p>
+            </div>
+          </div>
+
+          <!-- 4. Resolución de Contingencias -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-tools"></i></div>
+            <div class="feature-text">
+              <h5>Resolución y Diagnóstico de Fallas</h5>
+              <p>Metodología paso a paso para interpretar códigos de advertencia, restablecer parámetros y evitar paros de línea.</p>
+            </div>
+          </div>
+
+          <!-- 5. Mantenimiento y Cuidados de Baterías -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-battery-three-quarters"></i></div>
+            <div class="feature-text">
+              <h5>Operación Segura de Bancos de Baterías</h5>
+              <p>Procedimientos de revisión de celdas, torques de apriete, inspección de terminales y protocolos de seguridad física.</p>
+            </div>
+          </div>
+
+          <!-- 6. Constancias y Certificación -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+            <div class="feature-text">
+              <h5>Constancia de Participación y Evaluación</h5>
+              <p>Reconocimiento técnico avalado para el cumplimiento de planes de adiestramiento de personal de mantenimiento.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--color-sand-warm); border: 1.5px solid var(--color-sand-border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1.25rem;">
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-deep-ocean); line-height: 1.6;">
+            ⭐ <em>"Nuestros cursos cuentan con una parte teórica y otra práctica donde los clientes pueden <strong>simular alarmas de los equipos y la resolución de las mismas</strong> obteniendo con esto un <strong>mejor aprovechamiento del seminario</strong> y asegurando la continuidad de sus procesos productivos."</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="service-modal-footer">
+        <div class="modal-footer-cta">
+          <div>
+            <h5 style="margin: 0 0 0.35rem 0; color: var(--color-deep-ocean); font-weight: 800;">¿Deseas capacitar a tu equipo de operaciones?</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">Diseñamos temarios a la medida de tu infraestructura y equipamiento.</p>
+          </div>
+          <div class="modal-footer-cta-actions">
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20solicitar%20un%20Curso%20de%20Capacitaci%C3%B3n%20T%C3%A9cnica%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-modal">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
+              <i class="fas fa-graduation-cap"></i> Solicitar Capacitación
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. MODAL: PRUEBAS DE DESEMPEÑO (Contenido íntegro de ktronix.com.mx/services/pruebas-de-desempeno/) -->
+  <div id="modal-pruebas" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="service-modal-box">
+      <button type="button" class="service-modal-close" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="service-modal-header">
+        <div class="badge-cancun" style="margin-bottom: 0.75rem;">
+          <span>🔬</span> Pruebas y Diagnóstico K-tronix
+        </div>
+        <h3 class="service-modal-title">Pruebas de <span class="sea-glow">Desempeño</span> y Atestiguamiento</h3>
+        <p class="service-modal-lead">
+          En <strong>K-tronix</strong> se busca contar con instalaciones que permitan brindar a nuestros clientes las facilidades tecnológicas de punta para la ejecución de actividades de atestiguamiento de pruebas.
+        </p>
+      </div>
+
+      <div class="service-modal-media">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_primer-plano-de-un-ingeni_3012545054.png" alt="Pruebas de Desempeño y Bahía de Pruebas K-tronix">
+        <div class="media-caption">
+          🌴 <strong>Bahía de Pruebas Especializada:</strong> Simulación de cargas reales, pruebas de autonomía y aceptación en fábrica (FAT).
+        </div>
+      </div>
+
+      <div class="service-modal-content">
+        <h4 class="service-subheading">Instalaciones e instrumental técnico especializado:</h4>
+
+        <div class="engineering-features-grid">
+          <!-- 1. Bahía de Pruebas Especializada -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-warehouse"></i></div>
+            <div class="feature-text">
+              <h5>Bahía de Pruebas Especializada</h5>
+              <p>Espacio acondicionado para realizar pruebas de operación, desempeño, diagnóstico, reparación y mantenimiento correctivo bajo estricto control de calidad.</p>
+            </div>
+          </div>
+
+          <!-- 2. Pruebas de Aceptación en Fábrica (FAT) -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div class="feature-text">
+              <h5>Pruebas FAT (Factory Acceptance Test)</h5>
+              <p>Atestiguamiento formal de operatividad de los sistemas UPS y equipos de potencia antes de su embarque y entrega final.</p>
+            </div>
+          </div>
+
+          <!-- 3. Simuladores y Bancos de Cargas -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
+            <div class="feature-text">
+              <h5>Simuladores y Bancos de Cargas</h5>
+              <p>Equipos de prueba para simular condiciones operativas al 100% en toda nuestra gama de productos de potencia.</p>
+            </div>
+          </div>
+
+          <!-- 4. Pruebas de Autonomía en Baterías -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-battery-full"></i></div>
+            <div class="feature-text">
+              <h5>Pruebas de Autonomía de Baterías</h5>
+              <p>Certificación de capacidad real de descarga y tiempo de respaldo en bancos de baterías de acuerdo a los requerimientos del proyecto.</p>
+            </div>
+          </div>
+
+          <!-- 5. Termografía Infrarroja -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-temperature-high"></i></div>
+            <div class="feature-text">
+              <h5>Termografía Infrarroja Predictiva</h5>
+              <p>Detección de puntos calientes, falsos contactos o desbalances térmicos en componentes internos y conexiones.</p>
+            </div>
+          </div>
+
+          <!-- 6. Atestiguamiento Personalizado -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+            <div class="feature-text">
+              <h5>Atestiguamiento Presencial y Remoto</h5>
+              <p>Para el team K-tronix es un placer recibir a nuestros clientes para la revisión presencial o telemática de sus equipos garantizando su total satisfacción.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--color-sand-warm); border: 1.5px solid var(--color-sand-border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1.25rem;">
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-deep-ocean); line-height: 1.6;">
+            ⭐ <em>"Contamos con una <strong>Bahía de Pruebas especializada</strong> para realizar actividades de operación, desempeño y <strong>Pruebas de Aceptación en Fábrica (FAT)</strong>, confirmando a través de un estricto control de calidad la operatividad de nuestros equipos UPS antes de salir de nuestras instalaciones."</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="service-modal-footer">
+        <div class="modal-footer-cta">
+          <div>
+            <h5 style="margin: 0 0 0.35rem 0; color: var(--color-deep-ocean); font-weight: 800;">¿Deseas programar pruebas de desempeño o atestiguamiento?</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">Coordinamos pruebas FAT/SAT con instrumental calibrado de alta precisión.</p>
+          </div>
+          <div class="modal-footer-cta-actions">
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20programar%20Pruebas%20de%20Desempe%C3%B1o%20y%20FAT%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-modal">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
+              <i class="fas fa-microscope"></i> Solicitar Pruebas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. MODAL: POST-VENTA (Contenido íntegro de ktronix.com.mx/services/postventa/) -->
+  <div id="modal-postventa" class="service-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="service-modal-box">
+      <button type="button" class="service-modal-close" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="service-modal-header">
+        <div class="badge-cancun" style="margin-bottom: 0.75rem;">
+          <span>🛡️</span> Soporte Continuo K-tronix
+        </div>
+        <h3 class="service-modal-title">Servicio y Pólizas <span class="sea-glow">Post-Venta</span></h3>
+        <p class="service-modal-lead">
+          El <strong>cuidar la inversión de nuestros clientes</strong> es muy importante para <strong>K-tronix</strong>, es por eso que contamos con servicios Post-venta que garantizan la continua satisfacción y disponibilidad ininterrumpida de sus operaciones.
+        </p>
+      </div>
+
+      <div class="service-modal-media">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2025/04/magnific_un-ingeniero-de-servicio-_3012557155.png" alt="Soporte y Servicio Post-Venta K-tronix">
+        <div class="media-caption">
+          🌴 <strong>Respaldo 24/7 los 365 días del año:</strong> Pólizas preventivas, atención correctiva y stock inmediato de refacciones originales.
+        </div>
+      </div>
+
+      <div class="service-modal-content">
+        <h4 class="service-subheading">Nuestras soluciones de servicio Post-Venta:</h4>
+
+        <div class="engineering-features-grid">
+          <!-- 1. Soporte 7x24x365 -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-headset"></i></div>
+            <div class="feature-text">
+              <h5>Soporte Técnico 7X24 los 365 Días</h5>
+              <p>Trabajamos los 365 días del año enfocados en brindar servicios de calidad con un equipo de ingenieros especializados disponibles las 24 horas.</p>
+            </div>
+          </div>
+
+          <!-- 2. Pólizas de Mantenimiento Preventivo -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="feature-text">
+              <h5>Pólizas de Mantenimiento Preventivo</h5>
+              <p>Programas de revisión periódica, limpieza profunda, pruebas de bancos de baterías y ajuste de parámetros para evitar fallos imprevistos.</p>
+            </div>
+          </div>
+
+          <!-- 3. Mantenimiento Correctivo Inmediato -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-tools"></i></div>
+            <div class="feature-text">
+              <h5>Mantenimiento Correctivo con Respuesta Rápida</h5>
+              <p>Atención emergente en sitio con tiempos de respuesta reducidos para restablecer el suministro y asegurar la continuidad del negocio.</p>
+            </div>
+          </div>
+
+          <!-- 4. Amplio Stock de Refacciones Originales -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+            <div class="feature-text">
+              <h5>Amplio Stock de Refacciones Originales</h5>
+              <p>Disponibilidad inmediata de tarjetas electrónicas, semiconductores, ventiladores y componentes críticos para resolver servicios en el menor tiempo posible.</p>
+            </div>
+          </div>
+
+          <!-- 5. Cobertura Nacional y Costa Maya -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="feature-text">
+              <h5>Red Nacional de Ingenieros de Campo</h5>
+              <p>Presencia técnica con bases en Cancún, Monterrey, CDMX, Minatitlán, Cd. Madero y Guadalajara para atención directa.</p>
+            </div>
+          </div>
+
+          <!-- 6. Reportes y Bitácoras Digitales -->
+          <div class="feature-item-card">
+            <div class="feature-icon"><i class="fas fa-file-medical-alt"></i></div>
+            <div class="feature-text">
+              <h5>Diagnósticos y Bitácoras de Rendimiento</h5>
+              <p>Entrega de reportes técnicos con mediciones, curvas de descarga y recomendaciones de vida útil para auditorías de calidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--color-sand-warm); border: 1.5px solid var(--color-sand-border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1.25rem;">
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-deep-ocean); line-height: 1.6;">
+            ⭐ <em>"Diseñamos <strong>pólizas de mantenimiento Preventivo y Correctivo</strong> para garantizar el grado de operación y funcionalidad requerido en toda la gama de productos y contamos con un <strong>amplio stock de refacciones</strong> para llevar a cabo en el menor tiempo posible los servicios de mantenimiento."</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="service-modal-footer">
+        <div class="modal-footer-cta">
+          <div>
+            <h5 style="margin: 0 0 0.35rem 0; color: var(--color-deep-ocean); font-weight: 800;">¿Deseas proteger tus equipos con una póliza Post-Venta?</h5>
+            <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">Cotiza una póliza preventiva o correctiva a la medida de tu infraestructura.</p>
+          </div>
+          <div class="modal-footer-cta-actions">
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20una%20P%C3%B3liza%20de%20Mantenimiento%20Post-Venta%20con%20K-tronix." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-modal">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
+              <i class="fas fa-shield-alt"></i> Cotizar Póliza Post-Venta
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios%20con%20K-tronix%20Canc%C3%BAn%20y%20M%C3%A9xico." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>Cotizar por WhatsApp</span>
+  </a>
+
+  <button id="scrollTopBtn" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
