@@ -861,7 +861,197 @@ document.addEventListener('DOMContentLoaded', () => {
     const stockInfo = selectedOption.getAttribute('data-stock');
 
     if (cfgPriceDisplay) {
-      cfgPriceDisplay.textContent = ' + price.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      cfgPriceDisplay.textContent = '
+    }
+
+    if (cfgStockBadge) {
+      if (stockInfo.includes('Stock')) {
+        cfgStockBadge.className = 'stock-badge-pill in-stock';
+        cfgStockBadge.innerHTML = '<i class="fas fa-check-circle"></i> ' + stockInfo;
+      } else {
+        cfgStockBadge.className = 'stock-badge-pill transit';
+        cfgStockBadge.innerHTML = '<i class="fas fa-shipping-fast"></i> ' + stockInfo;
+      }
+    }
+  };
+
+  // Mostrar / Ocultar campo de voltaje personalizado
+  document.querySelectorAll('input[name="cfg_volt"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (cfgVoltCustom) {
+        cfgVoltCustom.style.display = radio.value === 'Otro voltaje específico' ? 'block' : 'none';
+        if (radio.value === 'Otro voltaje específico') cfgVoltCustom.focus();
+      }
+    });
+  });
+
+  // Listeners para cambio de capacidad o ATS
+  cfgCapacidad?.addEventListener('change', updatePlantaCalculation);
+  document.querySelectorAll('input[name="cfg_ats"]').forEach(radio => {
+    radio.addEventListener('change', updatePlantaCalculation);
+  });
+
+  // Abrir modal configurador
+  openPlantaBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const kw = btn.getAttribute('data-kw');
+      if (kw && cfgCapacidad) {
+        for (let i = 0; i < cfgCapacidad.options.length; i++) {
+          if (cfgCapacidad.options[i].value === kw) {
+            cfgCapacidad.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      updatePlantaCalculation();
+      if (modalPlanta) {
+        modalPlanta.classList.add('active');
+        modalPlanta.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  // Cerrar modal
+  const closePlantaModal = () => {
+    if (modalPlanta) {
+      modalPlanta.classList.remove('active');
+      modalPlanta.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  };
+
+  closePlantaBtn?.addEventListener('click', closePlantaModal);
+  modalPlanta?.addEventListener('click', (e) => {
+    if (e.target === modalPlanta) closePlantaModal();
+  });
+
+  // Enviar por WhatsApp con mensaje estructurado completo
+  btnSendWhatsapp?.addEventListener('click', () => {
+    const selectedOption = cfgCapacidad.options[cfgCapacidad.selectedIndex];
+    const kw = selectedOption.value + ' kW';
+    const model = selectedOption.getAttribute('data-model');
+    const atsMode = document.querySelector('input[name="cfg_ats"]:checked')?.value || 'Con ATS (Automático)';
+    
+    let voltMode = document.querySelector('input[name="cfg_volt"]:checked')?.value || '220 VCA';
+    if (voltMode === 'Otro voltaje específico' && cfgVoltCustom?.value.trim()) {
+      voltMode = 'Personalizado: ' + cfgVoltCustom.value.trim();
+    }
+
+    const priceText = cfgPriceDisplay?.textContent || '$0.00';
+    const ciudad = document.getElementById('cfg_ciudad')?.value.trim() || 'No especificada';
+
+    const message = `Hola K-tronix Cancún, deseo solicitar la cotización formal de una Planta de Emergencia Grupel:
+
+• Capacidad: ${kw}
+• Modelo: ${model}
+• Modalidad: ${atsMode}
+• Voltaje Requerido: ${voltMode}
+• Precio de Lista Referencial: ${priceText} MXN + IVA
+• Destino / Ciudad: ${ciudad}
+
+Por favor confirmar disponibilidad en stock, costos de envío y tiempo de entrega.`;
+
+    const whatsappUrl = `https://wa.me/528811058875?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    closePlantaModal();
+  });
+
+  // Enviar a Formulario de Contacto en la misma página
+  btnSendForm?.addEventListener('click', () => {
+    const selectedOption = cfgCapacidad.options[cfgCapacidad.selectedIndex];
+    const kw = selectedOption.value + ' kW';
+    const model = selectedOption.getAttribute('data-model');
+    const atsMode = document.querySelector('input[name="cfg_ats"]:checked')?.value || 'Con ATS';
+    
+    let voltMode = document.querySelector('input[name="cfg_volt"]:checked')?.value || '220 VCA';
+    if (voltMode === 'Otro voltaje específico' && cfgVoltCustom?.value.trim()) {
+      voltMode = cfgVoltCustom.value.trim();
+    }
+
+    const priceText = cfgPriceDisplay?.textContent || '';
+    const ciudad = document.getElementById('cfg_ciudad')?.value.trim() || '';
+
+    const messageField = document.getElementById('c_mensaje');
+    if (messageField) {
+      messageField.value = `Hola, solicito cotización formal de Planta de Emergencia Grupel de ${kw} (Modelo ${model}), en modalidad ${atsMode}, con requerimiento de Voltaje: ${voltMode}.${ciudad ? ' Destino: ' + ciudad + '.' : ''} (Precio ref: ${priceText} MXN).`;
+    }
+
+    closePlantaModal();
+
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+      const headerOffset = 90;
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  });
+
+  // ==========================================================================
+  // CONFIGURACIÓN DIRECTA EN FILAS DE LA TABLA (ATS, VOLTAJE Y PRECIO)
+  // ==========================================================================
+  const generatorRows = document.querySelectorAll('.generator-row');
+
+  generatorRows.forEach(row => {
+    const atsSelect = row.querySelector('.row-ats-select');
+    const voltSelect = row.querySelector('.row-volt-select');
+    const priceVal = row.querySelector('.row-price-val');
+    const cotizarBtn = row.querySelector('.btn-stock-cotizar-direct');
+
+    const atsPrice = parseFloat(row.getAttribute('data-ats-price'));
+    const sinPrice = parseFloat(row.getAttribute('data-sin-price'));
+    const kw = row.getAttribute('data-kw');
+    const model = row.getAttribute('data-model');
+    const stock = row.getAttribute('data-stock');
+
+    // Actualizar precio en vivo al cambiar el selector de ATS en la fila
+    atsSelect?.addEventListener('change', () => {
+      const isATS = atsSelect.value === 'con';
+      const currentPrice = isATS ? atsPrice : sinPrice;
+      if (priceVal) {
+        priceVal.textContent = ' + currentPrice.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+    });
+
+    // Enviar cotización por WhatsApp con la configuración exacta de esa fila
+    cotizarBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const isATS = atsSelect.value === 'con';
+      const atsText = isATS ? 'Con ATS (Transferencia Automática)' : 'Sin ATS (Transferencia Manual)';
+      const currentPrice = isATS ? atsPrice : sinPrice;
+      const priceFormatted = ' + currentPrice.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' MXN + IVA';
+
+      let voltValue = voltSelect.value;
+      if (voltValue.includes('Otro')) {
+        const customPrompt = prompt('Por favor, especifique el voltaje requerido para su planta de ' + kw + ' kW:', '440 VCA');
+        if (customPrompt && customPrompt.trim()) {
+          voltValue = 'Personalizado: ' + customPrompt.trim();
+        } else {
+          voltValue = '220 VCA (A definir)';
+        }
+      }
+
+      const message = `Hola K-tronix Cancún, deseo solicitar la cotización formal de una Planta de Emergencia Grupel:
+
+• Capacidad: ${kw} kW (Stand by)
+• Modelo: ${model}
+• Modalidad: ${atsText}
+• Voltaje Requerido: ${voltValue}
+• Precio de Lista Referencial: ${priceFormatted}
+• Disponibilidad: ${stock}
+
+Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
+
+      const whatsappUrl = `https://wa.me/528811058875?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  });
+
+});
+ + price.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
     if (cfgStockBadge) {
