@@ -642,7 +642,7 @@ document.addEventListener('DOMContentLoaded', () => {
     productFlipCards.forEach(card => {
       const front = card.querySelector('.product-card-front');
       const closeBtn = card.querySelector('.product-flip-close');
-      const actionLinks = card.querySelectorAll('.product-back-actions a');
+      const actionLinks = card.querySelectorAll('.product-back-actions a, .product-back-cta a');
 
       front?.addEventListener('click', (e) => {
         // Cerrar otras tarjetas abiertas de productos
