@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p style="font-size: 0.85rem; margin: 0;">Nuestros ingenieros especialistas te asesoran en el dimensionamiento y levantamiento en campo.</p>
             </div>
             <div class="modal-footer-cta-actions">
-              <a href="https://wa.me/528811058875?text=${proj.waMessage}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal">
+              <a href="https://wa.me/528110588875?text=${proj.waMessage}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal">
                 <i class="fab fa-whatsapp"></i> WhatsApp Proyecto
               </a>
               <a href="#contacto" class="btn btn-coral modal-close-and-scroll">
@@ -954,7 +954,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Por favor confirmar disponibilidad en stock, costos de envío y tiempo de entrega.`;
 
-    const whatsappUrl = `https://wa.me/528811058875?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/528110588875?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     closePlantaModal();
   });
@@ -1046,7 +1046,7 @@ Por favor confirmar disponibilidad en stock, costos de envío y tiempo de entreg
 
 Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
 
-      const whatsappUrl = `https://wa.me/528811058875?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/528110588875?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     });
   });
