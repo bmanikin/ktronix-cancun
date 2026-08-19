@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos & Equipamiento Energético • K-TRONIX Cancún & México</title>
+  <meta name="description" content="Catálogo completo de 12 categorías de productos K-tronix: UPS, rectificadores, inversores, plantas de emergencia, bancos de baterías y más.">
+  <link rel="icon" href="https://ktronix.com.mx/wp-content/uploads/2026/05/Recurso-2@2x-scaled.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div>
+        <span>☀️ <strong>Presencia Nacional:</strong> Cancún (Riviera Maya) • Monterrey • CDMX • Minatitlán • Cd. Madero</span>
+      </div>
+      <div class="top-bar-contacts">
+        <a href="index.html#stock-plantas" style="color: #ffffff; font-weight: 700; margin-right: 0.5rem;"><i class="fas fa-industry text-turquoise"></i> Plantas en Stock</a>
+        <a href="tel:8811058875"><i class="fas fa-phone"></i> Tel. (881) 105 8875</a>
+        <a href="mailto:ktronix@ktronix.com.mx"><i class="fas fa-envelope"></i> ktronix@ktronix.com.mx</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header" id="masthead">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Inicio K-tronix">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Recurso-2@2x-scaled.png" alt="K-tronix" onerror="this.onerror=null; this.src='https://ktronix.com.mx/wp-content/uploads/2026/05/logo-svg.svg';">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-list" aria-label="Navegación principal">
+        <div class="nav-item">
+          <a href="index.html#inicio" class="nav-link">Inicio</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#stock-plantas" class="nav-link" style="color: #FC5701; font-weight: 800;">Plantas</a>
+        </div>
+        <div class="nav-item">
+          <a href="nosotros.html" class="nav-link">Nosotros <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="nosotros.html#nosotros" class="dropdown-link"><i class="fas fa-building"></i> Misión & Visión</a>
+            <a href="nosotros.html#proyectos" class="dropdown-link"><i class="fas fa-project-diagram"></i> Proyectos Emblemáticos</a>
+            <a href="nosotros.html#blog" class="dropdown-link"><i class="fas fa-newspaper"></i> Blog/Novedades</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="servicios.html" class="nav-link">Servicios</a>
+        </div>
+        <div class="nav-item">
+          <a href="productos.html" class="nav-link active">Productos</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#aplicaciones" class="nav-link">Aplicaciones</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#contacto" class="nav-link">Contacto</a>
+        </div>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="index.html#contacto" class="btn btn-primary" style="padding: 0.65rem 1.4rem;">
+          <i class="fas fa-bolt"></i> Cotiza ahora!
+        </a>
+        <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Menú móvil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <a href="index.html#inicio" class="mobile-nav-item">
+      <span><i class="fas fa-home text-turquoise"></i> Inicio</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#stock-plantas" class="mobile-nav-item" style="border-left: 4px solid #FC5701; background: #fff6ee;">
+      <span><i class="fas fa-industry text-turquoise"></i> Plantas de Emergencia (Stock)</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="nosotros.html" class="mobile-nav-item">
+      <span><i class="fas fa-building text-turquoise"></i> Nosotros & Proyectos</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="servicios.html" class="mobile-nav-item">
+      <span><i class="fas fa-cogs text-turquoise"></i> Servicios</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="productos.html" class="mobile-nav-item" style="font-weight: 800; color: #FC5701;">
+      <span><i class="fas fa-boxes text-turquoise"></i> Catálogo de Productos</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#aplicaciones" class="mobile-nav-item">
+      <span><i class="fas fa-th-large text-turquoise"></i> Aplicaciones</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="index.html#contacto" class="mobile-nav-item">
+      <span><i class="fas fa-envelope text-turquoise"></i> Contacto</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <!-- HERO DE PRODUCTOS -->
+  <section class="hero-section" style="padding: 9rem 0 4.5rem; min-height: auto;">
+    <div class="hero-overlay" style="opacity: 0.92;"></div>
+    <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 900px;">
+      <div class="badge-cancun" style="margin-bottom: 1rem;">
+        <span>📦</span> Catálogo de Alta Tecnología
+      </div>
+      <h1 class="hero-title" style="font-size: 2.8rem; margin-bottom: 1rem;">
+        Equipos y Sistemas de <span class="cyan-text">Respaldo Energético</span>
+      </h1>
+      <p class="hero-subtitle-lead" style="font-size: 1.15rem; color: #d6e8f5; line-height: 1.7;">
+        Suministro oficial de tecnología de clase mundial: UPS on-line doble conversión, cargadores industriales, bancos de baterías, plantas diésel, reguladores y cables de alta pureza.
+      </p>
+    </div>
+  </section>
+
+<!-- SECTION 5: PRODUCTOS (Nuestras categorías de producto - 12 Cards) -->
+  <!-- SECTION: CATEGORÍAS DE PRODUCTO (Ruleta / Carrusel Interactivo con Info y Cotización al Clic) -->
+  <section id="productos" class="products-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-cancun" style="margin-bottom: 0.85rem;">
+          <span>🌴</span> Catálogo Completo
+        </div>
+        <h2 class="section-title">Nuestras categorías de <span class="sea-glow">producto</span></h2>
+        <p class="section-subtitle">
+          Suministro de equipos industriales de potencia de alto rendimiento. <em>(Toca cualquier equipo para ver su ficha y especificaciones técnicas)</em>.
+        </p>
+      </div>
+
+      <!-- Carousel Container / Ruleta -->
+      <div class="product-carousel-wrapper">
+        <!-- Navigation Buttons -->
+        <button type="button" class="product-carousel-nav prev" id="productPrevBtn" aria-label="Producto anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button type="button" class="product-carousel-nav next" id="productNextBtn" aria-label="Producto siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Track -->
+        <div class="product-carousel-track" id="productTrack">
+
+          <!-- 01. Acondicionador de Línea Eléctrico -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="01">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Acondicionador.png" alt="Acondicionador de Línea Eléctrico" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Acondicionador de Línea Eléctrico</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Acondicionador de Línea Eléctrico">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Acondicionador de Línea Eléctrico</h4>
+                  <p class="product-back-desc">Regulación y aislamiento de alta precisión que elimina ruidos armónicos, fluctuaciones y picos de voltaje. Diseñado para proteger equipos médicos, servidores, centros de cómputo y maquinaria de precisión.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Aislamiento Galvánico</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Supresión de Transientes</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Eficiencia >98%</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02. Baterías Níquel – Cadmio -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="02">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/baterias-niquel.png" alt="Baterías Níquel – Cadmio" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Baterías Níquel – Cadmio</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Baterías Níquel – Cadmio">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Baterías Níquel – Cadmio</h4>
+                  <p class="product-back-desc">Bancos de baterías industriales de larga vida útil (hasta 20 años) para subestaciones CFE, plantas petroquímicas y plataformas marinas. Gran resistencia a temperaturas extremas (-40°C a +60°C).</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Vida Útil 20+ Años</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Resistencia Térmica Extrema</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cero Efecto Memoria</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03. Cable de cobre especializado -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="03">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/cable-de-cobre.png" alt="Cable de cobre especializado" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Cable de cobre especializado</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Cable de cobre especializado">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Cable de cobre especializado</h4>
+                  <p class="product-back-desc">Conductores de cobre electrolítico de pureza 99.99% para catenaria ferroviaria (Tren Maya), subestaciones de transmisión eléctrica, líneas de media tensión y puesta a tierra industrial.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Pureza 99.99%</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Catenaria Ferroviaria</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Alta Conductividad</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04. Rectificador y Cargador Industrial -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="04">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/cargador-rectificador.png" alt="Rectificador y Cargador Industrial" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Rectificador y Cargador Industrial</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Rectificador y Cargador Industrial">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Rectificador y Cargador Industrial</h4>
+                  <p class="product-back-desc">Sistemas de conversión AC/DC de alta confiabilidad con tecnología tiristorizada o switch-mode para alimentación de cargas continuas y recarga de bancos de baterías en subestaciones y plantas industriales.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Control Digital Microprocesado</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Filtrado Armónico</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Redundancia N+1</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05. Cámaras Termográficas -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="05">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/camara-termografica.png" alt="Cámaras Termográficas" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Cámaras Termográficas</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Cámaras Termográficas">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Cámaras Termográficas</h4>
+                  <p class="product-back-desc">Instrumentación avanzada de diagnóstico térmico infrarrojo para mantenimiento predictivo en tableros eléctricos, líneas de distribución y transformadores. Detección temprana de puntos calientes.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Alta Resolución Térmica</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Conectividad Wi-Fi / Cloud</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Mantenimiento Predictivo</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06. Inversores -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="06">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Inversor.png" alt="Inversores" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Inversores</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Inversores">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Inversores</h4>
+                  <p class="product-back-desc">Inversores estáticos industriales DC/AC de onda senoidal pura para sistemas de telecomunicaciones, centros de control SCADA, subestaciones y plantas de generación solar.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Onda Senoidal Pura (<2% THD)</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Bypass Estático Ultrarrápido</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Aislamiento Galvánico</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 07. Plantas de emergencia -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="07">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Planta-de-emergencia.png" alt="Plantas de emergencia" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Plantas de emergencia</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Plantas de emergencia">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Plantas de emergencia</h4>
+                  <p class="product-back-desc">Generadores eléctricos a diésel y gas de 20 kVA a 2,500 kVA con motores de prestigio mundial (Cummins, Perkins, Grupel), controladores DeepSea y caseta acústica intemperie para arranque automático.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> 20 kVA a 2,500 kVA</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Transferencia ATS Automática</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Caseta Insonorizada</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 08. Reguladores -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="08">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/regulador.png" alt="Reguladores" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Reguladores</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Reguladores">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Reguladores</h4>
+                  <p class="product-back-desc">Reguladores automáticos de voltaje electrónicos y electromecánicos para corregir variaciones severas de red eléctrica y salvaguardar líneas de producción, motores y sistemas robotizados.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Corrección Instantánea</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Rango Amplio (±20%)</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Trifásicos y Monofásicos</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 09. Soluciones cero cortes -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="09">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/Cero-cortes.png" alt="Soluciones cero cortes" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Soluciones cero cortes</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Soluciones cero cortes">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Soluciones cero cortes</h4>
+                  <p class="product-back-desc">Sistemas de conmutación estática ultra-veloz (<4ms) que realizan transferencia imperceptible entre dos fuentes de potencia independientes para quirófanos, hospitales y data centers.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Transferencia <4 ms</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cero Caída de Tensión</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Grado Médico y Crítico</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Equipos de Alta, Media Tensión y Subestaciones -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="10">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/alta-tension.png" alt="Equipos de Alta, Media Tensión y Subestaciones" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Equipos de Alta, Media Tensión y Subestaciones</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Equipos de Alta, Media Tensión y Subestaciones">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Equipos de Alta, Media Tensión y Subestaciones</h4>
+                  <p class="product-back-desc">Transformadores de potencia secos y en aceite, seccionadores bajo carga, tableros metal-clad y subestaciones compactas para distribución eléctrica bajo normatividad CFE y NOM.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Transformadores de Potencia</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Celdas Metal-Clad</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Cumplimiento CFE / NOM</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. UPS -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="11">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/UPS.png" alt="UPS" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">UPS</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de UPS">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">UPS</h4>
+                  <p class="product-back-desc">Sistemas de Energía Ininterrumpible On-line Doble Conversión modulares de 1 kVA a 1,000 kVA. Respaldo continuo con factor de potencia 1.0 y disponibilidad 99.999% para IT y servidores.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Modular N+1 Escalable</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Eficiencia hasta 97%</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Factor de Potencia 1.0</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Supresor de Transientes -->
+          <div class="product-roulette-item">
+            <div class="product-flip-card" data-product="12">
+              <div class="product-flip-inner">
+                <!-- Front Face (Visual + Título + Hint) -->
+                <div class="product-card-front" title="Toca o haz clic para ver información">
+                  <div class="product-roulette-bg"></div>
+                  <div class="product-roulette-image">
+                    <img src="https://ktronix.com.mx/wp-content/uploads/2026/05/supresor.png" alt="Supresor de Transientes" loading="lazy">
+                    </div>
+                  <div class="product-roulette-info">
+                    <h5 class="product-roulette-title">Supresor de Transientes</h5>
+                    <button type="button" class="btn-product-reveal" aria-label="Ver detalles de Supresor de Transientes">
+                      <i class="fas fa-info-circle"></i> Info
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Back Face (Información Técnica + Botones de Cotización) -->
+                <div class="product-card-back">
+                  <div class="product-back-top">
+                    <span class="product-badge-tag"><i class="fas fa-bolt text-turquoise"></i> Solución K-tronix</span>
+                    <button type="button" class="product-flip-close" aria-label="Cerrar"><i class="fas fa-times"></i> Volver</button>
+                  </div>
+                  <h4 class="product-back-title">Supresor de Transientes</h4>
+                  <p class="product-back-desc">Supresores de sobretensiones transitorias (TVSS / SPD) Nivel A, B y C para tableros principales y de distribución. Protección certificada contra descargas atmosféricas e inducciones.</p>
+                  <div class="product-highlights-tags">
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Nivel A, B y C (IEEE C62.41)</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Capacidad hasta 300 kA</span>
+                    <span class="product-highlight-pill"><i class="fas fa-check text-turquoise"></i> Monitoreo y Alarma LED</span>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="product-carousel-dots" id="productDots"></div>
+      </div>
+    </div>
+  </section>
+
+    
+
+  <!-- SECTION 9: FOOTER & DIRECTORIO NACIONAL (5 Sucursales + Distribuidor) -->
+  <footer class="main-footer" id="sucursales">
+    <div class="container">
+      <!-- Footer Top Grid -->
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div>
+          <div class="footer-brand-title">K-<span>TRONIX</span></div>
+          <p class="footer-brand-desc">Energía Eléctrica Siempre a tu Alcance</p>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Líderes en ingeniería energética y respaldo ininterrumpible de potencia para industrias, centros de datos y hotelería.
+          </p>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61593284785329" class="social-icon-btn facebook" aria-label="Facebook K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ktronix_cancun/" class="social-icon-btn instagram" aria-label="Instagram K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@katronixcancun" class="social-icon-btn tiktok" aria-label="TikTok K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios%20con%20K-tronix%20Canc%C3%BAn%20y%20M%C3%A9xico." class="social-icon-btn whatsapp" aria-label="WhatsApp K-tronix Cancún" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: #ffffff; margin-bottom: 1rem;">Navegación</h4>
+          <div class="footer-links-list">
+            <a href="index.html#inicio"><i class="fas fa-angle-right text-turquoise"></i> Inicio</a>
+            <a href="index.html#stock-plantas"><i class="fas fa-angle-right text-turquoise"></i> Plantas Diésel</a>
+            <a href="nosotros.html"><i class="fas fa-angle-right text-turquoise"></i> Nosotros & Proyectos</a>
+            <a href="servicios.html"><i class="fas fa-angle-right text-turquoise"></i> Servicios</a>
+            <a href="productos.html"><i class="fas fa-angle-right text-turquoise"></i> Productos</a>
+            <a href="index.html#contacto"><i class="fas fa-angle-right text-turquoise"></i> Contacto</a>
+            <a href="aviso-de-privacidad.html" data-modal="modal-aviso"><i class="fas fa-angle-right text-turquoise"></i> Aviso de privacidad</a>
+            <a href="mailto:ktronix@ktronix.com.mx"><i class="fas fa-envelope text-turquoise"></i> ktronix@ktronix.com.mx</a>
+          </div>
+        </div>
+
+        <!-- Contacto Directo Matriz -->
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: #ffffff; margin-bottom: 1rem;">Atención Telefónica</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><a href="tel:8811058875" style="color: #c4d7e6; text-decoration: none;"><i class="fas fa-phone text-turquoise"></i> (881) 105 8875</a></p>
+          <p style="font-size: 0.9rem;"><i class="fab fa-whatsapp text-turquoise"></i> Whatsapp: (Pendiente)</p>
+        </div>
+      </div>
+
+      <!-- Sucursales Físicas (Exactas a ktronix.com.mx) -->
+      <h3 class="footer-branches-title">Directorio Nacional de Sucursales</h3>
+      <div class="branches-directory-grid">
+        <!-- 1. Cancún (Destacado Caribe) -->
+        <div class="branch-office-box featured-cancun">
+          <h3>🌴 Cancún (Riviera Maya)</h3>
+          <p>
+            Infinity Park Carretera Cancún Av. Chichén Itzá, C.P. 77569 Cancún, Q.R.<br>
+            <strong>Tel.</strong> (881) 105 8875<br><strong>Whatsapp:</strong> (Pendiente)
+          </p>
+        </div>
+
+        <!-- 2. Monterrey -->
+        <div class="branch-office-box">
+          <h3>🏭 Monterrey (Matriz)</h3>
+          <p>
+            Gral. José Ma. Mier #201, Col. Burócratas del Estado, Monterrey, Nuevo León, C.P. 64380<br>
+            <strong>Tel.</strong> (881) 105 8875<br>
+            <strong>Whatsapp:</strong> (Pendiente)
+          </p>
+        </div>
+
+        <!-- 3. CDMX -->
+        <div class="branch-office-box">
+          <h3>🏢 CDMX</h3>
+          <p>
+            Calle Volcán 150 Piso 4, Oficina 415, Col. Virreyes, CDMX, C.P. 11000<br>
+            <strong>Tel.</strong> (55) 4166 9122
+          </p>
+        </div>
+
+        <!-- 4. Minatitlán -->
+        <div class="branch-office-box">
+          <h3>⚡ Minatitlán</h3>
+          <p>
+            Calle Jose J. Zamora 22 Lote 11 Mza-29 Fracc. Eduardo Soto Innes, Minatitlán, Veracruz, C.P. 96879<br>
+            <strong>Tel.</strong> (922) 132 6062
+          </p>
+        </div>
+
+        <!-- 5. Cd. Madero -->
+        <div class="branch-office-box">
+          <h3>⚓ Cd. Madero</h3>
+          <p>
+            Av. Rosalío Bustamante 114, Esfuerzo Nacional, Cd. Madero, Tamaulipas, C.P. 89470<br>
+            <strong>Tel.</strong> (833) 513 0145
+          </p>
+        </div>
+
+        <!-- 6. EMI Proyectos -->
+        <div class="branch-office-box">
+          <h3>🤝 EMI Proyectos</h3>
+          <p>
+            <strong>DISTRIBUIDOR OFICIAL</strong><br>
+            Tel. (33) 5124 6877<br>
+            ventas@emiproyectos.com<br>
+            Guadalajara, Jalisco, México
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 K-TRONIX. Todos los derechos reservados.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="aviso-de-privacidad.html" data-modal="modal-aviso" style="color: #94aab9;">Aviso de privacidad</a>
+          <a href="productos.html" style="color: #FC5701;">Volver arriba ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/528811058875?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios%20con%20K-tronix%20Canc%C3%BAn%20y%20M%C3%A9xico." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>Cotizar por WhatsApp</span>
+  </a>
+
+  <button id="scrollTopBtn" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
