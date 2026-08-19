@@ -538,8 +538,8 @@ button, input, select, textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  /* Degradado suave y cristalino que resalta la playa, el mar turquesa y la zona hotelera de Cancún con total nitidez */
-  background: linear-gradient(90deg, rgba(6, 24, 40, 0.62) 0%, rgba(8, 37, 62, 0.32) 48%, rgba(0, 0, 0, 0.08) 85%, rgba(0, 0, 0, 0.02) 100%);
+  /* Degradado naranja muy tenue y cálido que mantiene la visibilidad cristalina de la playa y resalta la identidad K-tronix */
+  background: linear-gradient(90deg, rgba(18, 7, 2, 0.54) 0%, rgba(252, 87, 1, 0.22) 36%, rgba(255, 119, 40, 0.10) 70%, rgba(0, 0, 0, 0.02) 100%);
   z-index: 1;
   pointer-events: none;
 }
