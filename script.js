@@ -1401,6 +1401,16 @@ Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
     });
   });
 
+  // Permitir abrir el desglose técnico al hacer clic directamente en el modelo o en su celda
+  const modelClickElements = document.querySelectorAll('.model-cell-click, .model-code-tag');
+  modelClickElements.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const kw = el.getAttribute('data-kw') || el.closest('.generator-row')?.getAttribute('data-kw');
+      if (kw) openFichaModal(kw);
+    });
+  });
+
   closeFichaBtn?.addEventListener('click', () => {
     if (modalFicha) {
       modalFicha.classList.remove('active');

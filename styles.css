@@ -4087,6 +4087,36 @@ textarea.form-input {
   white-space: nowrap;
 }
 
+.model-code-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.model-code-tag:hover,
+.model-cell-click:hover .model-code-tag {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.15);
+}
+
+.model-cell-click:hover div {
+  color: #0284c7 !important;
+}
+
 .btn-stock-ficha:hover {
   background: #e2e8f0 !important;
   color: #0284c7 !important;
