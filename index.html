@@ -1276,96 +1276,150 @@
     </div>
   </section>
 
-    <!-- SECTION 8: FORMULARIO & MAPA NACIONAL (Contacto ktronix.com.mx/contacto/) -->
-  <section id="contacto" class="contact-section">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 2.5rem;">
-        <div class="badge-cancun" style="margin-bottom: 0.75rem; background: rgba(252, 87, 1, 0.12); color: #FC5701; border-color: rgba(252, 87, 1, 0.35); font-weight: 800;">
-          <span>📍</span> Contacto
+      <!-- SECTION 8: SECCIÓN TEMÁTICA DE CONTACTO Y GENERADORES CANCÚN -->
+  <section id="contacto" class="thematic-contact-section">
+    <div class="thematic-storm-overlay"></div>
+    <div class="container thematic-contact-container">
+      
+      <!-- Top Thematic Heading & Pain Points Banner -->
+      <div class="thematic-top-intro">
+        <div class="thematic-badge">
+          <i class="fas fa-bolt text-turquoise"></i> Soluciones Energéticas Inmediatas
         </div>
-        <h2 class="section-title">Contáctanos <span class="sea-glow">en México</span></h2>
-        <p class="section-subtitle">
-          Atención técnica especializada, asesoría de ingeniería y cotizaciones inmediatas para proyectos de respaldo de energía.
-        </p>
+        <h2 class="thematic-title">
+          Plantas de Luz <span class="thematic-cancun-glow">Cancún</span>
+        </h2>
+        <div class="thematic-pain-banner">
+          <div class="thematic-pain-left">
+            <h3 class="thematic-pain-title">
+              <i class="fas fa-triangle-exclamation"></i> UN APAGÓN PUEDE COSTARTE MILES EN MINUTOS
+            </h3>
+            <p class="thematic-pain-text">
+              Eventos detenidos, cuartos y refrigeración sin luz, obras paradas, clientes molestos...<br>
+              <strong>La falta de energía no espera y tú tampoco deberías esperar.</strong>
+            </p>
+            <div class="thematic-checks-grid">
+              <div class="thematic-check-item">
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Evita pérdidas</strong> críticas por apagones y tormentas tropicales</span>
+              </div>
+              <div class="thematic-check-item">
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Instalación rápida</strong>, profesional y sin complicaciones</span>
+              </div>
+              <div class="thematic-check-item">
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Disponible ahora mismo</strong> para entrega inmediata en Cancún</span>
+              </div>
+            </div>
+          </div>
+          <div class="thematic-pain-right">
+            <div class="thematic-banner-tag">
+              <i class="fas fa-shield-halved"></i> Respaldo Garantizado
+            </div>
+            <h4>TENEMOS EL GENERADOR QUE NECESITAS</h4>
+            <p>Desde 18 kW residenciales/comerciales hasta 305+ kW industriales con entrega exprés en Quintana Roo.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="contact-layout-grid">
-        <!-- Columna Izquierda: Imagen Oficial, Botón de Formulario & Formulario Directo -->
-        <div class="contact-card-box">
-          <!-- Banner Oficial de Contacto K-tronix -->
-          <div class="contact-banner-card">
-            <img src="https://ktronix.com.mx/wp-content/uploads/2026/07/02f17189-7c48-6852-a104-9c8448183f73-1024x341.jpg" alt="Contáctanos K-tronix Soluciones Energéticas">
+      <!-- Main Layout: Thematic Form Box + Map & Direct Contact Card -->
+      <div class="thematic-layout-grid">
+        
+        <!-- Thematic Red/Orange Form Card -->
+        <div class="thematic-form-card">
+          <div class="thematic-form-header">
+            <div class="thematic-form-badge">
+              <i class="fas fa-bolt"></i> Atención Inmediata
+            </div>
+            <h3>¿Te quedaste sin luz en Cancún?</h3>
+            <p>Evita pérdidas con una planta Automática de <strong>K-TRONIX</strong></p>
           </div>
 
-          <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--color-deep-ocean); margin-bottom: 0.35rem;">
-              Envíanos un mensaje directo
-            </h4>
-            <p style="color: var(--color-text-muted); font-size: 0.92rem; margin: 0;">
-              O completa el formulario a continuación y un especialista se comunicará contigo a la brevedad:
-            </p>
-          </div>
+          <form id="contactForm" class="thematic-form-body">
+            <div class="thematic-input-group">
+              <label for="c_nombre"><i class="fas fa-user"></i> Nombre completo *</label>
+              <input type="text" id="c_nombre" class="thematic-input" placeholder="Ingresa tu nombre completo" required>
+            </div>
 
-          <form id="contactForm">
-            <div class="contact-form-grid">
-              <div>
-                <label class="form-label" for="c_nombre">Nombre completo *</label>
-                <input type="text" id="c_nombre" class="form-input" placeholder="Tu nombre" required>
-              </div>
-              <div>
-                <label class="form-label" for="c_email">Correo electrónico *</label>
-                <input type="email" id="c_email" class="form-input" placeholder="tu@correo.com" required>
-              </div>
-              <div>
-                <label class="form-label" for="c_telefono">Teléfono *</label>
-                <input type="tel" id="c_telefono" class="form-input" placeholder="(81) 1105 8875" required>
-              </div>
-              <div>
-                <label class="form-label" for="c_sucursal">Sucursal de preferencia</label>
-                <select id="c_sucursal" class="form-input">
-                  <option value="cancun">🌴 Cancún, Q. Roo (Riviera Maya)</option>
-                  <option value="monterrey">🏭 Monterrey, N.L. (Matriz)</option>
-                  <option value="cdmx">🏢 CDMX</option>
-                  <option value="minatitlan">⚡ Minatitlán, Veracruz</option>
-                  <option value="madero">⚓ Cd. Madero, Tamaulipas</option>
-                  <option value="guadalajara">🇲🇽 Guadalajara, Jal. (Distribuidor)</option>
-                </select>
-              </div>
-              <div class="form-group-full">
-                <label class="form-label" for="c_mensaje">Mensaje / Requerimiento técnico *</label>
-                <textarea id="c_mensaje" class="form-input" placeholder="Describe los requerimientos de tu proyecto (kVA, voltaje, tipo de equipo)..." required></textarea>
-              </div>
-              <div class="form-group-full">
-                <label class="checkbox-wrap">
-                  <input type="checkbox" id="c_newsletter" checked>
-                  <span>Suscríbeme a la lista de correo de K-tronix</span>
-                </label>
-              </div>
-              <div class="form-group-full">
-                <button type="submit" class="btn btn-coral" style="width: 100%; font-size: 1.05rem;">
-                  <i class="fas fa-paper-plane"></i> <span>Enviar mensaje</span>
-                </button>
-              </div>
+            <div class="thematic-input-group">
+              <label for="c_email"><i class="fas fa-envelope"></i> Correo electrónico *</label>
+              <input type="email" id="c_email" class="thematic-input" placeholder="ejemplo@empresa.com" required>
+            </div>
+
+            <div class="thematic-input-group">
+              <label for="c_telefono"><i class="fas fa-phone"></i> Teléfono / WhatsApp *</label>
+              <input type="tel" id="c_telefono" class="thematic-input" placeholder="(81) 1105 8875" required>
+            </div>
+
+            <div class="thematic-input-group">
+              <label for="c_interes"><i class="fas fa-list-check"></i> Tipo de Interés *</label>
+              <select id="c_interes" class="thematic-select" required>
+                <option value="" disabled selected>Selecciona tu tipo de interés...</option>
+                <option value="Planta de Emergencia Diésel (18 a 305+ kW)">⚡ Planta de Emergencia Diésel (18 a 305+ kW)</option>
+                <option value="Sistemas UPS de Potencia Ininterrumpible">🔋 Sistemas UPS de Potencia Ininterrumpible</option>
+                <option value="Mantenimiento Preventivo y Correctivo en Cancún">🛠️ Mantenimiento Preventivo / Correctivo en Cancún</option>
+                <option value="Póliza de Respaldo y Renta de Generador">🛡️ Póliza de Respaldo y Renta de Emergencia</option>
+                <option value="Asesoría Técnica y Dimensionamiento de Cargas">📐 Asesoría Técnica y Dimensionamiento</option>
+                <option value="Otro requerimiento energético">⚙️ Otro requerimiento específico...</option>
+              </select>
+            </div>
+
+            <div class="thematic-input-group">
+              <label for="c_mensaje"><i class="fas fa-comment-dots"></i> Mensaje o Requerimiento Técnico *</label>
+              <textarea id="c_mensaje" class="thematic-textarea" rows="3" placeholder="Describe tu proyecto o la capacidad requerida (kVA, kW, voltaje 220V/440V)..." required></textarea>
+            </div>
+
+            <div class="thematic-form-actions">
+              <button type="submit" class="btn-thematic-submit">
+                <i class="fas fa-paper-plane"></i> Solicitar Cotización Inmediata
+              </button>
+              <a href="https://wa.me/528111058875?text=Hola%20K-tronix%20Canc%C3%BAn,%20necesito%20cotizar%20una%20Planta%20de%20Luz%20de%20Emergencia%20urgente." target="_blank" rel="noopener noreferrer" class="btn-thematic-whatsapp">
+                <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+              </a>
+              <a href="tel:8111058875" class="btn-thematic-call">
+                <i class="fas fa-phone-volume"></i> Llamar ahora: (81) 1105 8875
+              </a>
             </div>
           </form>
         </div>
 
-        <!-- Columna Derecha: Mapa Interactivo de Cobertura Nacional y Sucursales -->
-        <div class="contact-map-card">
-          <div class="contact-map-header">
-            <h4>🗺️ Mapa de Cobertura y Sucursales</h4>
-            <p>Ubica nuestras oficinas, centros de servicio y presencia estratégica en toda la República Mexicana.</p>
+        <!-- Right Side: Interactive Map & Sucursales Card -->
+        <div class="thematic-map-card">
+          <div class="thematic-map-header">
+            <h4><i class="fas fa-map-location-dot text-turquoise"></i> Cobertura en Cancún & Presencia Nacional</h4>
+            <p>Atención directa en Cancún, Riviera Maya, Zona Hotelera, Playa del Carmen, Tulum y 5 sedes en México.</p>
           </div>
-          <div class="contact-map-frame-wrap">
+          
+          <div class="thematic-map-frame">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BdDl_Y_3JCezUbydbWd_CEcoHitKMUc&ehbc=2E312F&noprof=1" allowfullscreen="" loading="lazy"></iframe>
           </div>
-          <div style="margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.88rem;">
-            <span style="color: var(--color-deep-ocean); font-weight: 700;">📍 5 Sucursales + Distribuidor Oficial</span>
-            <a href="https://wa.me/528111058875?text=Hola,%20deseo%20atenci%C3%B3n%20en%20K-tronix." target="_blank" rel="noopener noreferrer" style="color: #FC5701; font-weight: 700; text-decoration: none;">
-              <i class="fab fa-whatsapp"></i> Chat WhatsApp →
-            </a>
+
+          <div class="thematic-contact-info-pills">
+            <div class="thematic-info-pill">
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <strong>Sede Cancún & Riviera Maya</strong>
+                <span>Atención a Zona Hotelera, Hospitales, Comercio e Industria</span>
+              </div>
+            </div>
+            <div class="thematic-info-pill">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Línea Directa</strong>
+                <span><a href="tel:8111058875" style="color: inherit; text-decoration: none;">(81) 1105 8875</a></span>
+              </div>
+            </div>
+            <div class="thematic-info-pill">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Correo Electrónico</strong>
+                <span><a href="mailto:ktronix@ktronix.com.mx" style="color: inherit; text-decoration: none;">ktronix@ktronix.com.mx</a></span>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>

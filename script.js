@@ -50,8 +50,25 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando tu mensaje...';
 
+      const nombre = document.getElementById('c_nombre')?.value.trim() || 'Cliente';
+      const email = document.getElementById('c_email')?.value.trim() || 'No especificado';
+      const telefono = document.getElementById('c_telefono')?.value.trim() || 'No especificado';
+      const interes = document.getElementById('c_interes')?.value || 'Planta de Emergencia';
+      const mensaje = document.getElementById('c_mensaje')?.value.trim() || '';
+
+      const waMessage = `Hola K-tronix Cancún, deseo solicitar información técnica y cotización inmediata:
+
+• Nombre: ${nombre}
+• Teléfono: ${telefono}
+• Correo: ${email}
+• Tipo de Interés: ${interes}
+• Mensaje / Requerimiento: ${mensaje}`;
+
+      const waUrl = `https://wa.me/528111058875?text=${encodeURIComponent(waMessage)}`;
+      window.open(waUrl, '_blank');
+
       setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje Enviado con Éxito!';
+        submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje y Cotización Enviados!';
         submitBtn.style.background = 'linear-gradient(135deg, #FFA048 0%, #FC5701 100%)';
         
         // Notificación flotante estilo Cancún
@@ -70,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.style.alignItems = 'center';
         toast.style.gap = '0.75rem';
         toast.style.fontSize = '0.95rem';
-        toast.innerHTML = '🌴 <strong>¡Gracias por contactar a K-tronix!</strong> Un especialista se comunicará contigo a la brevedad.';
+        toast.innerHTML = '🌴 <strong>¡Gracias por contactar a K-tronix Cancún!</strong> Un especialista técnico se comunicará contigo de inmediato.';
         document.body.appendChild(toast);
 
         setTimeout(() => {
@@ -82,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.style.background = '';
           contactForm.reset();
         }, 4000);
-      }, 1000);
+      }, 800);
     });
   }
 
