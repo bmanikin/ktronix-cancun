@@ -3413,6 +3413,7 @@ textarea.form-input {
   border: 1.5px solid rgba(252, 87, 1, 0.25);
   box-shadow: var(--shadow-sun-lg);
   overflow: hidden;
+  scroll-margin-top: 95px;
 }
 
 .stock-table-header-bar {
