@@ -1014,6 +1014,11 @@ Por favor confirmar disponibilidad en stock, costos de envío y tiempo de entreg
       if (priceVal) {
         priceVal.textContent = '$' + currentPrice.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       }
+      const subtag = row.querySelector('.price-subtag');
+      if (subtag) {
+        subtag.textContent = isATS ? 'MXN + IVA • Con ATS' : 'MXN + IVA • Sin ATS';
+        subtag.style.color = isATS ? '#16a34a' : '#0284c7';
+      }
     });
 
     // Enviar cotización por WhatsApp con la configuración exacta de esa fila

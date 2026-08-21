@@ -3479,6 +3479,15 @@ textarea.form-input {
   white-space: nowrap;
 }
 
+.price-model-cell {
+  white-space: nowrap;
+}
+
+.price-model-cell .row-price-val {
+  font-family: var(--font-heading);
+  letter-spacing: -0.5px;
+}
+
 .model-code-tag {
   font-family: monospace;
   font-size: 0.85rem;
