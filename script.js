@@ -1431,3 +1431,49 @@ Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
       document.body.style.overflow = '';
     }
   });
+
+  // ==========================================================================
+  // ANIMACIÓN DE NÚMEROS EN ASCENSO (SMOOTH NUMBER COUNTERS)
+  // ==========================================================================
+  const counters = document.querySelectorAll('.counter-number');
+  
+  const animateCounter = (counter) => {
+    const target = parseFloat(counter.getAttribute('data-target')) || 0;
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const duration = 1800; // 1.8 segundos
+    const frameRate = 1000 / 60; // 60 FPS
+    const totalFrames = Math.round(duration / frameRate);
+    let frame = 0;
+
+    // Easing suave (ease-out cubic)
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    const timer = setInterval(() => {
+      frame++;
+      const progress = easeOutCubic(frame / totalFrames);
+      const current = Math.round(target * progress);
+
+      counter.textContent = current + suffix;
+
+      if (frame >= totalFrames) {
+        clearInterval(timer);
+        counter.textContent = target + suffix;
+      }
+    }, frameRate);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  } else {
+    counters.forEach(counter => animateCounter(counter));
+  }
+

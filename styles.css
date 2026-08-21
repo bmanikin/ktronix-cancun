@@ -665,9 +665,12 @@ button, input, select, textarea {
 
 .stat-item h4 {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-turquoise);
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #FC5701;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  margin-bottom: 2px;
 }
 
 .stat-item p {
