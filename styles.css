@@ -676,10 +676,11 @@ button, input, select, textarea {
 }
 
 .hero-loc-address {
-  font-size: 0.86rem;
-  color: #f1f5f9;
-  font-weight: 500;
+  font-size: 0.92rem;
+  color: #f8fafc;
+  font-weight: 600;
   line-height: 1.35;
+  letter-spacing: 0.2px;
 }
 
 .hero-visual-card {
