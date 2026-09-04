@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Ficha Técnica Oficial • Planta de Emergencia Grupel | K-tronix Cancún</title>
+  <link rel="icon" href="https://ktronix.com.mx/wp-content/uploads/2026/05/Recurso-2@2x-scaled.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary-navy: #08253E;
+      --primary-dark: #04121F;
+      --brand-orange: #FC5701;
+      --brand-orange-light: #FFF1EB;
+      --brand-cyan: #0284c7;
+      --brand-green: #16a34a;
+      --bg-slate: #f8fafc;
+      --border-color: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #eef2f6;
+      color: var(--text-main);
+      line-height: 1.45;
+      padding: 1.5rem 1rem;
+    }
+
+    /* Top Bar (Screen Only) */
+    .top-action-bar {
+      max-width: 1000px;
+      margin: 0 auto 1.5rem;
+      background: var(--primary-navy);
+      padding: 0.85rem 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 3px solid var(--brand-orange);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .model-selector-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .model-select-dropdown {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .model-select-dropdown option {
+      background: var(--primary-navy);
+      color: #ffffff;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print {
+      background: var(--brand-orange);
+      color: #ffffff;
+    }
+    .btn-print:hover {
+      background: #e04e00;
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+    }
+    .btn-whatsapp:hover {
+      background: #1eb956;
+      transform: translateY(-1px);
+    }
+
+    .btn-back {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Document Sheet (Target PDF 1 Page) */
+    .sheet-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 35px rgba(8, 37, 62, 0.08);
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      padding: 2.5rem;
+    }
+
+    /* Header */
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #e2e8f0;
+      margin-bottom: 1.5rem;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .brand-sub strong {
+      color: var(--primary-navy);
+    }
+
+    .title-wrap {
+      text-align: right;
+    }
+
+    .badge-official {
+      display: inline-block;
+      background: var(--brand-orange-light);
+      color: var(--brand-orange);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+      border: 1px solid rgba(252, 87, 1, 0.25);
+    }
+
+    .sheet-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      line-height: 1.2;
+    }
+
+    .sheet-model-code {
+      font-family: monospace;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--brand-cyan);
+      margin-top: 2px;
+    }
+
+    /* Top Summary Showcase (Image + Key Specs + Pricing) */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 280px;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--bg-slate);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.25rem;
+      align-items: center;
+    }
+
+    .showcase-img-box {
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .showcase-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    .showcase-main-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .power-hero-box {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .power-hero-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      line-height: 1;
+    }
+
+    .power-hero-sub {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .mini-tags-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .mini-tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+    }
+    .mini-tag.stock {
+      background: #dcfce7;
+      color: var(--brand-green);
+      border-color: #86efac;
+    }
+
+    .showcase-price-box {
+      background: #ffffff;
+      border: 2px solid var(--brand-orange);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(252, 87, 1, 0.12);
+    }
+
+    .price-card-label {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .price-card-val {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--brand-orange);
+      line-height: 1.2;
+    }
+
+    .price-card-sub {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--brand-green);
+      margin-bottom: 0.65rem;
+    }
+
+    .price-manual-row {
+      font-size: 0.78rem;
+      color: #64748b;
+      border-top: 1px dashed #e2e8f0;
+      padding-top: 0.5rem;
+    }
+    .price-manual-row strong {
+      color: #1e293b;
+    }
+
+    /* Detailed Specs Grids (2 Columns) */
+    .specs-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .spec-block {
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .spec-block-title {
+      background: var(--primary-navy);
+      color: #ffffff;
+      padding: 0.65rem 1rem;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .spec-block-title i {
+      color: var(--brand-orange);
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+
+    .spec-table tr {
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .spec-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .spec-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .spec-table td {
+      padding: 0.55rem 0.85rem;
+      vertical-align: top;
+    }
+
+    .spec-label {
+      font-weight: 600;
+      color: #475569;
+      width: 44%;
+    }
+
+    .spec-val {
+      font-weight: 700;
+      color: var(--primary-navy);
+      width: 56%;
+    }
+
+    /* Inclusions & Guarantees Banner */
+    .sheet-inclusions-bar {
+      background: var(--bg-slate);
+      border-left: 4px solid var(--brand-cyan);
+      border-radius: 0 8px 8px 0;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      color: #334155;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .sheet-inclusions-bar ul {
+      list-style-position: inside;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .sheet-footer {
+      border-top: 2px solid #e2e8f0;
+      padding-top: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-left strong {
+      color: var(--primary-navy);
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-pill {
+      color: var(--primary-navy);
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* PRINT STYLES (Single Page PDF) */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        margin: 0;
+      }
+      .top-action-bar {
+        display: none !important;
+      }
+      .sheet-container {
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 1.2cm 1.5cm;
+      }
+      .spec-block-title {
+        background: #08253E !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .spec-table tr:nth-child(even) {
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .price-card-val {
+        color: #FC5701 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .showcase-price-box {
+        border-color: #FC5701 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+      .specs-columns {
+        grid-template-columns: 1fr;
+      }
+      .title-wrap {
+        text-align: left;
+      }
+      .sheet-inclusions-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar (Screen only) -->
+  <div class="top-action-bar">
+    <div class="action-group">
+      <a href="lista-precios.html" class="btn-action btn-back">
+        <i class="fas fa-arrow-left"></i> Volver a Lista de Precios
+      </a>
+      <div class="model-selector-wrap">
+        <span>Seleccionar Planta:</span>
+        <select id="modelSelector" class="model-select-dropdown" aria-label="Seleccionar Modelo">
+          <option value="18">18 kW (22.5 kVA)</option>
+          <option value="25">25 kW (31.25 kVA)</option>
+          <option value="39">39 kW (48.75 kVA)</option>
+          <option value="76">76 kW (95 kVA)</option>
+          <option value="113">113 kW (141 kVA)</option>
+          <option value="149">149 kW (186 kVA)</option>
+          <option value="305">305 kW (381 kVA)</option>
+        </select>
+      </div>
+    </div>
+    <div class="action-group">
+      <button type="button" class="btn-action btn-print" onclick="window.print()">
+        <i class="fas fa-file-pdf"></i> Descargar / Imprimir PDF
+      </button>
+      <a id="btnWhatsappQuote" href="#" target="_blank" class="btn-action btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Printable Sheet Container -->
+  <div class="sheet-container">
+    <!-- Header -->
+    <div class="doc-header">
+      <div class="brand-wrap">
+        <img src="https://ktronix.com.mx/wp-content/uploads/2026/04/k-tronix-logo.png" alt="K-tronix Sede Cancún" class="brand-logo">
+        <div class="brand-sub">
+          <strong>K-TRONIX S.A. DE C.V. — Sede Cancún & Riviera Maya</strong><br>
+          Infinity Park, Carretera Cancún Av. Chichén Itzá, C.P. 77569 Cancún, Q.R.<br>
+          Tel. Directo: <strong>(81) 1105 8875</strong> | Web: <strong>www.ktronixcancun.com</strong>
+        </div>
+      </div>
+      <div class="title-wrap">
+        <div class="badge-official">Ficha Técnica Oficial 2026</div>
+        <h1 class="sheet-title" id="txtTitle">PLANTA DE EMERGENCIA 18 kW</h1>
+        <div class="sheet-model-code" id="txtModel">MODELO: G0018GRGRCA8T2200S</div>
+      </div>
+    </div>
+
+    <!-- Showcase Grid -->
+    <div class="showcase-grid">
+      <div class="showcase-img-box">
+        <img src="grupel-plantas-stock-info.jpg" alt="Planta de Emergencia Grupel Cancún">
+      </div>
+      <div class="showcase-main-specs">
+        <div class="power-hero-box">
+          <div class="power-hero-val" id="txtKw">18 kW</div>
+          <div class="power-hero-sub" id="txtKva">/ 22.5 kVA (ESP)</div>
+        </div>
+        <p style="font-size: 0.85rem; color: #475569;" id="txtRangeDesc">
+          Grupel Smart Range • Caseta Insonorizada para Intemperie • Régimen de Emergencia Standby (ESP) y Continuo (PRP).
+        </p>
+        <div class="mini-tags-row">
+          <span class="mini-tag stock"><i class="fas fa-check-circle"></i> En Stock Cancún</span>
+          <span class="mini-tag" id="txtVoltageBadge">220V (Adaptable a 440V)</span>
+          <span class="mini-tag" id="txtAmperageBadge">60 Amperes</span>
+          <span class="mini-tag">Motor Diésel 1800 RPM</span>
+        </div>
+      </div>
+      <div class="showcase-price-box">
+        <div class="price-card-label">Precio Con ATS Incluido</div>
+        <div class="price-card-val" id="txtPriceAts">$142,850.00</div>
+        <div class="price-card-sub">MXN + IVA • Transferencia Automática</div>
+        <div class="price-manual-row">
+          Precio Sin ATS: <strong id="txtPriceSin">$138,200.00 MXN</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Specs (2 Columns) -->
+    <div class="specs-columns">
+      <!-- Col 1: Motor & Combustión -->
+      <div class="spec-block">
+        <div class="spec-block-title">
+          <i class="fas fa-gears"></i> Motor & Rendimiento Mecánico
+        </div>
+        <table class="spec-table">
+          <tr>
+            <td class="spec-label">Marca / Modelo:</td>
+            <td class="spec-val" id="txtEngine">Grupel / 3GA20DS0</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Configuración:</td>
+            <td class="spec-val" id="txtCylinders">3 cilindros en línea, Natural</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Cilindrada:</td>
+            <td class="spec-val" id="txtDisplacement">1.9 L</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Velocidad / Frec.:</td>
+            <td class="spec-val" id="txtRpm">1800 r.p.m. (60 Hz)</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Consumo (100%):</td>
+            <td class="spec-val" id="txtCons100">6.8 L/h</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Consumo (75%):</td>
+            <td class="spec-val" id="txtCons75">4.9 L/h</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Capacidad de Aceite:</td>
+            <td class="spec-val" id="txtOil">5.5 L</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Refrigerante:</td>
+            <td class="spec-val" id="txtCoolant">9.5 L</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Sistema Eléctrico:</td>
+            <td class="spec-val" id="txtBattery">12V (62 Ah)</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Col 2: Alternador, Caseta & Dimensiones -->
+      <div class="spec-block">
+        <div class="spec-block-title">
+          <i class="fas fa-bolt"></i> Alternador, Dimensiones & Caseta
+        </div>
+        <table class="spec-table">
+          <tr>
+            <td class="spec-label">Alternador:</td>
+            <td class="spec-val" id="txtAlternator">Grupel 184GB18 (IP23, H)</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Controlador Digital:</td>
+            <td class="spec-val" id="txtController">Grupel G545 (Monitoreo 24/7)</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Dimensiones (L×W×H):</td>
+            <td class="spec-val" id="txtDimensions">1,970 × 825 × 1,120 mm</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Peso en Seco:</td>
+            <td class="spec-val" id="txtWeight">680 kg</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Tanque de Diésel:</td>
+            <td class="spec-val" id="txtTank">55 Litros</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Nivel de Ruido @ 7m:</td>
+            <td class="spec-val" id="txtNoise">72 ± 2 dB(A)</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Voltaje Estándar:</td>
+            <td class="spec-val" id="txtVoltage">220 VCA (440V / 480V reconectable)</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Amperaje Máximo:</td>
+            <td class="spec-val" id="txtAmperage">60 Amperes</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Tiempo de Entrega:</td>
+            <td class="spec-val" style="color: var(--brand-green);">5 días hábiles en banco de pruebas</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Inclusions & Guarantees Bar -->
+    <div class="sheet-inclusions-bar">
+      <div>
+        <strong>✅ Equipamiento Incluido de Fábrica:</strong>
+        <ul>
+          <li>Caseta de aislamiento acústico para intemperie con pintura electrostática anticorrosiva.</li>
+          <li>Tablero de control digital con autodiagnóstico de fallas y paro de emergencia.</li>
+          <li>Cargador estático de baterías y silenciador industrial interno.</li>
+        </ul>
+      </div>
+      <div>
+        <strong>🛡️ Condiciones & Garantía K-tronix Cancún:</strong>
+        <ul>
+          <li>Garantía de 1 año o 1,000 horas contra defectos de fabricación.</li>
+          <li>Soporte técnico directo, puesta en marcha y refacciones en Cancún y Península.</li>
+          <li>Precios expresados en Pesos Mexicanos (MXN) más 16% de IVA.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Contacts -->
+    <div class="sheet-footer">
+      <div class="footer-left">
+        <strong>K-TRONIX S.A. DE C.V.</strong> • Soluciones de Respaldo Energético de Alta Disponibilidad
+      </div>
+      <div class="footer-right">
+        <a href="tel:8111058875" class="footer-pill"><i class="fas fa-phone"></i> (81) 1105 8875</a>
+        <a href="mailto:ktronix@ktronix.com.mx" class="footer-pill"><i class="fas fa-envelope"></i> ktronix@ktronix.com.mx</a>
+        <a href="https://ktronixcancun.com" class="footer-pill"><i class="fas fa-globe"></i> www.ktronixcancun.com</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const db = {
+      "18": {
+        kw: 18,
+        kva_esp: 22.5,
+        model: "G0018GRGRCA8T2200S",
+        range: "Grupel Smart Range • Caseta Insonorizada para Intemperie • Régimen Standby (ESP) y Prime (PRP).",
+        engine: "Grupel / 3GA20DS0",
+        cylinders: "3 cilindros en línea, Aspiración Natural",
+        displacement: "1.9 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "60 Amperes",
+        alternator: "Grupel 184GB18 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "1,970 × 825 × 1,120 mm",
+        weight: "680 kg",
+        tank: "55 Litros",
+        noise: "68 dB(A) @ 7m",
+        cons100: "6.8 L/h",
+        cons75: "4.9 L/h",
+        oil: "5.5 L",
+        coolant: "9.5 L",
+        battery: "12V (62 Ah)",
+        price_ats: "$142,850.00",
+        price_sin: "$138,200.00"
+      },
+      "25": {
+        kw: 25,
+        kva_esp: 31.25,
+        model: "G0025GRGRCA8T2200S",
+        range: "Grupel Smart Range • Caseta Insonorizada para Intemperie • Régimen Standby (ESP) y Prime (PRP).",
+        engine: "Grupel / 4GA27DS0",
+        cylinders: "4 cilindros en línea, Aspiración Natural",
+        displacement: "2.672 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "80 Amperes",
+        alternator: "Grupel 184GB23 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "1,970 × 825 × 1,120 mm",
+        weight: "743 kg",
+        tank: "55 Litros",
+        noise: "70 dB(A) @ 7m",
+        cons100: "9.1 L/h",
+        cons75: "6.2 L/h",
+        oil: "6.5 L",
+        coolant: "11.6 L",
+        battery: "12V (62 Ah)",
+        price_ats: "$161,704.19",
+        price_sin: "$157,176.10"
+      },
+      "39": {
+        kw: 39,
+        kva_esp: 48.75,
+        model: "G0039GRGRCA8T2200S",
+        range: "Grupel Smart Range • Caseta Insonorizada para Intemperie • Régimen Standby (ESP) y Prime (PRP).",
+        engine: "Grupel / 4GD32TDS2",
+        cylinders: "4 cilindros en línea, Turbocharged",
+        displacement: "3.2 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "125 Amperes",
+        alternator: "Grupel 184GB40 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "1,970 × 825 × 1,120 mm",
+        weight: "838 kg",
+        tank: "55 Litros",
+        noise: "70 dB(A) @ 7m",
+        cons100: "15.3 L/h",
+        cons75: "10.4 L/h",
+        oil: "7.0 L",
+        coolant: "20.0 L",
+        battery: "12V (62 Ah)",
+        price_ats: "$194,490.60",
+        price_sin: "$181,032.31"
+      },
+      "76": {
+        kw: 76,
+        kva_esp: 95,
+        model: "G0076GRGRCA8T2200S",
+        range: "Grupel Industrial Range • Caseta Insonorizada para Intemperie • Alto Rendimiento Continuo.",
+        engine: "Grupel / 4GA41TID45",
+        cylinders: "4 cilindros en línea, Turbo-intercooled",
+        displacement: "4.1 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "270 Amperes",
+        alternator: "Grupel 224GB90 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "2,630 × 1,015 × 1,580 mm",
+        weight: "1,450 kg",
+        tank: "200 Litros",
+        noise: "72 dB(A) @ 7m",
+        cons100: "23.5 L/h",
+        cons75: "16.8 L/h",
+        oil: "11.0 L",
+        coolant: "24.0 L",
+        battery: "24V (100 Ah)",
+        price_ats: "$312,194.36",
+        price_sin: "$289,059.15"
+      },
+      "113": {
+        kw: 113,
+        kva_esp: 141,
+        model: "G0113GRGRCA8T2200S",
+        range: "Grupel Industrial Range • Caseta Insonorizada para Intemperie • Regulación Electrónica Avanzada.",
+        engine: "Grupel / 4GA53TID50",
+        cylinders: "4 cilindros en línea, Turbo-intercooled, Regulación Electrónica",
+        displacement: "5.32 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "400 Amperes",
+        alternator: "Grupel 274GB160 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "2,630 × 1,015 × 1,580 mm",
+        weight: "1,790 kg",
+        tank: "200 Litros",
+        noise: "74 dB(A) @ 7m",
+        cons100: "30.0 L/h",
+        cons75: "21.2 L/h",
+        oil: "13.2 L",
+        coolant: "29.0 L",
+        battery: "24V (100 Ah)",
+        price_ats: "$368,743.80",
+        price_sin: "$319,174.60"
+      },
+      "149": {
+        kw: 149,
+        kva_esp: 186,
+        model: "G0149GRGRCA8T2200S",
+        range: "Grupel Industrial Range (150 kW) • Caseta Insonorizada para Intemperie • Inyección Directa Electrónica.",
+        engine: "Grupel / 6GD65TIDS22",
+        cylinders: "6 cilindros en línea, Turbo-aftercooled, Inyección Directa",
+        displacement: "6.5 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "630 Amperes",
+        alternator: "Grupel 274GB160 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "3,200 × 1,185 × 1,800 mm",
+        weight: "1,988 kg",
+        tank: "400 Litros",
+        noise: "76 dB(A) @ 7m",
+        cons100: "41.8 L/h",
+        cons75: "28.7 L/h",
+        oil: "17.5 L",
+        coolant: "35.0 L",
+        battery: "24V (140 Ah)",
+        price_ats: "$488,666.13",
+        price_sin: "$439,096.93"
+      },
+      "305": {
+        kw: 305,
+        kva_esp: 381,
+        model: "G0305GRGRCA8T2200S",
+        range: "Grupel Industrial Extra Range • Caseta Insonorizada para Intemperie • Common Rail Alta Presión.",
+        engine: "Grupel / 6GA97TIDS45",
+        cylinders: "6 cilindros en línea, Turbo-aftercooled, Common Rail",
+        displacement: "9.7 L",
+        rpm: "1800 r.p.m. (60 Hz)",
+        voltage: "220 VCA (Reconectable a 440V / 480V)",
+        amperage: "1100 Amperes",
+        alternator: "Grupel 354GB350 (Trifásico, IP23, Aislamiento H)",
+        controller: "Grupel G545 (Monitoreo Digital 24/7 y Protección)",
+        dimensions: "4,000 × 1,400 × 2,100 mm",
+        weight: "3,850 kg",
+        tank: "800 Litros",
+        noise: "78 dB(A) @ 7m",
+        cons100: "82.0 L/h",
+        cons75: "58.0 L/h",
+        oil: "17.5 L",
+        coolant: "48.0 L",
+        battery: "24V (140 Ah)",
+        price_ats: "$1,056,846.31",
+        price_sin: "$917,382.51"
+      }
+    };
+
+    function loadModel(kw) {
+      const data = db[kw] || db["18"];
+      document.getElementById('pageTitle').innerText = `Ficha Técnica ${data.kw} kW (${data.model}) | K-tronix Cancún`;
+      document.getElementById('txtTitle').innerText = `PLANTA DE EMERGENCIA ${data.kw} kW`;
+      document.getElementById('txtModel').innerText = `MODELO: ${data.model}`;
+      document.getElementById('txtKw').innerText = `${data.kw} kW`;
+      document.getElementById('txtKva').innerText = `/ ${data.kva_esp} kVA (ESP)`;
+      document.getElementById('txtRangeDesc').innerText = data.range;
+      document.getElementById('txtAmperageBadge').innerText = data.amperage;
+      document.getElementById('txtPriceAts').innerText = data.price_ats;
+      document.getElementById('txtPriceSin').innerText = `${data.price_sin} MXN`;
+
+      // Specs
+      document.getElementById('txtEngine').innerText = data.engine;
+      document.getElementById('txtCylinders').innerText = data.cylinders;
+      document.getElementById('txtDisplacement').innerText = data.displacement;
+      document.getElementById('txtRpm').innerText = data.rpm;
+      document.getElementById('txtCons100').innerText = data.cons100;
+      document.getElementById('txtCons75').innerText = data.cons75;
+      document.getElementById('txtOil').innerText = data.oil;
+      document.getElementById('txtCoolant').innerText = data.coolant;
+      document.getElementById('txtBattery').innerText = data.battery;
+
+      document.getElementById('txtAlternator').innerText = data.alternator;
+      document.getElementById('txtController').innerText = data.controller;
+      document.getElementById('txtDimensions').innerText = data.dimensions;
+      document.getElementById('txtWeight').innerText = data.weight;
+      document.getElementById('txtTank').innerText = data.tank;
+      document.getElementById('txtNoise').innerText = data.noise;
+      document.getElementById('txtVoltage').innerText = data.voltage;
+      document.getElementById('txtAmperage').innerText = data.amperage;
+
+      // WhatsApp link
+      const waMsg = encodeURIComponent(`Hola K-tronix Cancún, deseo cotizar formalmente la Planta de Emergencia Grupel de ${data.kw} kW (Modelo ${data.model}) con precio ${data.price_ats} MXN con ATS.`);
+      document.getElementById('btnWhatsappQuote').href = `https://wa.me/528111058875?text=${waMsg}`;
+      
+      // Update dropdown selection
+      document.getElementById('modelSelector').value = kw;
+    }
+
+    // Init from URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialKw = urlParams.get('kw') || '18';
+    loadModel(initialKw);
+
+    document.getElementById('modelSelector').addEventListener('change', function(e) {
+      const selected = e.target.value;
+      const newUrl = new URL(window.location);
+      newUrl.searchParams.set('kw', selected);
+      window.history.pushState({}, '', newUrl);
+      loadModel(selected);
+    });
+  </script>
+</body>
+</html>

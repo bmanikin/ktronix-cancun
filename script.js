@@ -1403,6 +1403,9 @@ Por favor confirmar existencias, tiempos de entrega y costos de flete.`;
           <a href="https://wa.me/528111058875?text=${encodeURIComponent('Hola K-tronix Cancún, deseo cotizar formalmente la Planta de Emergencia Grupel de ' + spec.kw + ' kW (' + spec.model + ') con dimensiones ' + spec.length_mm + 'x' + spec.width_mm + 'x' + spec.height_mm + ' mm.')}" target="_blank" rel="noopener noreferrer" class="btn" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: #ffffff; font-weight: 700; padding: 0.65rem 1.25rem; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(37,211,102,0.3);">
             <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Cotizar este Modelo
           </a>
+          <a href="ficha-tecnica.html?kw=${spec.kw}" target="_blank" class="btn" style="background: #0284c7; color: #ffffff; font-weight: 700; padding: 0.65rem 1.1rem; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 0.45rem;">
+            <i class="fas fa-file-pdf"></i> Ficha PDF Individual
+          </a>
           <button type="button" class="btn btn-outline-sea" onclick="window.print()" style="border-color: rgba(255,255,255,0.3); color: #ffffff; padding: 0.65rem 1rem; border-radius: 8px; cursor: pointer;">
             <i class="fas fa-print"></i> Imprimir Ficha
           </button>

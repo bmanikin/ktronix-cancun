@@ -521,6 +521,88 @@
         padding: 1rem;
       }
     }
+  
+    .btn-ficha-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.75rem;
+      background: #0284c7;
+      color: #ffffff !important;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+    }
+    .btn-ficha-mini:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
+    }
+
+    .pdf-quick-downloads {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .pdf-quick-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .pdf-quick-header h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pdf-quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+    }
+    .pdf-card-btn {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--primary-navy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+    .pdf-card-btn:hover {
+      border-color: var(--brand-orange);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(252, 87, 1, 0.15);
+    }
+    .pdf-card-btn i {
+      font-size: 1.3rem;
+      color: #ef4444;
+    }
+    .pdf-card-btn strong {
+      font-size: 0.95rem;
+      color: var(--primary-navy);
+    }
+    .pdf-card-btn span {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
   </style>
 </head>
 <body>
@@ -686,6 +768,52 @@
         </div>
       </div>
 
+      
+      <!-- Quick Individual PDF Downloads Section -->
+      <div class="pdf-quick-downloads">
+        <div class="pdf-quick-header">
+          <h3><i class="fas fa-file-pdf" style="color: #ef4444;"></i> Fichas Técnicas Oficiales en PDF (Descarga 1 por 1)</h3>
+          <span style="font-size: 0.82rem; color: #64748b;">Cada ficha está lista para imprimir o guardar en PDF de 1 página formal para clientes.</span>
+        </div>
+        <div class="pdf-quick-grid">
+          <a href="ficha-tecnica.html?kw=18" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>18 kW</strong>
+            <span>22.5 kVA • PDF</span>
+          </a>
+          <a href="ficha-tecnica.html?kw=25" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>25 kW</strong>
+            <span>31.25 kVA • PDF</span>
+          </a>
+          <a href="ficha-tecnica.html?kw=39" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>39 kW</strong>
+            <span>48.75 kVA • PDF</span>
+          </a>
+          <a href="ficha-tecnica.html?kw=76" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>76 kW</strong>
+            <span>95 kVA • PDF</span>
+          </a>
+          <a href="ficha-tecnica.html?kw=113" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>113 kW</strong>
+            <span>141 kVA • PDF</span>
+          </a>
+          <a href="ficha-tecnica.html?kw=149" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>149 kW</strong>
+            <span>186 kVA • PDF</span>
+          </a>
+          <a href="ficha-tecnica.html?kw=305" target="_blank" class="pdf-card-btn">
+            <i class="fas fa-file-pdf"></i>
+            <strong>305 kW</strong>
+            <span>381 kVA • PDF</span>
+          </a>
+        </div>
+      </div>
+
       <!-- Main Pricing Table -->
       <div class="table-wrap">
         <table class="price-table">
@@ -698,6 +826,7 @@
               <th>Dimensiones (L × W × H)</th>
               <th>Peso & Tanque</th>
               <th style="text-align: center;">Disponibilidad</th>
+              <th style="text-align: center;">Ficha Individual</th>
             </tr>
           </thead>
           <tbody>
