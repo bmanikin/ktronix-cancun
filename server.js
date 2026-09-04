@@ -59,6 +59,22 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+let currentPort = parseInt(process.env.PORT, 10) || 3000;
+
+function startServer(port) {
+  server.listen(port, () => {
+    console.log(`Servidor K-tronix corriendo en http://localhost:${port}`);
+  });
+}
+
+server.on('error', (e) => {
+  if (e.code === 'EADDRINUSE') {
+    console.log(`Puerto ${currentPort} en uso, intentando puerto ${currentPort + 1}...`);
+    currentPort += 1;
+    setTimeout(() => startServer(currentPort), 200);
+  } else {
+    console.error(e);
+  }
 });
+
+startServer(currentPort);

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Oficial de Precios • Plantas de Emergencia Grupel Diésel | K-tronix Cancún</title>
+  <link rel="icon" href="https://ktronix.com.mx/wp-content/uploads/2026/05/Recurso-2@2x-scaled.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary-navy: #08253E;
+      --primary-dark: #04121F;
+      --brand-orange: #FC5701;
+      --brand-orange-light: #FFF1EB;
+      --brand-cyan: #0284c7;
+      --brand-green: #16a34a;
+      --bg-slate: #f8fafc;
+      --border-color: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #eef2f6;
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .doc-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(8, 37, 62, 0.08);
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Action Bar (Screen Only) */
+    .top-action-bar {
+      background: var(--primary-navy);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 2px solid var(--brand-orange);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print {
+      background: var(--brand-orange);
+      color: #ffffff;
+    }
+    .btn-print:hover {
+      background: #e04e00;
+      transform: translateY(-1px);
+    }
+
+    .btn-copy-email {
+      background: #0284c7;
+      color: #ffffff;
+    }
+    .btn-copy-email:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+    }
+    .btn-whatsapp:hover {
+      background: #1eb956;
+      transform: translateY(-1px);
+    }
+
+    .btn-back {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Document Sheet */
+    .doc-sheet {
+      padding: 3rem;
+    }
+
+    /* Document Header */
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      margin-bottom: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .brand-logo-wrap img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .brand-meta strong {
+      color: var(--primary-navy);
+    }
+
+    .doc-title-col {
+      text-align: right;
+    }
+
+    .doc-badge {
+      display: inline-block;
+      background: var(--brand-orange-light);
+      color: var(--brand-orange);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+      border: 1px solid rgba(252, 87, 1, 0.25);
+    }
+
+    .doc-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+
+    .doc-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Info Bar (Cancún & Validity) */
+    .doc-infobar {
+      background: var(--bg-slate);
+      border-left: 4px solid var(--brand-orange);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.88rem;
+    }
+
+    .infobar-item strong {
+      color: var(--primary-navy);
+    }
+
+    /* Pricing Table */
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 2.5rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    .price-table thead {
+      background: var(--primary-navy);
+      color: #ffffff;
+    }
+
+    .price-table th {
+      padding: 1rem 0.9rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .price-table th:last-child {
+      border-right: none;
+    }
+
+    .price-table tbody tr {
+      border-bottom: 1px solid #e2e8f0;
+      transition: background 0.15s ease;
+    }
+
+    .price-table tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .price-table tbody tr:hover {
+      background: #fff7ed;
+    }
+
+    .price-table td {
+      padding: 1rem 0.9rem;
+      vertical-align: middle;
+      border-right: 1px solid #f1f5f9;
+    }
+
+    .price-table td:last-child {
+      border-right: none;
+    }
+
+    .cap-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      display: block;
+    }
+
+    .cap-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .model-code {
+      font-family: monospace;
+      font-size: 0.78rem;
+      background: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #334155;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+
+    .engine-meta {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .price-without-ats {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    .price-with-ats {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--brand-orange);
+      line-height: 1.15;
+    }
+
+    .ats-badge-sub {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--brand-green);
+      text-transform: uppercase;
+    }
+
+    .spec-mini {
+      font-size: 0.8rem;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    .stock-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--brand-green);
+      background: #dcfce7;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+
+    /* Inclusions & Guarantees */
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .inc-card {
+      background: var(--bg-slate);
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+
+    .inc-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .inc-card-header i {
+      color: var(--brand-orange);
+      font-size: 1.1rem;
+    }
+
+    .inc-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Commercial Notes Box */
+    .commercial-notes {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: #334155;
+      margin-bottom: 2.5rem;
+    }
+
+    .commercial-notes h4 {
+      font-size: 0.95rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.65rem;
+      font-weight: 700;
+    }
+
+    .commercial-notes ul {
+      list-style-position: inside;
+      line-height: 1.6;
+    }
+
+    /* Footer Contacts & Signature */
+    .doc-footer {
+      border-top: 2px solid #e2e8f0;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-cancun-info {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .footer-cancun-info strong {
+      color: var(--primary-navy);
+    }
+
+    .footer-contact-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      background: var(--bg-slate);
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      text-decoration: none;
+    }
+
+    .contact-pill:hover {
+      border-color: var(--brand-orange);
+      color: var(--brand-orange);
+    }
+
+    /* Toast Notification */
+    #copyToast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border-left: 4px solid #22c55e;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 9999;
+    }
+
+    #copyToast.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* PRINT STYLES (PDF OPTIMIZED) */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        margin: 0;
+      }
+      .top-action-bar, #copyToast {
+        display: none !important;
+      }
+      .doc-container {
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+      .doc-sheet {
+        padding: 1.5cm;
+      }
+      .price-table th {
+        background: #08253E !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .price-table tbody tr:nth-child(even) {
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .price-with-ats {
+        color: #FC5701 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .doc-infobar {
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5rem;
+      }
+      .doc-sheet {
+        padding: 1.5rem 1rem;
+      }
+      .doc-title-col {
+        text-align: left;
+      }
+      .top-action-bar {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden Container for Rich HTML Email Copying -->
+  <div id="emailHtmlContainer" style="display: none;">
+    <table style="width: 100%; max-width: 700px; font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; background-color: #ffffff; margin: 0 auto; color: #1e293b; border: 1px solid #cbd5e1;">
+      <!-- Header -->
+      <tr>
+        <td style="background-color: #08253E; padding: 20px 24px; border-bottom: 3px solid #FC5701;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="vertical-align: middle;">
+                <h2 style="color: #ffffff; margin: 0; font-size: 20px; font-weight: bold; letter-spacing: 0.5px;">K-TRONIX CANCÚN & RIVIERA MAYA</h2>
+                <p style="color: #38E1FF; margin: 4px 0 0 0; font-size: 13px; font-weight: bold;">CATÁLOGO OFICIAL DE PRECIOS • PLANTAS DE EMERGENCIA GRUPEL</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- Body Intro -->
+      <tr>
+        <td style="padding: 16px 24px; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #475569;">
+          <strong>Estimado Cliente:</strong> A continuación presentamos nuestra lista ejecutiva de generadores diésel con entrega en Cancún y Península de Yucatán. Todos los equipos incluyen caseta insonorizada para intemperie y control digital.
+        </td>
+      </tr>
+      <!-- Table -->
+      <tr>
+        <td style="padding: 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+            <thead>
+              <tr style="background-color: #0d3b66; color: #ffffff;">
+                <th style="padding: 10px 12px; text-align: left; border-bottom: 1px solid #cbd5e1;">Capacidad</th>
+                <th style="padding: 10px 12px; text-align: left; border-bottom: 1px solid #cbd5e1;">Modelo</th>
+                <th style="padding: 10px 12px; text-align: right; border-bottom: 1px solid #cbd5e1;">Sin ATS (Manual)</th>
+                <th style="padding: 10px 12px; text-align: right; border-bottom: 1px solid #cbd5e1; background-color: #FC5701;">Con ATS Incluido</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">18 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(22.5 kVA / 60 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0018GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$138,200.00 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$142,850.00 MXN</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f8fafc;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">25 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(31.25 kVA / 80 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0025GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$157,176.10 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$161,704.19 MXN</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">39 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(48.75 kVA / 125 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0039GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$181,032.31 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$194,490.60 MXN</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f8fafc;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">76 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(95 kVA / 270 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0076GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$289,059.15 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$312,194.36 MXN</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">113 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(141 kVA / 400 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0113GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$319,174.60 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$368,743.80 MXN</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f8fafc;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">149 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(186 kVA / 630 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0149GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$439,096.93 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$488,666.13 MXN</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 10px 12px; font-weight: bold; color: #08253E;">305 kW <span style="font-size: 11px; color: #64748b; font-weight: normal;">(381 kVA / 1,100 A)</span></td>
+                <td style="padding: 10px 12px; font-family: monospace; font-size: 12px;">G0305GRGRCA8T2200S</td>
+                <td style="padding: 10px 12px; text-align: right; color: #475569;">$917,382.51 MXN</td>
+                <td style="padding: 10px 12px; text-align: right; font-weight: bold; color: #FC5701; background-color: #fff7ed;">$1,056,846.31 MXN</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- Conditions -->
+      <tr>
+        <td style="padding: 16px 24px; background-color: #f8fafc; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
+          <ul style="margin: 0; padding-left: 18px; line-height: 1.5;">
+            <li>Precios expresados en Pesos Mexicanos (MXN) más 16% de IVA.</li>
+            <li><strong>Tiempo de entrega:</strong> 5 días hábiles para revisión integral en banco de pruebas y calibración.</li>
+            <li><strong>Voltaje:</strong> 220 VCA estándar, adaptable a 440V o 480V según su instalación.</li>
+            <li><strong>Soporte técnico en Cancún:</strong> Infinity Park, Carretera Cancún Av. Chichén Itzá, C.P. 77569 Cancún, Q.R.</li>
+          </ul>
+        </td>
+      </tr>
+      <!-- Footer Contact -->
+      <tr>
+        <td style="background-color: #08253E; padding: 16px 24px; color: #ffffff; font-size: 13px; text-align: center;">
+          <strong>K-TRONIX S.A. DE C.V. • Sede Cancún</strong><br>
+          📞 Teléfono / WhatsApp: <strong>(81) 1105 8875</strong> | ✉️ Correo: <a href="mailto:ktronix@ktronix.com.mx" style="color: #38E1FF; text-decoration: none;">ktronix@ktronix.com.mx</a><br>
+          🌐 Web: <a href="https://ktronixcancun.com" style="color: #38E1FF; text-decoration: none;">www.ktronixcancun.com</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="doc-container">
+    <!-- Top Action Bar (Screen only) -->
+    <div class="top-action-bar">
+      <div class="action-group">
+        <a href="index.html" class="btn-action btn-back">
+          <i class="fas fa-arrow-left"></i> Volver al Portal
+        </a>
+      </div>
+      <div class="action-group">
+        <button type="button" class="btn-action btn-copy-email" id="btnCopyEmail">
+          <i class="fas fa-copy"></i> Copiar Formato para Correo
+        </button>
+        <button type="button" class="btn-action btn-print" onclick="window.print()">
+          <i class="fas fa-file-pdf"></i> Guardar como PDF / Imprimir
+        </button>
+        <a href="https://wa.me/528111058875?text=Hola,%20solicito%20la%20lista%20de%20precios%20oficial%20de%20Plantas%20de%20Emergencia%20K-tronix%20Cancún." target="_blank" class="btn-action btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Printable Sheet -->
+    <div class="doc-sheet">
+      <!-- Header -->
+      <div class="doc-header">
+        <div class="brand-col">
+          <div class="brand-logo-wrap">
+            <img src="https://ktronix.com.mx/wp-content/uploads/2026/04/k-tronix-logo.png" alt="K-tronix Sede Cancún">
+          </div>
+          <div class="brand-meta">
+            <strong>K-TRONIX S.A. DE C.V.</strong> • Especialistas en Respaldo Crítico de Energía<br>
+            Sede Cancún & Riviera Maya: Infinity Park, Av. Chichén Itzá, C.P. 77569 Cancún, Q.R.<br>
+            Tel. Directo: <strong>(81) 1105 8875</strong> | Web: <strong>www.ktronixcancun.com</strong>
+          </div>
+        </div>
+        <div class="doc-title-col">
+          <div class="doc-badge">Documento Oficial de Venta 2026</div>
+          <h1 class="doc-title">LISTA DE PRECIOS EJECUTIVA</h1>
+          <p class="doc-subtitle">Plantas de Emergencia Diésel Grupel con Caseta Acústica</p>
+        </div>
+      </div>
+
+      <!-- Info Bar -->
+      <div class="doc-infobar">
+        <div class="infobar-item">
+          <strong>Ubicación de Entrega:</strong> Sede Cancún & Península de Yucatán
+        </div>
+        <div class="infobar-item">
+          <strong>Moneda:</strong> Pesos Mexicanos (MXN) + 16% IVA
+        </div>
+        <div class="infobar-item">
+          <strong>Tiempo de Entrega:</strong> 5 días hábiles en banco de pruebas
+        </div>
+        <div class="infobar-item">
+          <strong>Garantía:</strong> 1 Año / Soporte Técnico Local
+        </div>
+      </div>
+
+      <!-- Main Pricing Table -->
+      <div class="table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Capacidad (ESP)</th>
+              <th>Modelo & Motor</th>
+              <th>Precio Base (Sin ATS)</th>
+              <th style="background-color: var(--brand-orange);">Precio Con ATS Incluido</th>
+              <th>Dimensiones (L × W × H)</th>
+              <th>Peso & Tanque</th>
+              <th style="text-align: center;">Disponibilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 1. 18 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">18 kW</span>
+                <span class="cap-sub">22.5 kVA • 60 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0018GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 4G23D15 • 68 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$138,200.00</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$142,850.00</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">1,970 × 825 × 1,120 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 680 kg<br>🛢️ Tanque: 55 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+
+            <!-- 2. 25 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">25 kW</span>
+                <span class="cap-sub">31.25 kVA • 80 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0025GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 4G32D15 • 70 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$157,176.10</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$161,704.19</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">1,970 × 825 × 1,120 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 743 kg<br>🛢️ Tanque: 55 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+
+            <!-- 3. 39 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">39 kW</span>
+                <span class="cap-sub">48.75 kVA • 125 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0039GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 4GA41D15 • 70 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$181,032.31</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$194,490.60</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">1,970 × 825 × 1,120 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 838 kg<br>🛢️ Tanque: 55 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+
+            <!-- 4. 76 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">76 kW</span>
+                <span class="cap-sub">95 kVA • 270 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0076GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 4GA41TIDS15 • 72 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$289,059.15</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$312,194.36</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">2,630 × 1,015 × 1,580 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 1,450 kg<br>🛢️ Tanque: 200 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+
+            <!-- 5. 113 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">113 kW</span>
+                <span class="cap-sub">141 kVA • 400 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0113GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 6GA70TIDS15 • 74 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$319,174.60</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$368,743.80</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">2,630 × 1,015 × 1,580 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 1,790 kg<br>🛢️ Tanque: 200 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+
+            <!-- 6. 149 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">149 kW</span>
+                <span class="cap-sub">186 kVA • 630 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0149GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 6GA70TIDS25 • 76 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$439,096.93</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$488,666.13</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">3,200 × 1,185 × 1,800 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 1,988 kg<br>🛢️ Tanque: 400 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+
+            <!-- 7. 305 kW -->
+            <tr>
+              <td>
+                <span class="cap-title">305 kW</span>
+                <span class="cap-sub">381 kVA • 1,100 A</span>
+              </td>
+              <td>
+                <span class="model-code">G0305GRGRCA8T2200S</span>
+                <div class="engine-meta">Motor: 6GA97TIDS45 • 78 dB(A)</div>
+              </td>
+              <td>
+                <span class="price-without-ats">$917,382.51</span>
+                <div style="font-size: 0.75rem; color: #64748b;">MXN + IVA</div>
+              </td>
+              <td style="background-color: var(--brand-orange-light);">
+                <div class="price-with-ats">$1,056,846.31</div>
+                <div class="ats-badge-sub">MXN + IVA • Con ATS</div>
+              </td>
+              <td>
+                <div class="spec-mini">4,000 × 1,400 × 2,100 mm</div>
+              </td>
+              <td>
+                <div class="spec-mini">⚖️ 3,850 kg<br>🛢️ Tanque: 800 L</div>
+              </td>
+              <td style="text-align: center;">
+                <span class="stock-tag"><i class="fas fa-check-circle"></i> En Stock</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Value Inclusions -->
+      <div class="inclusions-grid">
+        <div class="inc-card">
+          <div class="inc-card-header">
+            <i class="fas fa-shield-alt"></i> Caseta Acústica para Intemperie
+          </div>
+          <p>Protección anticorrosiva para ambiente costero y tropical de Cancún, con aislamiento sonoro de alta densidad.</p>
+        </div>
+        <div class="inc-card">
+          <div class="inc-card-header">
+            <i class="fas fa-microchip"></i> Panel Digital Grupel G545
+          </div>
+          <p>Monitoreo en tiempo real de voltaje, frecuencia, presión de aceite, temperatura y horas de trabajo.</p>
+        </div>
+        <div class="inc-card">
+          <div class="inc-card-header">
+            <i class="fas fa-bolt"></i> Transferencia Automática (ATS)
+          </div>
+          <p>Conmutación inmediata ante cortes de CFE para continuidad 100% autónoma en hoteles, residencias y comercios.</p>
+        </div>
+        <div class="inc-card">
+          <div class="inc-card-header">
+            <i class="fas fa-vial-circle-check"></i> Pruebas en Banco Certificadas
+          </div>
+          <p>Cada equipo pasa por 5 días de riguroso testeo de carga, temperatura y parámetros eléctricos antes de su entrega.</p>
+        </div>
+      </div>
+
+      <!-- Commercial Notes -->
+      <div class="commercial-notes">
+        <h4>Condiciones Comerciales y Logística</h4>
+        <ul>
+          <li><strong>Precios:</strong> Expresados en Moneda Nacional (MXN). Aplica 16% de IVA. Precios sujetos a cambio sin previo aviso.</li>
+          <li><strong>Voltaje:</strong> Configuración estándar 220 VCA. Reconfigurable a 440V / 480V trifásico según las especificaciones técnicas del proyecto.</li>
+          <li><strong>Tiempo de Entrega:</strong> 5 días hábiles para equipos en stock a partir de la confirmación de pedido y pago anticipado.</li>
+          <li><strong>Logística y Maniobras:</strong> No incluye maniobras especiales de descarga, cimentación civil ni instalaciones eléctricas en sitio, las cuales pueden cotizarse por separado.</li>
+        </ul>
+      </div>
+
+      <!-- Footer Contacts -->
+      <div class="doc-footer">
+        <div class="footer-cancun-info">
+          <strong>K-TRONIX S.A. DE C.V. — Sede Cancún & Riviera Maya</strong><br>
+          Infinity Park, Carretera Cancún Av. Chichén Itzá, C.P. 77569 Cancún, Q.R.<br>
+          Atención a Zona Hotelera, Tulum, Playa del Carmen y Sureste Mexicano.
+        </div>
+        <div class="footer-contact-actions">
+          <a href="tel:8111058875" class="contact-pill">
+            <i class="fas fa-phone"></i> (81) 1105 8875
+          </a>
+          <a href="mailto:ktronix@ktronix.com.mx" class="contact-pill">
+            <i class="fas fa-envelope"></i> ktronix@ktronix.com.mx
+          </a>
+          <a href="https://wa.me/528111058875" target="_blank" class="contact-pill" style="border-color: #25D366; color: #16a34a;">
+            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy Toast Notification -->
+  <div id="copyToast">
+    <i class="fas fa-check-circle" style="color: #22c55e; font-size: 1.3rem;"></i>
+    <div>
+      <strong>¡Formato de Correo Copiado!</strong><br>
+      <span style="font-size: 0.85rem; color: #cbd5e1;">Abre tu cliente de correo (Gmail/Outlook) y presiona Ctrl + V para pegar la tabla ejecutiva.</span>
+    </div>
+  </div>
+
+  <script>
+    // Copy rich HTML table to clipboard for email pasting
+    document.getElementById('btnCopyEmail').addEventListener('click', async function() {
+      const emailHtml = document.getElementById('emailHtmlContainer').innerHTML;
+      
+      try {
+        if (navigator.clipboard && window.ClipboardItem) {
+          const type = "text/html";
+          const blob = new Blob([emailHtml], { type });
+          const data = [new ClipboardItem({ [type]: blob, "text/plain": new Blob([document.getElementById('emailHtmlContainer').innerText], { type: "text/plain" }) })];
+          await navigator.clipboard.write(data);
+        } else {
+          // Fallback
+          const listener = function(e) {
+            e.clipboardData.setData("text/html", emailHtml);
+            e.clipboardData.setData("text/plain", document.getElementById('emailHtmlContainer').innerText);
+            e.preventDefault();
+          };
+          document.addEventListener("copy", listener);
+          document.execCommand("copy");
+          document.removeEventListener("copy", listener);
+        }
+
+        const toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 4000);
+      } catch (err) {
+        console.error('Error al copiar al portapapeles:', err);
+        alert('Se ha seleccionado el formato. Usa Ctrl+C para copiar.');
+      }
+    });
+  </script>
+</body>
+</html>
